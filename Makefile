@@ -24,6 +24,7 @@
 .ONESHELL:
 
 NAME=ppt
+PARTS=9x6.tex dark.tex light.tex
 
 all: $(NAME).pdf test copyright zip
 
@@ -48,12 +49,13 @@ zip: $(NAME).pdf $(NAME).sty
 	cd $(NAME)
 	cp ../../README.md .
 	cp ../../$(NAME).sty .
-	cp ../../*.tex .
+	cp ../../$(NAME).tex .
+	for p in $(PARTS); do cp ../../$${p} .; done
 	cp ../../.latexmkrc .
 	latexmk -pdf $(NAME).tex
 	rm .latexmkrc
-	rm -rf _minted-* *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.log *.run.xml *.out *.exc
-	cat $(NAME).sty | grep RequirePackage | gsed -e "s/.*{\(.\+\)}.*/hard \1/" | uniq > DEPENDS.txt
+	rm -rf _minted-* *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.log *.run.xml *.out *.exc *.crumbs
+	cat $(NAME).sty $(PARTS) | grep RequirePackage | gsed -e "s/.*{\(.\+\)}.*/hard \1/" | uniq > DEPENDS.txt
 	cd ..
 	zip -r $(NAME).zip *
 	cp $(NAME).zip ../$(NAME)-ctan.zip
