@@ -12,4 +12,4 @@ jobs:
       - uses: yegor256/latexmk-action@master
         with:
           opts: -pdf ppt.tex
-          packages: libertine microtype fancyhdr href-ul minted fvextra framed tcolorbox environ catchfile xstring pgfopts crumbs qrcode varwidth lastpage anyfontsize fontsize changepage soul tikzpagenodes ifoddpage clicks textpos enumitem
+          packages: libertine microtype fancyhdr href-ul minted fvextra framed tcolorbox environ catchfile xstring pgfopts crumbs qrcode varwidth lastpage anyfontsize fontsize changepage soul tikzpagenodes ifoddpage clicks textpos enumitem seqsplit
