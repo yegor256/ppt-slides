@@ -21,31 +21,47 @@
 % SOFTWARE.
 
 \documentclass{article}
-\usepackage{clicks}
-\usepackage[template=light,directory=..]{../ppt}
+\usepackage[static]{clicks}
+\usepackage[template=dark,directory=..]{../ppt}
 \pptLeft{How Did I Spend Last Summer}
 \pptRight{@yegor256}
 \begin{document}
 
 \plush{
   \pptMiddle{
-    Hello, world!
+    \pptTitle
+      {Hello, world!}
+      {All features in this document}
   }
 }
 
-\pptTOC{}
+% \pptToc
 
 \plush{
   \pptChapter{First}
 }
 
+\subcrumbection{About}
 \plush{
   \pptSection{About Me}
-  Some text here...
+  Some text here... \par
+  In two paragraphs
+}
+
+\subcrumbection{Photo}
+\plush{
+  \pptSection{This Is My Photo}
+  \pptPic{0.6}{face.jpg}
 }
 
 \plush{
   \pptChapter{Second}
+}
+
+\subcrumbection{Quote}
+\plush{
+  \pptSection{This Is My Favorite Quote}
+  \pptQuote{face.jpg}{Life is great!}{Anonymous}
 }
 
 \end{document}
