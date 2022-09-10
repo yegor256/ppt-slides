@@ -21,6 +21,8 @@
 % SOFTWARE.
 
 \documentclass{article}
+\usepackage[increment]{crumbs}
+\usepackage[static]{clicks}
 \usepackage[template=light]{ppt}
 \usepackage{ffcode}
 \usepackage{titling}
@@ -33,11 +35,12 @@
 
 \begin{document}
 
-\clearpage
-\pptMiddle{
-  \pptTitle{ppt}{\thetitle}\par
-  {\scshape\theauthor}\par
-  \thedate
+\plush{
+  \pptMiddle{
+    \pptTitle{ppt}{\thetitle}\par
+    {\scshape\theauthor}\par
+    \thedate
+  }
 }
 
 \clearpage
@@ -46,29 +49,26 @@ This package helps you make slide decks in \LaTeX:
 
 \begin{ffcode}
 \documentclass{article}
+\usepackage{clicks}
 \usepackage[template=light]{ppt}
-\pptMiddle{
-  This is the content to put in the center
-  of the slide.
-}
+\plick{\pptBanner{Making Slides Is Easy}{
+\plick{Just use this package...}
+\plish{together with 'clicks' package.}
 \end{document}
 \end{ffcode}
 
 They will look similar to what PowerPoint\texttrademark{} can make,
 but with the precision of \LaTeX.
 
-\clearpage
-\pptTOC
+\pptChapter{Chapters \& Sections}
 
-\clearpage
-\pptSection{}
-This package helps you make slide decks in \LaTeX:
+\plush{To be continued...}
 
-
-\clearpage
-\pptMiddle{
-	More details about this package you can find
-	in the \ff{yegor256/ppt} GitHub repository.
+\plush{
+  \pptMiddle{
+	  More details about this package you can find\\
+	  in \href{https://github.com/yegor256/ppt}{yegor256/ppt} GitHub repository.
+  }
 }
 
 \end{document}
