@@ -1,0 +1,17 @@
+docker:
+  image: yegor256/rultor-image:1.11.0
+install: |-
+  tlmgr option repository ctan
+  tlmgr --verify-repo=none update --self
+  tlmgr --verify-repo=none install l3build
+release:
+  script: |-
+    date=$(date +%Y/%m/%d)
+    sed -i "s|00\.00\.0000|${date}|" ppt.sty
+    sed -i "s/0\.0\.0/${tag}/g" ppt.sty
+    sed -i "s|00\.00\.0000|${date}|" ppt.tex
+    sed -i "s/0\.0\.0/${tag}/g" ppt.tex
+    sed -i "s/0\.0\.0/${tag}/g" build.lua
+    git commit -m "version set to ${tag}"
+    make
+    l3build upload
