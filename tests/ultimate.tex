@@ -22,7 +22,7 @@
 
 \documentclass{article}
 \usepackage[dry,increment]{crumbs}
-\usepackage[static]{clicks}
+\usepackage{clicks}
 \usepackage[template=dark,directory=..]{../ppt}
 \usepackage{titling}
 \title{The Ultimate Example of All Features}
@@ -63,15 +63,19 @@
 }
 
 \subcrumbection{Quote}
-\plush{
+\plick{
   \pptPin{Life is great!}
-  \pptSection{This Is My Favorite Quote}
-  \pptQuote{face.jpg}{Life is great!}{Anonymous}
+  \pptSection{What to Know My Favorite Quote?}
 }
+\plush{\pptQuote{face.jpg}{Life is great!}{Anonymous}}
 
 \subcrumbection{Thought}
-\plush{
-  \pptBanner{Sometimes, I'm thinking...}
-  \pptThought{Overthinking is the biggest cause of unhappiness}
-}
+\plick{\pptBanner{Sometimes, I'm thinking...}}
+\plush{\pptThought{Overthinking is the biggest cause of unhappiness}}
+
+\subcrumbection{Link}
+\plick{\pptBanner{This is my blog:}}
+\plush{\pptQR{https://www.yegor256.com}}
+
+
 \end{document}
