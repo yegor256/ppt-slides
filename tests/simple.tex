@@ -21,17 +21,21 @@
 % SOFTWARE.
 
 \documentclass{article}
+\usepackage[dry,increment]{crumbs}
 \usepackage[static]{clicks}
 \usepackage[template=dark,directory=..]{../ppt}
-\pptLeft{How Did I Spend Last Summer}
-\pptRight{@yegor256}
+\usepackage{titling}
+\title{The Ultimate Example of All Features}
+\author{@yegor256}
+\pptLeft{\thetitle}
+\pptRight{\theauthor}
 \begin{document}
 
 \plush{
   \pptMiddle{
     \pptTitle
-      {Hello, world!}
-      {All features in this document}
+      {``ppt'' package}
+      {\thetitle}
   }
 }
 
