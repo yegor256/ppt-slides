@@ -41,32 +41,21 @@
 
 % \pptToc
 
-\plush{
-  \pptChapter{First}
-}
+\plush{\pptChapter{First}}
 
 \subcrumbection{About}
-\plush{
-  \pptSection{About Me}
-  Some text here... \par
-  In two paragraphs
-}
+\plick{\pptSection{About Me}}
+\plick{Some text here...}
+\plush{In two paragraphs}
 
 \subcrumbection{Photo}
-\plush{
-  \pptSection{This Is My Photo}
-  \pptPic{0.6}{face.jpg}
-}
+\plick{\pptSection{This Is My Photo}}
+\plush{\pptPic{0.6}{face.jpg}}
 
-\plush{
-  \pptChapter{Second}
-}
+\plush{\pptChapter{Second}}
 
 \subcrumbection{Quote}
-\plick{
-  \pptPin{Life is great!}
-  \pptSection{What to Know My Favorite Quote?}
-}
+\plick{\pptSection{What to Know My Favorite Quote?}}
 \plush{\pptQuote{face.jpg}{Life is great!}{Anonymous}}
 
 \subcrumbection{Thought}
@@ -75,7 +64,18 @@
 
 \subcrumbection{Link}
 \plick{\pptBanner{This is my blog:}}
-\plush{\pptQR{https://www.yegor256.com}}
+\plick{\pptQR[1in]{https://www.yegor256.com}}
+\plick{\pptPin{yegor256.com}}
+\plick{It is about OOP,}
+\plick{and management,}
+\plush{and about lifestyle, a bit.}
 
+\subcrumbection{Pinned QR}
+\plick{\pptBanner{Some Ideas on the Blog:}}
+\plick{\pptPinQR{https://www.yegor256.com}}
+\plick{Objects must be immutable}
+\plick{Static methods are evil}
+\plick{Ctors must be code-free}
+\plush{Getters and setters are bad design}
 
 \end{document}
