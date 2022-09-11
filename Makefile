@@ -58,7 +58,8 @@ zip: $(NAME).pdf $(NAME).sty
 	cp ../../README.md .
 	cp ../../$(NAME).sty .
 	cp ../../$(NAME).tex .
-	cp -r ../../$(NAME) .
+	cp -r ../../ppt-templates .
+	cp -r ../../ppt-schemes .
 	cp ../../socrates.jpg .
 	cp ../../.latexmkrc .
 	latexmk -pdf $(NAME).tex

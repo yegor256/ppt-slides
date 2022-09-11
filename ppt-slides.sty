@@ -39,14 +39,14 @@
 \makeatother
 
 \makeatletter\ifdefined\ppt@template
-  \input{\ppt@directory/ppt-slides/\ppt@template.tex}
+  \input{\ppt@directory/ppt-templates/ppt-\ppt@template.tex}
 \else
   \message{^^Jppt: No template is loaded, because 'template' option is not specified}
 \fi\makeatother
 
 \makeatletter\ifdefined\ppt@scheme
   \RequirePackage{xcolor}
-  \input{\ppt@directory/ppt-slides/\ppt@scheme.tex}
+  \input{\ppt@directory/ppt-schemes/ppt-\ppt@scheme.tex}
 \else
 	\message{^^Jppt: No color scheme is loaded, because 'scheme' option is not specified}
 \fi\makeatother
