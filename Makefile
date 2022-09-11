@@ -50,7 +50,7 @@ zip: $(NAME).pdf $(NAME).sty
 	cp ../../README.md .
 	cp ../../$(NAME).sty .
 	cp ../../$(NAME).tex .
-	cp ../../face.jpg .
+	cp ../../socrates.jpg .
 	for p in $(PARTS); do cp ../../$${p} .; done
 	cp ../../.latexmkrc .
 	latexmk -pdf $(NAME).tex
