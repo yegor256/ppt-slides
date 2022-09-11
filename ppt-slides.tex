@@ -23,7 +23,7 @@
 \documentclass{article}
 \usepackage[increment]{crumbs}
 \usepackage[static]{clicks}
-\usepackage[template=dark]{ppt-slides}
+\usepackage[template,scheme=dark]{ppt-slides}
 \usepackage[nonumbers]{ffcode}
 \usepackage{titling}
 \usepackage{textcomp}
@@ -48,7 +48,7 @@ This package helps you make slide decks in \LaTeX:
 {\small\begin{ffcode}
 \documentclass{article}
 \usepackage{clicks}
-\usepackage[template=dark]{ppt-slides}
+\usepackage[template,scheme=dark]{ppt-slides}
 \begin{document}
 \plick{\pptBanner{Making Slides Is Easy}}
 \plick{Just use this package...}
@@ -67,23 +67,23 @@ together with \href{https://github.com/yegor256/clicks}{clicks}.
 \plush{\pptChapter[Layout]{Scaffolding and Layout}}
 
 \clearpage
-\pptSection{Templates}
-You can choose the template for your slides, using \ff{template} option
+\pptSection[Scheme]{Color Schemes}
+You can choose a color scheme for your slides, using \ff{scheme} option
 of the package:
 {\scriptsize\begin{ffcode}
 \documentclass{article}
 \usepackage{clicks}
-\usepackage[template=light]{ppt-slides}
+\usepackage[template,scheme=light]{ppt-slides}
 \begin{document}
 ...
 \end{document}
 \end{ffcode}
 }
-There are a few out-of-the-box templates available: \ff{light}, \ff{dark},
+There are a few out-of-the-box schemes available: \ff{light}, \ff{dark},
 \ff{light-mono}, and \ff{dark-mono}. You can design your own, using
 \ff{ppt-light.text} file as an example:
 {\scriptsize\begin{ffcode}
-\usepackage[template=/usr/local/my-template.tex]{ppt-slides}
+\usepackage[template,scheme=/usr/local/my-colors.tex]{ppt-slides}
 \end{ffcode}
 }
 
@@ -93,7 +93,7 @@ First, split your story into Chapters:
 {\scriptsize\begin{ffcode}
 \documentclass{article}
 \usepackage{clicks}
-\usepackage[template=light]{ppt-slides}
+\usepackage[template,scheme=light]{ppt-slides}
 \begin{document}
 \pptToc
 \plush{\pptChapter{About Me}}
@@ -136,7 +136,7 @@ of each slide, on the left and on the right respectively:
 {\scriptsize\begin{ffcode}
 \documentclass{article}
 \usepackage{clicks}
-\usepackage[template=light]{ppt-slides}
+\usepackage[template,scheme=light]{ppt-slides}
 \pptLeft{How Did I Spend Last Summer}
 \pptRight{Yegor Bugayenko}
 \begin{document}
