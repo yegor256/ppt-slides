@@ -23,7 +23,7 @@
 \documentclass{article}
 \usepackage[increment]{crumbs}
 \usepackage[static]{clicks}
-\usepackage[template=dark]{ppt}
+\usepackage[template=dark]{ppt-slides}
 \usepackage[nonumbers]{ffcode}
 \usepackage{titling}
 \usepackage{textcomp}
@@ -37,7 +37,7 @@
 
 \plush{
   \pptMiddle{
-    \pptTitle{ppt}{\thetitle}\par
+    \pptTitle{ppt-slides}{\thetitle}\par
     {\scshape Made by \href{https://www.yegor256.com}{\theauthor}}\par
     \thedate
   }
@@ -48,7 +48,7 @@ This package helps you make slide decks in \LaTeX:
 {\small\begin{ffcode}
 \documentclass{article}
 \usepackage{clicks}
-\usepackage[template=dark]{ppt}
+\usepackage[template=dark]{ppt-slides}
 \begin{document}
 \plick{\pptBanner{Making Slides Is Easy}}
 \plick{Just use this package...}
@@ -73,7 +73,7 @@ of the package:
 {\scriptsize\begin{ffcode}
 \documentclass{article}
 \usepackage{clicks}
-\usepackage[template=light]{ppt}
+\usepackage[template=light]{ppt-slides}
 \begin{document}
 ...
 \end{document}
@@ -83,7 +83,7 @@ There are a few out-of-the-box templates available: \ff{light}, \ff{dark},
 \ff{light-mono}, and \ff{dark-mono}. You can design your own, using
 \ff{ppt-light.text} file as an example:
 {\scriptsize\begin{ffcode}
-\usepackage[template=/usr/local/my-template.tex]{ppt}
+\usepackage[template=/usr/local/my-template.tex]{ppt-slides}
 \end{ffcode}
 }
 
@@ -93,7 +93,7 @@ First, split your story into Chapters:
 {\scriptsize\begin{ffcode}
 \documentclass{article}
 \usepackage{clicks}
-\usepackage[template=light]{ppt}
+\usepackage[template=light]{ppt-slides}
 \begin{document}
 \pptToc
 \plush{\pptChapter{About Me}}
@@ -136,7 +136,7 @@ of each slide, on the left and on the right respectively:
 {\scriptsize\begin{ffcode}
 \documentclass{article}
 \usepackage{clicks}
-\usepackage[template=light]{ppt}
+\usepackage[template=light]{ppt-slides}
 \pptLeft{How Did I Spend Last Summer}
 \pptRight{Yegor Bugayenko}
 \begin{document}
@@ -235,7 +235,7 @@ we use behind the scene:\par
   \crumbection{Sources}
   \pptMiddle{
 	  More details about this package you can find\\
-	  in \href{https://github.com/yegor256/ppt}{yegor256/ppt} GitHub repository.
+	  in \href{https://github.com/yegor256/ppt-slides}{yegor256/ppt-slides} GitHub repository.
   }
 }
 

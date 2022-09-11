@@ -24,8 +24,7 @@
 .ONESHELL:
 
 VERSION=0.0.0
-NAME=ppt
-PARTS=$(NAME)-9x6.tex $(NAME)-dark.tex $(NAME)-light.tex $(NAME)-dark-mono.tex $(NAME)-light-mono.tex
+NAME=ppt-slides
 
 all: $(NAME).pdf test copyright zip
 
@@ -39,10 +38,10 @@ test: tests/*.tex $(NAME).sty
 
 set-version:
 	date=$$(date +%Y/%m/%d)
-	sed -i "s|00\.00\.0000|$${date}|" ppt.sty
-	sed -i "s/0\.0\.0/$(VERSION)/g" ppt.sty
-	sed -i "s|00\.00\.0000|$${date}|" ppt.tex
-	sed -i "s/0\.0\.0/$(VERSION)/g" ppt.tex
+	sed -i "s|00\.00\.0000|$${date}|" $(NAME).sty
+	sed -i "s/0\.0\.0/$(VERSION)/g" $(NAME).sty
+	sed -i "s|00\.00\.0000|$${date}|" $(NAME).tex
+	sed -i "s/0\.0\.0/$(VERSION)/g" $(NAME).tex
 	sed -i "s/0\.0\.0/$(VERSION)/g" build.lua
 
 $(NAME).pdf: $(NAME).tex $(NAME).sty
@@ -59,8 +58,8 @@ zip: $(NAME).pdf $(NAME).sty
 	cp ../../README.md .
 	cp ../../$(NAME).sty .
 	cp ../../$(NAME).tex .
+	cp -r ../../$(NAME) .
 	cp ../../socrates.jpg .
-	for p in $(PARTS); do cp ../../$${p} .; done
 	cp ../../.latexmkrc .
 	latexmk -pdf $(NAME).tex
 	rm .latexmkrc

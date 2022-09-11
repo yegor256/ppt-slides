@@ -14,7 +14,7 @@ and then use in preamble:
 ```tex
 \documentclass{article}
 \usepackage{clicks}
-\usepackage[template=dark]{ppt}
+\usepackage[template=dark]{ppt-slides}
 \begin{document}
 \plick{\pptBanner{This Is My First Slide}}
 \plick{The slide tells you an interesting story...}
