@@ -10,4 +10,5 @@
 --ignore=textcolor:pp
 --ignore=newmdenv:op
 --ignore=ff,nospell,citet,citep
---ignore=ppt,ppt*
+--ignore=pptPic
+--ignore=ffcode*

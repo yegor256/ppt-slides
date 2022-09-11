@@ -45,7 +45,7 @@
 
 \clearpage
 This package helps you make slide decks in \LaTeX:
-{\small\begin{ffcode}
+\begin{ffcode*}{fontsize=\small}
 \documentclass{article}
 \usepackage{clicks}
 \usepackage[template,scheme=dark]{ppt-slides}
@@ -54,10 +54,9 @@ This package helps you make slide decks in \LaTeX:
 \plick{Just use this package...}
 \plush{together with 'clicks' package.}
 \end{document}
-\end{ffcode}
-}
+\end{ffcode*}
 They will look similar to what PowerPoint\texttrademark{} can make,
-but with the precision of \LaTeX. We recomend to use this package
+but with the precision of \LaTeX. We recommend to use this package
 together with \href{https://github.com/yegor256/clicks}{clicks}.
 
 \clearpage
@@ -69,15 +68,14 @@ together with \href{https://github.com/yegor256/clicks}{clicks}.
 \clearpage
 \pptSection{Template}
 You start with a template for your slide deck:
-{\scriptsize\begin{ffcode}
+\begin{ffcode*}{fontsize=\scriptsize}
 \documentclass{article}
 \usepackage{clicks}
 \usepackage[template=9x6]{ppt-slides}
 \begin{document}
 ...
 \end{document}
-\end{ffcode}
-}
+\end{ffcode*}
 There is only one template, which is used by default: \ff{9x6}. If you don't
 specify the name, it will be used. If you don't use \ff{template} option at all,
 the default \ff{article} will be rendered, which is not what you want.
@@ -86,15 +84,14 @@ the default \ff{article} will be rendered, which is not what you want.
 \pptSection[Scheme]{Color Schemes}
 You can choose a color scheme for your slides, using \ff{scheme} option
 of the package:
-{\scriptsize\begin{ffcode}
+\begin{ffcode*}{fontsize=\scriptsize}
 \documentclass{article}
 \usepackage{clicks}
 \usepackage[template,scheme=light]{ppt-slides}
 \begin{document}
 ...
 \end{document}
-\end{ffcode}
-}
+\end{ffcode*}
 There are a few out-of-the-box schemes available: \ff{light}, \ff{dark},
 \ff{light-mono}, and \ff{dark-mono}. You can design your own, using
 \ff{ppt-light.text} file as an example:
@@ -106,7 +103,7 @@ There are a few out-of-the-box schemes available: \ff{light}, \ff{dark},
 \clearpage
 \pptSection{Chapters}
 First, split your story into Chapters:
-{\scriptsize\begin{ffcode}
+\begin{ffcode*}{fontsize=\scriptsize}
 \documentclass{article}
 \usepackage{clicks}
 \usepackage[template,scheme=light]{ppt-slides}
@@ -119,8 +116,7 @@ First, split your story into Chapters:
 \plush{\pptChapter[FAQ]{Discussion \& Questions}}
 ...
 \end{document}
-\end{ffcode}
-}
+\end{ffcode*}
 \ff{\char`\\pptToc} will render the table of contents in an interactive ``clickable'' format.
 Thanks to the use of \href{https://github.com/yegor256/crumbs}{crumbs}, there will
 be a navigation at the top left corner.
@@ -128,7 +124,7 @@ be a navigation at the top left corner.
 \clearpage
 \pptSection{Sections}
 Put Sections inside Chapters:
-{\scriptsize\begin{ffcode}
+\begin{ffcode*}{fontsize=\scriptsize}
 \begin{document}
 \pptToc
 \plush{\pptChapter{About Me}}
@@ -140,8 +136,7 @@ Put Sections inside Chapters:
 \plush{\pptSection{Novelty}}
 \plush{\pptSection{Impact}}
 \end{document}
-\end{ffcode}
-}
+\end{ffcode*}
 \ff{\char`\\pptChapter} and \ff{\char`\\pptSection} used together will render
 nice two-level nagivation menu at the top left corner.
 
@@ -149,7 +144,7 @@ nice two-level nagivation menu at the top left corner.
 \pptSection[Signatures]{Signatures at the Botom of Each Page}
 You can place the title of the presentation and your name at the bottom
 of each slide, on the left and on the right respectively:
-{\scriptsize\begin{ffcode}
+\begin{ffcode*}{fontsize=\scriptsize}
 \documentclass{article}
 \usepackage{clicks}
 \usepackage[template,scheme=light]{ppt-slides}
@@ -158,23 +153,21 @@ of each slide, on the left and on the right respectively:
 \begin{document}
 ...
 \end{document}
-\end{ffcode}
-}
+\end{ffcode*}
 If you don't use \ff{\char`\\pptLeft} or \ff{\char`\\pptRight}, nothing will
 be printed at the bottom.
 
 \clearpage
 \pptSection[Wide]{Wide Slides}
 Sometimes you need your slide content to take all visible horizontal space:
-{\scriptsize\begin{ffcode}
+\begin{ffcode*}{fontsize=\scriptsize}
 \begin{document}
 \begin{pptWideOne}
 This paragraph is too long for some reasons,
 that's why must take all visible horizontal space.
 \end{pptWideOne}
 \end{document}
-\end{ffcode}
-}
+\end{ffcode*}
 \begin{pptWideOne}
 This paragraph is too long for some reasons, that's why must take all visible horizontal space.
 \end{pptWideOne}
@@ -189,12 +182,11 @@ where \ff{X} is the number of columns to render.
 You can add an image to the slide (the first argument is the width
 of the image in relation to \ff{\char`\\textwidth},
 while the second one is the path of it):
-{\scriptsize\begin{ffcode}
+\begin{ffcode*}{fontsize=\scriptsize}
 \begin{document}
 \plush{\pptPic{0.2}{socrates.jpg}}
 \end{document}
-\end{ffcode}
-}
+\end{ffcode*}
 \pptPic{0.2}{socrates.jpg}
 
 \clearpage
@@ -219,13 +211,12 @@ doesn't start a new section.
 \clearpage
 \pptSection{Quotes}
 \pptQuote{socrates.jpg}{The only true wisdom is in knowing you know nothing}{Socrates}
-{\scriptsize\begin{ffcode}
+\begin{ffcode*}{fontsize=\scriptsize}
 \begin{document}
 \plush{\pptQuote{socrates.jpg}
   {The only true wisdom is in knowing you know nothing}{Socrates}}
 \end{document}
-\end{ffcode}
-}
+\end{ffcode*}
 
 \clearpage
 \pptSection{Thoughts}
@@ -235,13 +226,12 @@ doesn't start a new section.
 \pptSection[QR]{QR Codes}
 Sometimes it's convenient to show a QR code to your audience instead of
 a URL, since it's easier to use --- they can scan it:
-{\scriptsize\begin{ffcode}
+\begin{ffcode*}{fontsize=\scriptsize}
 \begin{document}
 \plick{Check my blog post by this link:}
 \plush{\pptQR{https://www.yegor256.com}}
 \end{document}
-\end{ffcode}
-}
+\end{ffcode*}
 The code will look like this, thanks to \href{https://ctan.org/pkg/qrcode}{qrcode} package that
 we use behind the scene:\par
 \pptQR[1in]{https://www.yegor256.com}
