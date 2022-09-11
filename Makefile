@@ -24,7 +24,7 @@
 .ONESHELL:
 
 NAME=ppt
-PARTS=9x6.tex dark.tex light.tex
+PARTS=$(NAME)-9x6.tex $(NAME)-dark.tex $(NAME)-light.tex
 
 all: $(NAME).pdf test copyright zip
 
