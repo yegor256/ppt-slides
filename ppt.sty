@@ -38,7 +38,7 @@
 
 \makeatletter\ifdefined\ppt@template
   \input{\ppt@directory/ppt-9x6.tex}
-	\RequirePackage{xcolor}
+  \RequirePackage{xcolor}
   \input{\ppt@directory/ppt-\ppt@template.tex}
 \else
 	\message{^^Jppt: No template is loaded, because 'template' option is not specified}
@@ -65,68 +65,73 @@
 \newcommand\pptChapter[2][]{%
   \crumbection[#1]{#2}%
   \pptMiddle{%
-    {\large\ttfamily Chapter \#\the\value{section}:}
-    \newline
-    \rotatebox{1}{\pptBanner[blue]{\LARGE#2}}
-  }
+    {\large\ttfamily Chapter \#\the\value{section}:}%
+    \newline%
+    \rotatebox{1}{\pptBanner[blue]{\LARGE#2}}%
+  }%
 }
 
 \newcommand\pptSection[2][]{%
-  \subcrumbection[#1]{#2}
+  \subcrumbection[#1]{#2}%
   \pptHeader{#2}%
 }
 
 \newcommand\pptHeader[1]{%
-  \vspace*{-0.75in}\hspace*{-0.5in}
-  \rotatebox{1}{\pptBanner[orange]{\Large #1}}\vspace*{0.15in}\par
+  \vspace*{-0.75in}\hspace*{-0.5in}%
+  \rotatebox{1}{\pptBanner[orange]{\Large #1}}\vspace*{0.15in}%
+  \par%
 }
 
 \newcommand\pptTitle[2]{%
-  {\pptBanner{\Huge #1}}
-  {\pptBanner{\large #2}}
+  {\pptBanner{\Huge #1}}%
+  {\pptBanner{\large #2}}%
 }
 
 \newcommand*\pptTOC{}
-\newcommand\pptToc{%
-  \renewcommand*\pptTOC{}
+\newcommand\pptToc[1][]{%
+  \renewcommand*\pptTOC{}%
   \print{%
+    \def\param{#1}%
+    \ifx\param\empty\else%
+      \pptBanner{#1}%
+    \fi%
     \tikz{%
       \node (z) {%
-        \begin{varwidth}{\textwidth}
-          \ifx\pptTOC\empty\else
+        \begin{varwidth}{\textwidth}%
+          \ifx\pptTOC\empty\else%
             \begin{itemize}[label={}]
               \pptTOC
             \end{itemize}
-          \fi
-        \end{varwidth}
-      };
-      \path [draw=blue,line width=4pt] (z.north west) -- (z.south west);
-    }
-  }
-  \begin{@empty}
+          \fi%
+        \end{varwidth}%
+      };%
+      \path [draw=blue,line width=4pt] (z.north west) -- (z.south west);%
+    }%
+  }%
+  \begin{@empty}%
     \renewcommand\crumb[2]{%
       \ifx\pptTOC\empty\else\click[0]\fi
       \gappto\pptTOC{\item ##2}
     }
     \crumbs
-  \end{@empty}
-  \flush[1]
+  \end{@empty}%
+  \flush[1]%
 }
 
 \RequirePackage{tabularx}
 \newcommand\pptQuote[3]{%
-  \begin{tabularx}{\columnwidth}{c>{\raggedright\arraybackslash}X}
-    \raisebox{\dimexpr-\height+\ht\strutbox}{\pptPic{0.25}{#1}}
-    &
-    ``#2''
+  \begin{tabularx}{\columnwidth}{c>{\raggedright\arraybackslash}X}%
+    \raisebox{\dimexpr-\height+\ht\strutbox}{\pptPic{0.25}{#1}}%
+    &%
+    ``#2''%
     \def\param{#3}%
-    \ifx\param\empty\else
-      \newline\newline
-      \small
+    \ifx\param\empty\else%
+      \newline\newline%
+      \small%
       --- #3
-    \fi
-    \\
-  \end{tabularx}
+    \fi%
+    \\%
+  \end{tabularx}%
 }
 
 \newcommand\pptPic[2]{%
@@ -136,7 +141,7 @@
     \fcolorbox{gray}{white}{%
       \includegraphics[width=#1\columnwidth]{#2}%
     }%
-  }
+  }%
 }
 
 \RequirePackage{ifthen}
@@ -175,9 +180,9 @@
 }
 
 \newcommand\pptSnippet[2][\small]{%
-  \begin{samepage}
-    #1\verbatiminput{#2}
-  \end{samepage}
+  \begin{samepage}%
+    #1\verbatiminput{#2}%
+  \end{samepage}%
 }
 
 \newcommand\pptQR[2][2in]{%

@@ -31,14 +31,14 @@
 \author{Yegor Bugayenko}
 \date{0.0.0 00.00.0000}
 \pptLeft{\thetitle}
-\pptRight{\theauthor}
+\pptRight{\href{https://github.com/yegor256}{@yegor256}}
 
 \begin{document}
 
 \plush{
   \pptMiddle{
     \pptTitle{ppt}{\thetitle}\par
-    {\scshape Made by \theauthor}\par
+    {\scshape Made by \href{https://www.yegor256.com}{\theauthor}}\par
     \thedate
   }
 }
@@ -59,6 +59,9 @@ This package helps you make slide decks in \LaTeX:
 They will look similar to what PowerPoint\texttrademark{} can make,
 but with the precision of \LaTeX. We recomend to use this package
 together with \href{https://github.com/yegor256/clicks}{clicks}.
+
+\clearpage
+\pptToc[Table of Contents]
 
 \clearpage
 \plush{\pptChapter[Layout]{Scaffolding and Layout}}
@@ -143,6 +146,24 @@ of each slide, on the left and on the right respectively:
 }
 If you don't use \ff{\char`\\pptLeft} or \ff{\char`\\pptRight}, nothing will
 be printed at the bottom.
+
+\clearpage
+\pptSection[Wide]{Wide Slides}
+Sometimes you need your slide content to take all visible horizontal space:
+{\scriptsize\begin{ffcode}
+\begin{document}
+\begin{pptWideOne}
+This paragraph is too long for some reasons,
+that's why must take all visible horizontal space.
+\end{pptWideOne}
+\end{document}
+\end{ffcode}
+}
+\begin{pptWideOne}
+This paragraph is too long for some reasons, that's why must take all visible horizontal space.
+\end{pptWideOne}
+You can also use \ff{\char`\\begin\char`\{pptWide\char`\{\char`\{X\char`\{},
+where \ff{X} is the number of columns to render.
 
 \clearpage
 \plush{\pptChapter[Elements]{Content Elements}}
