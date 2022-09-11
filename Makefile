@@ -38,7 +38,7 @@ test: tests/*.tex $(NAME).sty
 	fi
 
 set-version:
-	date=$(date +%Y/%m/%d)
+	date=$$(date +%Y/%m/%d)
 	sed -i "s|00\.00\.0000|$${date}|" ppt.sty
 	sed -i "s/0\.0\.0/$(VERSION)/g" ppt.sty
 	sed -i "s|00\.00\.0000|$${date}|" ppt.tex
