@@ -23,6 +23,7 @@
 .SHELLFLAGS = -e -x -c
 .ONESHELL:
 
+VERSION=0.0.0
 NAME=ppt
 PARTS=$(NAME)-9x6.tex $(NAME)-dark.tex $(NAME)-light.tex $(NAME)-dark-mono.tex $(NAME)-light-mono.tex
 
@@ -35,6 +36,14 @@ test: tests/*.tex $(NAME).sty
 	if [ -d tests ]; then
 		cd tests && make && cd ..
 	fi
+
+set-version:
+	date=$(date +%Y/%m/%d)
+	sed -i "s|00\.00\.0000|$${date}|" ppt.sty
+	sed -i "s/0\.0\.0/$(VERSION)/g" ppt.sty
+	sed -i "s|00\.00\.0000|$${date}|" ppt.tex
+	sed -i "s/0\.0\.0/$(VERSION)/g" ppt.tex
+	sed -i "s/0\.0\.0/$(VERSION)/g" build.lua
 
 $(NAME).pdf: $(NAME).tex $(NAME).sty
 	latexmk -pdf $<
