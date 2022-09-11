@@ -24,20 +24,23 @@
 \ProvidesPackage{ppt}[00.00.0000 0.0.0 Slide Decks à la Power Point]
 
 \RequirePackage{pgfopts}
-\makeatletter\pgfkeys{
+\makeatletter
+\pgfkeys{
   /ppt/.is family,
   /ppt,
   template/.estore in = \ppt@template,
   directory/.estore in = \ppt@directory,
   directory/.default = .,
-  directory,
-  template
-}\makeatother
+  directory
+}
 \ProcessPgfOptions*
+\makeatother
 
-\makeatletter\ifx\ppt@template\empty\else
+\makeatletter\ifdefined\ppt@template
   \input{\ppt@directory/ppt-9x6.tex}
   \input{\ppt@directory/ppt-\ppt@template.tex}
+\else
+	\message{^^Jppt: No template is loaded, because 'template' option is not specified}
 \fi\makeatother
 
 \RequirePackage{geometry}
