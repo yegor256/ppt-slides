@@ -51,13 +51,14 @@
 	\message{^^Jppt: No color scheme is loaded, because 'scheme' option is not specified}
 \fi\makeatother
 
-\RequirePackage{pagecolor}
-\RequirePackage{varwidth}
-\RequirePackage{qrcode}
-\RequirePackage{tikz}
-\RequirePackage{tikzpagenodes}
-\RequirePackage[inline]{enumitem}
-\RequirePackage{crumbs}
+\RequirePackage{ifthen} % for if/then/else in LaTeX
+\RequirePackage{href-ul} % for nice hyperlinks
+\RequirePackage{pagecolor} % to change page color
+\RequirePackage{varwidth} % for pptWide
+\RequirePackage{qrcode} % to print QR codes
+\RequirePackage{tikz} % for drawings in TOC
+\RequirePackage[inline]{enumitem} % for lists in crumbs
+\RequirePackage{crumbs} % for crumbs
 
 \newcommand\pptMiddle[1]{%
   \vspace*{\fill}#1\vspace*{\fill}%
@@ -117,12 +118,12 @@
   }%
   \begin{@empty}%
     \renewcommand\crumb[2]{%
-      \ifx\pptTOC\empty\else\click[0]\fi
+      \ifx\pptTOC\empty\else\ifdefined\click\click[0]\fi\fi
       \gappto\pptTOC{\item ##2}
     }
     \crumbs
   \end{@empty}%
-  \flush[1]%
+  \ifdefined\flush\flush[1]\fi%
 }
 
 \RequirePackage{tabularx}
@@ -151,7 +152,6 @@
   }%
 }
 
-\RequirePackage{ifthen}
 \newcommand\pptPin[2][right]{%
   \begin{tikzpicture}[remember picture,overlay]%
     \ifthenelse{\equal{#1}{left}}
@@ -203,7 +203,6 @@
 }
 
 \RequirePackage{seqsplit}
-\RequirePackage{hyperref}
 \newcommand\pptPinQR[2][right]{%
   \pptPin[#1]{%
     \begin{minipage}{1.4in}%

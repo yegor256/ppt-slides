@@ -24,26 +24,15 @@
   \geometry{paperwidth=16in, paperheight=9in, left=4in, right=2in, top=1.5in, bottom=1.5in}
 \RequirePackage[absolute]{textpos}
   \TPGrid{16}{16}
-
-\RequirePackage[tt=false,type1=true]{libertine}
-\RequirePackage{microtype}
-\RequirePackage{anyfontsize}
-\RequirePackage{multicol}
+\RequirePackage[tt=false,type1=true]{libertine} % the font we use
+\RequirePackage{microtype} % just to make rendering smooth
+\RequirePackage{anyfontsize} % to support all sizes
+\RequirePackage{multicol} % for pptWide environment
 \RequirePackage[fontsize=24pt]{fontsize} % to make fonts larger
-\RequirePackage{changepage}
-\RequirePackage{soul}
-\RequirePackage{href-ul}
-
-\RequirePackage{tikz}
-  \usetikzlibrary{arrows}
-  \usetikzlibrary{decorations}
-  \usetikzlibrary{decorations.pathmorphing}
-  \usetikzlibrary{intersections}
-  \usetikzlibrary{positioning}
-  \usetikzlibrary{backgrounds}
-  \usetikzlibrary{calc}
-  \usetikzlibrary{shapes.arrows}
-\RequirePackage{tikzpagenodes}
+\RequirePackage{changepage} % to use 'adjustwidth' environment in pptWide
+\RequirePackage{soul} % for underscores in crumbs
+\RequirePackage{tikz} % for drawing circles
+\RequirePackage{lastpage} % to count pages and show total
 
 \RequirePackage{crumbs}
   \renewcommand\crumb[2]{%
@@ -80,7 +69,6 @@
       \end{textblock}%
     \fi
   }
-  \RequirePackage{lastpage}
   \fancyhead[R]{%
     \ifnum\value{page}=1\else%
       \begin{textblock}{4}[1,0](15,1)%
