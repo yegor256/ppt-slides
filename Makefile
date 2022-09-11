@@ -24,7 +24,7 @@
 .ONESHELL:
 
 NAME=ppt
-PARTS=$(NAME)-9x6.tex $(NAME)-dark.tex $(NAME)-light.tex
+PARTS=$(NAME)-9x6.tex $(NAME)-dark.tex $(NAME)-light.tex $(NAME)-dark-mono.tex $(NAME)-light-mono.tex
 
 all: $(NAME).pdf test copyright zip
 
@@ -50,6 +50,7 @@ zip: $(NAME).pdf $(NAME).sty
 	cp ../../README.md .
 	cp ../../$(NAME).sty .
 	cp ../../$(NAME).tex .
+	cp ../../face.jpg .
 	for p in $(PARTS); do cp ../../$${p} .; done
 	cp ../../.latexmkrc .
 	latexmk -pdf $(NAME).tex

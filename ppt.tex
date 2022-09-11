@@ -23,7 +23,7 @@
 \documentclass{article}
 \usepackage[increment]{crumbs}
 \usepackage[static]{clicks}
-\usepackage[template=light]{ppt}
+\usepackage[template=light-mono]{ppt}
 \usepackage[nonumbers]{ffcode}
 \usepackage{titling}
 \usepackage{textcomp}
@@ -38,32 +38,144 @@
 \plush{
   \pptMiddle{
     \pptTitle{ppt}{\thetitle}\par
-    {\scshape\theauthor}\par
+    {\scshape Made by \theauthor}\par
     \thedate
   }
 }
 
 \clearpage
 This package helps you make slide decks in \LaTeX:
-
-\begin{ffcode}
+{\small\begin{ffcode}
 \documentclass{article}
 \usepackage{clicks}
-\usepackage[template=light]{ppt}
-\plick{\pptBanner{Making Slides Is Easy}{
+\usepackage[template=dark]{ppt}
+\begin{document}
+\plick{\pptBanner{Making Slides Is Easy}}
 \plick{Just use this package...}
 \plish{together with 'clicks' package.}
 \end{document}
 \end{ffcode}
-
+}
 They will look similar to what PowerPoint\texttrademark{} can make,
-but with the precision of \LaTeX.
+but with the precision of \LaTeX. We recomend to use this package
+together with \href{https://github.com/yegor256/clicks}{clicks}.
 
-\pptChapter{Chapters \& Sections}
+\clearpage
+\plush{\pptChapter[Layout]{Scaffolding and Layout}}
 
-\plush{To be continued...}
+\clearpage
+\pptSection{Chapters}
+First, split your story into Chapters:
+{\scriptsize\begin{ffcode}
+\documentclass{article}
+\usepackage{clicks}
+\usepackage[template=light]{ppt}
+\begin{document}
+\pptToc
+\plush{\pptChapter{About Me}}
+...
+\plush{\pptChapter[Idea]{My Idea Is Novel}}
+...
+\plush{\pptChapter[FAQ]{Discussion \& Questions}}
+...
+\end{document}
+\end{ffcode}
+}
+\ff{\char`\\pptToc} will render the table of contents in an interactive ``clickable'' format.
+Thanks to the use of \href{https://github.com/yegor256/crumbs}{crumbs}, there will
+be a navigation at the top left corner.
 
+\clearpage
+\pptSection{Sections}
+Put Sections inside Chapters:
+{\scriptsize\begin{ffcode}
+\begin{document}
+\pptToc
+\plush{\pptChapter{About Me}}
+\plush{\pptSection[Student]{I'm a Student}}
+...
+\plush{\pptSection[Athlete]{Also, I'm an Athlete}}
+...
+\plush{\pptChapter[Idea]{My Idea Is Novel}}
+\plush{\pptSection{Novelty}}
+\plush{\pptSection{Impact}}
+\end{document}
+\end{ffcode}
+}
+\ff{\char`\\pptChapter} and \ff{\char`\\pptSection} used together will render
+nice two-level nagivation menu at the top left corner.
+
+\clearpage
+\pptSection[Signatures]{Bottom Signatures}
+You can place the title of the presentation and your name at the bottom
+of each slide, on the left and on the right respectively:
+{\scriptsize\begin{ffcode}
+\documentclass{article}
+\usepackage{clicks}
+\usepackage[template=light]{ppt}
+\pptLeft{How Did I Spend Last Summer}
+\pptRight{Yegor Bugayenko}
+\begin{document}
+...
+\end{document}
+\end{ffcode}
+}
+If you don't use \ff{\char`\\pptLeft} or \ff{\char`\\pptRight}, nothing will
+be printed at the bottom.
+
+\clearpage
+\plush{\pptChapter[Elements]{Content Elements}}
+
+\clearpage
+\pptSection[Images]{Images}
+You can add an image to the slide:
+{\scriptsize\begin{ffcode}
+\begin{document}
+\plush{\pptPic{0.3}{face.jpg}}
+\end{document}
+\end{ffcode}
+}
+The first argument is the width of the image in relation to \ff{\char`\\textwidth},
+while the second one is the path of it:\par
+\pptPic{0.3}{face.jpg}
+
+\clearpage
+\pptSection[Snippets]{Code Snippets}
+You can add a piece of code to the slide (we recommend using \href{https://github.com/yegor256/ffcode}{ffcode}):
+{\scriptsize
+\begin{verbatim}
+\begin{document}
+\clearpage
+\pptHeader{This is How You Print to Console:}
+\begin{ffcode}
+System.out.println("Hello, world!");
+\end{ffcode}
+\end{document}
+\end{verbatim}
+}
+Don't use \ff{\char`\\plick} or \ff{\char`\\plush}, they won't work with code snippets.
+
+\ff{\char`\\pptHeader} prints a header similar to what \ff{\char`\\pptSection} prints, but
+doesn't start a new section.
+
+\clearpage
+\pptSection[QR]{QR Codes}
+Sometimes it's convenient to show a QR code to your audience instead of
+a URL, since it's easier to use --- they can scan it:
+{\scriptsize\begin{ffcode}
+\begin{document}
+\plick{Check my blog post by this link:}
+\plush{\pptQR{https://www.yegor256.com}}
+\end{document}
+\end{ffcode}
+}
+The code will look like this, thanks to \href{https://ctan.org/pkg/qrcode}{qrcode} package that
+we use behind the scene:\par
+\pptQR[1in]{https://www.yegor256.com}
+
+\clearpage
 \plush{
+  \crumbection{Sources}
   \pptMiddle{
 	  More details about this package you can find\\
 	  in \href{https://github.com/yegor256/ppt}{yegor256/ppt} GitHub repository.

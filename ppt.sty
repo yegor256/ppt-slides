@@ -38,6 +38,8 @@
 
 \makeatletter\ifdefined\ppt@template
   \input{\ppt@directory/ppt-9x6.tex}
+	\RequirePackage{xcolor}
+	\RequirePackage{pagecolor}
   \input{\ppt@directory/ppt-\ppt@template.tex}
 \else
 	\message{^^Jppt: No template is loaded, because 'template' option is not specified}
@@ -53,8 +55,7 @@
 \RequirePackage{tikz}
 \RequirePackage{tikzpagenodes}
 \RequirePackage[inline]{enumitem}
-
-\newcommand\br{\newline}
+\RequirePackage{crumbs}
 
 \newcommand\pptMiddle[1]{%
   \vspace*{\fill}#1\vspace*{\fill}%
@@ -62,21 +63,22 @@
 
 \newcommand\pptBanner[2][green]{%
   \par
-  {\setlength{\fboxsep}{6pt}\colorbox{#1}{\color{white}\large #2}}
+  {\setlength{\fboxsep}{6pt}\colorbox{#1}{\color{\thepagecolor}\large #2}}
   \par
 }
 
-\RequirePackage{crumbs}
 \newcommand\pptChapter[2][]{%
   \crumbection[#1]{#2}%
   \pptMiddle{%
-    {\large\ttfamily Chapter \#\the\value{section}:}\br
+    {\large\ttfamily Chapter \#\the\value{section}:}
+    \newline
     \rotatebox{1}{\pptBanner[blue]{\LARGE#2}}
   }
 }
 
-\newcommand\pptSection[1]{%
-  \pptHeader{#1}%
+\newcommand\pptSection[2][]{%
+  \subcrumbection[#1]{#2}
+  \pptHeader{#2}%
 }
 
 \newcommand\pptHeader[1]{%
