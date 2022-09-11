@@ -67,6 +67,22 @@ together with \href{https://github.com/yegor256/clicks}{clicks}.
 \plush{\pptChapter[Layout]{Scaffolding and Layout}}
 
 \clearpage
+\pptSection{Template}
+You start with a template for your slide deck:
+{\scriptsize\begin{ffcode}
+\documentclass{article}
+\usepackage{clicks}
+\usepackage[template=9x6]{ppt-slides}
+\begin{document}
+...
+\end{document}
+\end{ffcode}
+}
+There is only one template, which is used by default: \ff{9x6}. If you don't
+specify the name, it will be used. If you don't use \ff{template} option at all,
+the default \ff{article} will be rendered, which is not what you want.
+
+\clearpage
 \pptSection[Scheme]{Color Schemes}
 You can choose a color scheme for your slides, using \ff{scheme} option
 of the package:
