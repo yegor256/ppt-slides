@@ -2,13 +2,14 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/ppt/blob/master/LICENSE.txt)
 
 This LaTeX package helps you create slide decks as good looking
-as with PowerPoint, but more strict. Check
-[this series of lectures](https://github.com/yegor256/ssd16)
-fully designed with this package.
+as with [PowerPoint™](https://en.wikipedia.org/wiki/Microsoft_PowerPoint),
+but more precise, uniform, and visually strict.
+Check [this series of lectures](https://github.com/yegor256/ssd16)
+fully designed with the use of this package.
 
 First, [install it](https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages)
 from [CTAN](https://ctan.org/pkg/ppt)
-and then use in the preamble:
+and then use in preamble:
 
 ```tex
 \documentclass{article}
@@ -23,11 +24,11 @@ and then use in the preamble:
 \end{document}
 ```
 
-The full example and all commands are available in the 
+The full example and all commands are available in
 [`ppt.tex`](https://github.com/yegor256/ppt/blob/master/ppt.tex) file.
 
-If you want to contribute yourself, make a fork, then create a branch, 
-then run `make` in the root directory.
+If you want to contribute yourself, make a fork, create a branch,
+then run `make` in root directory.
 It should compile everything without errors. If not, submit an issue and wait.
 Otherwise, make your changes and then run `make` again. If the build is
 still clean, submit a pull request.
