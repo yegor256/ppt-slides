@@ -15,12 +15,11 @@ and then use in the preamble:
 \usepackage{clicks}
 \usepackage[template=dark]{ppt}
 \begin{document}
-\plick{\pptBanner{This Is My First Slide}
+plick{\pptBanner{This Is My First Slide}}
 \plick{The slide tells you an interesting story...}
 \plick{but slowly...}
 \plick{step by step...}
 \plush{until you get totally bored.}
-\end{ppt}
 \end{document}
 ```
 
