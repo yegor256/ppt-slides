@@ -39,17 +39,12 @@
 \makeatletter\ifdefined\ppt@template
   \input{\ppt@directory/ppt-9x6.tex}
 	\RequirePackage{xcolor}
-	\RequirePackage{pagecolor}
   \input{\ppt@directory/ppt-\ppt@template.tex}
 \else
 	\message{^^Jppt: No template is loaded, because 'template' option is not specified}
 \fi\makeatother
 
-\RequirePackage{geometry}
-  \geometry{paperwidth=16in, paperheight=9in, left=4in, right=2in, top=1.5in, bottom=1.5in}
-\RequirePackage[absolute]{textpos}
-  \TPGrid{16}{16}
-
+\RequirePackage{pagecolor}
 \RequirePackage{varwidth}
 \RequirePackage{qrcode}
 \RequirePackage{tikz}

@@ -23,7 +23,7 @@
 \documentclass{article}
 \usepackage[increment]{crumbs}
 \usepackage[static]{clicks}
-\usepackage[template=light-mono]{ppt}
+\usepackage[template=dark]{ppt}
 \usepackage[nonumbers]{ffcode}
 \usepackage{titling}
 \usepackage{textcomp}
@@ -52,7 +52,7 @@ This package helps you make slide decks in \LaTeX:
 \begin{document}
 \plick{\pptBanner{Making Slides Is Easy}}
 \plick{Just use this package...}
-\plish{together with 'clicks' package.}
+\plush{together with 'clicks' package.}
 \end{document}
 \end{ffcode}
 }
@@ -62,6 +62,27 @@ together with \href{https://github.com/yegor256/clicks}{clicks}.
 
 \clearpage
 \plush{\pptChapter[Layout]{Scaffolding and Layout}}
+
+\clearpage
+\pptSection{Templates}
+You can choose the template for your slides, using \ff{template} option
+of the package:
+{\scriptsize\begin{ffcode}
+\documentclass{article}
+\usepackage{clicks}
+\usepackage[template=light]{ppt}
+\begin{document}
+...
+\end{document}
+\end{ffcode}
+}
+There are a few out-of-the-box templates available: \ff{light}, \ff{dark},
+\ff{light-mono}, and \ff{dark-mono}. You can design your own, using
+\ff{ppt-light.text} file as an example:
+{\scriptsize\begin{ffcode}
+\usepackage[template=/usr/local/my-template.tex]{ppt}
+\end{ffcode}
+}
 
 \clearpage
 \pptSection{Chapters}
