@@ -1,12 +1,17 @@
 docker:
-  image: yegor256/rultor-image:1.11.0
+  image: yegor256/rultor-image:1.13.0
 install: |-
-  tlmgr option repository ctan
-  tlmgr --verify-repo=none update --self
-  tlmgr --verify-repo=none install l3build
+  sudo apt-get install -y python3-pygments
+  sudo pip3 install pygments
+  sudo tlmgr option repository ctan
+  sudo gem install texsc:0.6.0
+  sudo gem install texqc:0.6.0
+  sudo apt-get install -y aspell
+  sudo tlmgr --verify-repo=none update --self
+  sudo tlmgr --verify-repo=none install l3build
 release:
   script: |-
     make VERSION=${tag} set-version
-    git commit -m "version set to ${tag}"
+    git commit -am "version set to ${tag}"
     make
-    l3build upload
+    echo 'y' | l3build upload --halt-on-error
