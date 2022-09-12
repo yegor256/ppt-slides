@@ -69,6 +69,7 @@ zip: $(NAME).pdf $(NAME).sty
 	cd ..
 	zip -r $(NAME).zip *
 	cp $(NAME).zip ../$(NAME)-ctan.zip
+	unzip -l $(NAME).zip
 	cd ..
 
 clean:
