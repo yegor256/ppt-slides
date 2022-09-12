@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-.SHELLFLAGS = -e -x -c
+.SHELLFLAGS = -e -x -c -o pipefail
 .ONESHELL:
 
 VERSION=0.0.0
@@ -65,7 +65,7 @@ zip: $(NAME).pdf $(NAME).sty
 	latexmk -pdf $(NAME).tex
 	rm .latexmkrc
 	rm -rf _minted-* *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.log *.run.xml *.out *.exc *.crumbs
-	cat $(NAME).sty $(PARTS) | grep RequirePackage | gsed -e "s/.*{\(.\+\)}.*/hard \1/" | uniq > DEPENDS.txt
+	cat $(NAME).sty $(PARTS) | grep RequirePackage | sed -e "s/.*{\(.\+\)}.*/hard \1/" | uniq > DEPENDS.txt
 	cd ..
 	zip -r $(NAME).zip *
 	cp $(NAME).zip ../$(NAME)-ctan.zip
