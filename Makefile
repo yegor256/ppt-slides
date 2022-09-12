@@ -22,6 +22,7 @@
 
 .SHELLFLAGS = -e -x -c -o pipefail
 .ONESHELL:
+SHELL = bash
 
 VERSION=0.0.0
 NAME=ppt-slides
