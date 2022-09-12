@@ -1,4 +1,5 @@
 [![make](https://github.com/yegor256/ppt-slides/actions/workflows/latexmk.yml/badge.svg)](https://github.com/yegor256/ppt-slides/actions/workflows/latexmk.yml)
+[![CTAN](https://img.shields.io/ctan/v/ppt-slides)](https://ctan.org/pkg/ppt-slides)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/ppt-slides/blob/master/LICENSE.txt)
 
 This LaTeX package helps you create slide decks as good looking
