@@ -158,6 +158,20 @@ If you don't use \ff{\char`\\pptLeft} or \ff{\char`\\pptRight}, nothing will
 be printed at the bottom.
 
 \clearpage
+\pptSection[Minutes]{Tracking Minutes}
+By default, if you render your slide deck in non-static mode (option \ff{static} for clicks package),
+there will be minutes tracking in the right top corner of each slide. You can turn this off
+by using \ff{nominutes} option of the package:
+\begin{ffcode*}{fontsize=\small}
+\documentclass{article}
+\usepackage{clicks}
+\usepackage[template,scheme=light,nominutes]{ppt-slides}
+\begin{document}
+...
+\end{document}
+\end{ffcode*}
+
+\clearpage
 \pptSection[Wide]{Wide Slides}
 Sometimes you need your slide content to take all visible horizontal space:
 \begin{ffcode*}{fontsize=\scriptsize}

@@ -74,13 +74,15 @@
       \begin{textblock}{4}[1,0](15,1)%
         {\ttfamily\normalsize {\thepage{}}{\footnotesize{\color{grey}/\pageref{LastPage}}}}
       \end{textblock}%
-      \ifcsname c@minutes\endcsname
-        \ifnum\value{minutes}=0\else%
-          \begin{textblock}{1}[1,0](15.8,0.2)%
-            \tikz{\node[inner sep=2pt,circle,draw=grey]{\color{grey}\scriptsize\ttfamily\theminutes{}};}
-          \end{textblock}%
+      \makeatletter\ifdefined\ppt@nominutes\else
+        \ifcsname c@minutes\endcsname
+          \ifnum\value{minutes}=0\else%
+            \begin{textblock}{1}[1,0](15.8,0.2)%
+              \tikz{\node[inner sep=2pt,circle,draw=grey]{\color{grey}\scriptsize\ttfamily\theminutes{}};}
+            \end{textblock}%
+          \fi
         \fi
-      \fi
+      \fi\makeatother
     \fi
   }
 
