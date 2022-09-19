@@ -2,6 +2,7 @@ module = "ppt-slides"
 uploadconfig = {
   update = true,
   confirm = true,
+  announcement = "",
   pkg = "ppt-slides",
   version = "0.0.0",
   author = "Yegor Bugayenko",
