@@ -26,6 +26,7 @@
   \TPGrid{16}{16}
 \RequirePackage[tt=false,type1=true]{libertine} % the font we use
 \RequirePackage{microtype} % just to make rendering smooth
+\AddToHook{env/verbatim/begin}{\microtypesetup{protrusion=false}}
 \RequirePackage{anyfontsize} % to support all sizes
 \RequirePackage{multicol} % for pptWide environment
 \RequirePackage[fontsize=24pt]{fontsize} % to make fonts larger
