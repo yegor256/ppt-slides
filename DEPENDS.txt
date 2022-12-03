@@ -1,0 +1,13 @@
+hard pgfopts
+hard xcolor
+hard ifthen
+hard href-ul
+hard pagecolor
+hard varwidth
+hard qrcode
+hard tikz
+hard tikzpagenodes
+hard enumitem
+hard crumbs
+hard tabularx
+hard seqsplit
