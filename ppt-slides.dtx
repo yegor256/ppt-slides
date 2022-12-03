@@ -212,6 +212,7 @@
 % \end{document}
 % \end{docshot}
 
+% \DescribeMacro{\pptHeader}
 % You can add a piece of code to the slide (we recommend using \href{https://github.com/yegor256/ffcode}{ffcode}):
 % \begin{docshot}
 % \documentclass{article}
@@ -227,6 +228,19 @@
 % \end{document}
 % \end{docshot}
 % Don't use |\plick| or |\plush|, they won't work with code snippets.
+% The |\pptHeader| command prints a header similar to what the |\pptSection| command prints, but
+% doesn't start a new section.
+
+% \DescribeMacro{\pptQuote}
+% \begin{docshot}
+% \documentclass{article}
+% \usepackage[template,scheme=dark]{ppt-slides}
+% \usepackage{ffcode}
+% \begin{document}
+% \pptQuote{socrates.jpg}{The only true wisdom
+% is in knowing you know nothing}{Socrates}
+% \end{document}
+% \end{docshot}
 
 % \DescribeMacro{pptWide}
 % \DescribeMacro{pptWideOne}
