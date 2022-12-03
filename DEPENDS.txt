@@ -16,3 +16,4 @@ hard anyfontsize
 hard fontsize
 hard changepage
 hard soul
+hard lastpage
