@@ -130,6 +130,36 @@
 % specify the name, it will be used. If you don't use the |template| option at all,
 % the default |article| will be rendered, which is not what you want.
 
+% \DescribeMacro{scheme}
+% You can choose a color scheme for your slides, using the |scheme| option
+% of the package:
+%\iffalse
+%<*verb>
+%\fi
+\begin{verbatim}
+\documentclass{article}
+\usepackage{clicks}
+\usepackage[template,scheme=light]{ppt-slides}
+\begin{document}
+...
+\end{document}
+\end{verbatim}
+%\iffalse
+%</verb>
+%\fi
+% There are a few out-of-the-box schemes available: |light|, |dark|,
+% |light-mono|, and |dark-mono|. You can design your own, using
+% |ppt-light.tex| file as an example:
+%\iffalse
+%<*verb>
+%\fi
+\begin{verbatim}
+\usepackage[template,scheme=/usr/local/my-colors.tex]{ppt-slides}
+\end{verbatim}
+%\iffalse
+%</verb>
+%\fi
+
 % \StopEventually{}
 
 % \section{Implementation}
