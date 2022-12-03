@@ -6,7 +6,7 @@ checkengines = {"pdftex", "luatex", "xetex"}
 tagfiles = {"build.lua", "ppt-slides.dtx"}
 docfiles = {"socrates.jpg"}
 cleanfiles = {"build", "_docshots", "*.run.xml", "*.log", "*.crumbs", "*.bcf", "*.glo", "*.fls", "*.idx", "*.out", "*.fdb_latexmk", "*.aux", "*.sty", "*.zip", "ppt-slides.pdf"}
-typesetruns = 1
+typesetruns = 2
 
 uploadconfig = {
   update = true,
