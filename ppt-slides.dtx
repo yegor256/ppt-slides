@@ -108,6 +108,95 @@
 % \end{document}
 % \end{docshot}
 
+% \section{Layout}
+
+% First, split your story into chapters:
+%\iffalse
+%<*verb>
+%\fi
+\begin{verbatim}
+\documentclass{article}
+\usepackage{clicks}
+\usepackage[template,scheme=light]{ppt-slides}
+\begin{document}
+\pptToc
+\plush{\pptChapter{About Me}}
+...
+\plush{\pptChapter[Idea]{My Idea Is Novel}}
+...
+\plush{\pptChapter[FAQ]{Discussion \& Questions}}
+...
+\end{document}
+\end{verbatim}
+%\iffalse
+%</verb>
+%\fi
+% |\pptToc| will render the table of contents in an interactive ``clickable'' format.
+% Thanks to the use of \href{https://github.com/yegor256/crumbs}{crumbs}, there will
+% be a navigation at the top left corner.
+
+% Then, put Sections inside Chapters:
+%\iffalse
+%<*verb>
+%\fi
+\begin{verbatim}
+\begin{document}
+\pptToc
+\plush{\pptChapter{About Me}}
+\plush{\pptSection[Student]{I'm a Student}}
+...
+\plush{\pptSection[Athlete]{Also, I'm an Athlete}}
+...
+\plush{\pptChapter[Idea]{My Idea Is Novel}}
+\plush{\pptSection{Novelty}}
+\plush{\pptSection{Impact}}
+\end{document}
+\end{verbatim}
+%\iffalse
+%</verb>
+%\fi
+% The |\pptChapter| and |\pptSection| commands used together will render
+% nice two-level nagivation menu at the top left corner.
+
+% You can place the title of the presentation and your name at the bottom
+% of each slide, on the left and on the right respectively:
+%\iffalse
+%<*verb>
+%\fi
+\begin{verbatim}
+\documentclass{article}
+\usepackage{clicks}
+\usepackage[template,scheme=light]{ppt-slides}
+\pptLeft{How Did I Spend Last Summer}
+\pptRight{Yegor Bugayenko}
+\begin{document}
+...
+\end{document}
+\end{verbatim}
+%\iffalse
+%</verb>
+%\fi
+% If you don't use the |\pptLeft| or |\pptRight| commands, nothing will
+% be printed at the bottom.
+
+% By default, if you render your slide deck in non-static mode (the |static| option for the ``clicks'' package),
+% there will be minutes tracking in the right top corner of each slide. You can turn this off
+% by using the |nominutes| option of the package:
+%\iffalse
+%<*verb>
+%\fi
+\begin{verbatim}
+\documentclass{article}
+\usepackage{clicks}
+\usepackage[template,scheme=light,nominutes]{ppt-slides}
+\begin{document}
+...
+\end{document}
+\end{verbatim}
+%\iffalse
+%</verb>
+%\fi
+
 % \section{Package Options}
 
 % \DescribeMacro{template}
