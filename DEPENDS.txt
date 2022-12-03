@@ -1,6 +1,5 @@
 hard pgfopts
 hard xcolor
-hard ifthen
 hard href-ul
 hard pagecolor
 hard varwidth
@@ -9,8 +8,8 @@ hard pgf
 hard tikzpagenodes
 hard enumitem
 hard crumbs
-hard tabularx
 hard seqsplit
 hard hardwrap
 hard ifoddpage
 hard textpos
+hard anyfontsize
