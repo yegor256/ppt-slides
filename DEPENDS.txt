@@ -13,3 +13,4 @@ hard tabularx
 hard seqsplit
 hard hardwrap
 hard ifoddpage
+hard textpos
