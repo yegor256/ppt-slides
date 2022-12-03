@@ -344,6 +344,7 @@
 % \changes{0.0.1}{2022/09/11}{First draft.}
 % \changes{0.1.4}{2022/09/15}{The \texttt{nominutes} package option added.}
 % \changes{0.1.5}{2022/09/19}{The default directory fixed.}
+% \changes{0.2.0}{2022/12/03}{We migrated to the \texttt{ltxdoc} format and \texttt{.dtx} file.}
 
 % First, we parse the package options:
 %    \begin{macrocode}
@@ -369,7 +370,8 @@
 \makeatletter\ifdefined\ppt@template
   \input{\ppt@directory ppt-templates/ppt-\ppt@template.tex}
 \else
-  \message{^^Jppt: No template is loaded, because 'template' option is not specified}
+  \message{^^Jppt: No template is loaded, because
+    the 'template' option is not specified}
 \fi\makeatother
 %    \end{macrocode}
 
@@ -379,7 +381,8 @@
   \RequirePackage{xcolor}
   \input{\ppt@directory ppt-schemes/ppt-\ppt@scheme.tex}
 \else
-  \message{^^Jppt: No color scheme is loaded, because 'scheme' option is not specified}
+  \message{^^Jppt: No color scheme is loaded, because
+    the 'scheme' option is not specified}
 \fi\makeatother
 %    \end{macrocode}
 
@@ -411,7 +414,8 @@
 %    \begin{macrocode}
 \newcommand\pptBanner[2][green]{%
   \par%
-  {\setlength{\fboxsep}{6pt}\colorbox{#1}{\color{\thepagecolor}\large #2}}
+  {\setlength{\fboxsep}{6pt}%
+    \colorbox{#1}{\color{\thepagecolor}\large #2}}
   \par%
 }
 %    \end{macrocode}
@@ -541,7 +545,8 @@
   \begin{tikzpicture}[remember picture,overlay]%
     \ifthenelse{\equal{#1}{left}}%
     {%
-      \node[anchor=north east] at ($(current page text area.north west) - (24pt, 18pt)$) {%
+      \node[anchor=north east] at
+        ($(current page text area.north west) - (24pt, 18pt)$) {%
         \begin{minipage}{0.25\textwidth}%
           \raggedleft #2%
         \end{minipage}%
@@ -614,7 +619,8 @@
       \raggedleft%
       \pptQR[1in]{#2}%
       \\[3pt]
-      \ttfamily\fontsize{8pt}{10pt}\selectfont\seqsplit{#2} \href{#2}{$\rightarrow$}%
+      \ttfamily\fontsize{8pt}{10pt}\selectfont%
+      \seqsplit{#2} \href{#2}{$\rightarrow$}%
       \\
     \end{minipage}%
   }%
