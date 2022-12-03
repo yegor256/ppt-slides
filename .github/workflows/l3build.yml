@@ -12,6 +12,16 @@ jobs:
         os: [ubuntu-20.04, macos-12]
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: sudo apt-get install -y python3-pygments && sudo pip3 install pygments
+        if: matrix.os == 'ubuntu-20.04'
+      - run: |
+          pip3 install pygments
+          easy_install Pygments
+          pygmentize -V
+        if: matrix.os == 'macos-12'
       - run: sudo apt-get -y install ghostscript
         if: matrix.os == 'ubuntu-20.04'
       - uses: teatimeguest/setup-texlive-action@v2.5.0
