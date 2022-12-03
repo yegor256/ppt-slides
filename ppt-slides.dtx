@@ -398,6 +398,7 @@
 %    \end{macrocode}
 
 % \begin{macro}{\pptMiddle}
+% Then, we define the |\pptMiddle| command:
 %    \begin{macrocode}
 \newcommand\pptMiddle[1]{%
   \vspace*{\fill}#1\vspace*{\fill}%
@@ -406,7 +407,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptBanner}
-% Then, we define |\pptBanner| command:
+% Then, we define the |\pptBanner| command:
 %    \begin{macrocode}
 \newcommand\pptBanner[2][green]{%
   \par%
@@ -417,7 +418,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptChapter}
-% Then, we define |\pptChapter| command:
+% Then, we define the |\pptChapter| command:
 %    \begin{macrocode}
 \newcommand\pptChapter[2][]{%
   \crumbection[#1]{#2}%
@@ -431,7 +432,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptSection}
-% Then, we define |\pptSection| command:
+% Then, we define the |\pptSection| command:
 %    \begin{macrocode}
 \newcommand\pptSection[2][]{%
   \subcrumbection[#1]{#2}%
@@ -441,7 +442,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptHeader}
-% Then, we define |\pptHeader| command:
+% Then, we define the |\pptHeader| command:
 %    \begin{macrocode}
 \newcommand\pptHeader[1]{%
   \vspace*{-0.75in}\hspace*{-0.5in}%
@@ -452,7 +453,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptTitle}
-% Then, we define |\pptTitle| command:
+% Then, we define the |\pptTitle| command:
 %    \begin{macrocode}
 \newcommand\pptTitle[2]{%
   {\pptBanner{\Huge #1}}%
@@ -462,7 +463,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptToc}
-% Then, we define |\pptToc| command:
+% Then, we define the |\pptToc| command:
 %    \begin{macrocode}
 \newcommand*\pptTOC{}
 \newcommand\pptToc[1][]{%
@@ -498,7 +499,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptQuote}
-% Then, we define |\pptQuote| command:
+% Then, we define the |\pptQuote| command:
 %    \begin{macrocode}
 \RequirePackage{tabularx}
 \newcommand\pptQuote[3]{%
@@ -519,7 +520,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptPic}
-% Then, we define |\pptPic| command:
+% Then, we define the |\pptPic| command:
 %    \begin{macrocode}
 \newcommand\pptPic[2]{%
   {%
@@ -534,7 +535,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptPin}
-% Then, we define |\pptPin| command:
+% Then, we define the |\pptPin| command:
 %    \begin{macrocode}
 \newcommand\pptPin[2][right]{%
   \begin{tikzpicture}[remember picture,overlay]%
@@ -559,7 +560,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptThought}
-% Then, we define |\pptThought| command:
+% Then, we define the |\pptThought| command:
 %    \begin{macrocode}
 \newcommand\pptThought[1]{%
   \pptMiddle{%
@@ -578,7 +579,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptSnippet}
-% Then, we define |\pptSnippet| command:
+% Then, we define the |\pptSnippet| command:
 %    \begin{macrocode}
 \newcommand\pptSnippet[2][\small]{%
   \begin{samepage}%
@@ -589,7 +590,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptQR}
-% Then, we define |\pptQR| command:
+% Then, we define the |\pptQR| command:
 %    \begin{macrocode}
 \newcommand\pptQR[2][2in]{%
   \tikz{%
@@ -604,7 +605,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptPinQR}
-% Then, we define |\pptPinQR| command:
+% Then, we define the |\pptPinQR| command:
 %    \begin{macrocode}
 \RequirePackage{seqsplit}
 \newcommand\pptPinQR[2][right]{%
@@ -622,7 +623,7 @@
 % \end{macro}
 
 % \begin{macro}{pptWide}
-% Finally, we define |pptWide| and |pptWideOne| environments:
+% Finally, we define the |pptWide| and |pptWideOne| environments:
 %    \begin{macrocode}
 \newenvironment{pptWideOne}
   {\begin{adjustwidth}{-2in}{-1in}}
