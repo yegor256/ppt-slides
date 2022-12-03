@@ -110,6 +110,8 @@
 
 % \section{Layout}
 
+% \DescribeMacro{\pptToc}
+% \DescribeMacro{\pptChapter}
 % First, split your story into chapters:
 %\iffalse
 %<*verb>
@@ -135,7 +137,8 @@
 % Thanks to the use of \href{https://github.com/yegor256/crumbs}{crumbs}, there will
 % be a navigation at the top left corner.
 
-% Then, put Sections inside Chapters:
+% \DescribeMacro{\pptSection}
+% Then, put sections inside chapters:
 %\iffalse
 %<*verb>
 %\fi
@@ -158,6 +161,8 @@
 % The |\pptChapter| and |\pptSection| commands used together will render
 % nice two-level nagivation menu at the top left corner.
 
+% \DescribeMacro{\pptLeft}
+% \DescribeMacro{\pptRight}
 % You can place the title of the presentation and your name at the bottom
 % of each slide, on the left and on the right respectively:
 %\iffalse
@@ -178,24 +183,6 @@
 %\fi
 % If you don't use the |\pptLeft| or |\pptRight| commands, nothing will
 % be printed at the bottom.
-
-% By default, if you render your slide deck in non-static mode (the |static| option for the ``clicks'' package),
-% there will be minutes tracking in the right top corner of each slide. You can turn this off
-% by using the |nominutes| option of the package:
-%\iffalse
-%<*verb>
-%\fi
-\begin{verbatim}
-\documentclass{article}
-\usepackage{clicks}
-\usepackage[template,scheme=light,nominutes]{ppt-slides}
-\begin{document}
-...
-\end{document}
-\end{verbatim}
-%\iffalse
-%</verb>
-%\fi
 
 % \section{Commands}
 
@@ -295,7 +282,6 @@
 %\fi
 \begin{verbatim}
 \documentclass{article}
-\usepackage{clicks}
 \usepackage[template=9x6]{ppt-slides}
 \begin{document}
 ...
@@ -315,12 +301,7 @@
 %<*verb>
 %\fi
 \begin{verbatim}
-\documentclass{article}
-\usepackage{clicks}
 \usepackage[template,scheme=light]{ppt-slides}
-\begin{document}
-...
-\end{document}
 \end{verbatim}
 %\iffalse
 %</verb>
@@ -351,7 +332,9 @@
 %\fi
 
 % \DescribeMacro{nominutes}
-% You can turn off minutes tracking with the |nominutes| package option:
+% By default, if you render your slide deck in non-static mode (the |static| option for the ``clicks'' package),
+% there will be minutes tracking in the right top corner of each slide. You can turn this off
+% by using the |nominutes| option of the package:
 %\iffalse
 %<*verb>
 %\fi

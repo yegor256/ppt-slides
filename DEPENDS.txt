@@ -5,7 +5,7 @@ hard href-ul
 hard pagecolor
 hard varwidth
 hard qrcode
-hard tikz
+hard pgf
 hard tikzpagenodes
 hard enumitem
 hard crumbs
