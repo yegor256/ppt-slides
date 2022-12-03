@@ -232,6 +232,7 @@
 % doesn't start a new section.
 
 % \DescribeMacro{\pptQuote}
+% You can put a quote next to the image, by using the |\pptQuote| command:
 % \begin{docshot}
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
@@ -239,6 +240,19 @@
 % \begin{document}
 % \pptQuote{socrates.jpg}{The only true wisdom
 % is in knowing you know nothing}{Socrates}
+% \end{document}
+% \end{docshot}
+
+% \DescribeMacro{\pptThought}
+% For an interesting thought in the middle of the slide, use |\pptThought|:
+% \begin{docshot}
+% \documentclass{article}
+% \usepackage[template,scheme=dark]{ppt-slides}
+% \usepackage{ffcode}
+% \begin{document}
+% \pptThought{Socrates said that the only true
+% wisdom is in knowing you know nothing. Was he
+% a wise man?...}
 % \end{document}
 % \end{docshot}
 
