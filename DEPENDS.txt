@@ -11,3 +11,4 @@ hard enumitem
 hard crumbs
 hard tabularx
 hard seqsplit
+hard hardwrap
