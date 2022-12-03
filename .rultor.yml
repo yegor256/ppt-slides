@@ -8,7 +8,9 @@ install: |-
   sudo tlmgr --verify-repo=none update l3build docshots iexec
 release:
   script: |-
-    make VERSION=${tag} set-version
+    l3build tag ${tag}
+    l3build ctan --show-log-on-error
+    texsc
+    texqc
     git commit -am "version set to ${tag}"
-    make
     echo 'y' | l3build upload --halt-on-error
