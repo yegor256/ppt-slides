@@ -14,3 +14,4 @@ hard ifoddpage
 hard textpos
 hard anyfontsize
 hard fontsize
+hard changepage
