@@ -205,7 +205,7 @@
 % while the second one is the path of it):
 % \begin{docshot}
 % \documentclass{article}
-% \usepackage{ppt-slides}
+% \usepackage[template]{ppt-slides}
 % \begin{document}
 % \pptPic{0.2}{socrates.jpg}
 % This is Socrates, a Greek philosopher.
@@ -215,12 +215,14 @@
 % You can add a piece of code to the slide (we recommend using \href{https://github.com/yegor256/ffcode}{ffcode}):
 % \begin{docshot}
 % \documentclass{article}
-% \usepackage{ppt-slides}
+% \usepackage[template]{ppt-slides}
 % \usepackage{ffcode}
 % \begin{document}
 % \pptHeader{This is How You Print to Console:}
 % \begin{ffcode}
-% System.out.println("Hello, world!");
+% void main(char** args) {
+%   printf("Hello, world!");
+% }
 % \end{ffcode}
 % \end{document}
 % \end{docshot}
