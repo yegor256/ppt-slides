@@ -236,7 +236,6 @@
 % \begin{docshot}
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
-% \usepackage{ffcode}
 % \begin{document}
 % \pptQuote{socrates.jpg}{The only true wisdom
 % is in knowing you know nothing}{Socrates}
@@ -248,13 +247,26 @@
 % \begin{docshot}
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
-% \usepackage{ffcode}
 % \begin{document}
 % \pptThought{Socrates said that the only true
 % wisdom is in knowing you know nothing. Was he
 % a wise man?...}
 % \end{document}
 % \end{docshot}
+
+% \DescribeMacro{\pptQR}
+% Sometimes it's convenient to show a QR code to your audience instead of
+% a URL, since it's easier to use --- they can scan it:
+% \begin{docshot}
+% \documentclass{article}
+% \usepackage[template,scheme=dark]{ppt-slides}
+% \begin{document}
+% Check my blog post by this link: \\
+% \pptQR{https://www.yegor256.com}
+% \end{document}
+% \end{docshot}
+% The code will look like this, thanks to \href{https://ctan.org/pkg/qrcode}{qrcode} package that
+% we use behind the scene.
 
 % \DescribeMacro{pptWide}
 % \DescribeMacro{pptWideOne}
