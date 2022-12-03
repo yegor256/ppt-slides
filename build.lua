@@ -1,4 +1,13 @@
 module = "ppt-slides"
+ctanupload = true
+typesetopts = "-interaction=batchmode -shell-escape -halt-on-error"
+checkopts = "-interaction=batchmode -shell-escape -halt-on-error"
+checkengines = {"pdftex", "luatex", "xetex"}
+tagfiles = {"build.lua", "ppt-slides.dtx"}
+docfiles = {}
+cleanfiles = {"build", "_docshots", "*.run.xml", "*.log", "*.crumbs", "*.bcf", "*.glo", "*.fls", "*.idx", "*.out", "*.fdb_latexmk", "*.aux", "*.sty", "*.zip", "ppt-slides.pdf"}
+typesetruns = 1
+
 uploadconfig = {
   update = true,
   confirm = true,
@@ -15,5 +24,12 @@ uploadconfig = {
   license = "mit",
   summary = "Good-looking slide decks à la PowerPoint (PPT)",
   repository = "https://github.com/yegor256/ppt-slides",
-  topic = "presentation"
+  topic = {"presentation"}
 }
+
+function update_tag(file, content, tagname, tagdate)
+  return string.gsub(
+    string.gsub(content, "0%.0%.0", tagname),
+    "0000%-00%-00", os.date("%Y-%m-%d")
+  )
+end

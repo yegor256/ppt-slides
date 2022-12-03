@@ -1,6 +1,7 @@
+% \iffalse meta-comment
 % (The MIT License)
 %
-% Copyright (c) 2022 Yegor Bugayenko
+% Copyright (c) 2021-2022 Yegor Bugayenko
 %
 % Permission is hereby granted, free of charge, to any person obtaining a copy
 % of this software and associated documentation files (the 'Software'), to deal
@@ -19,10 +20,124 @@
 % LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 % OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 % SOFTWARE.
+% \fi
 
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{ppt-slides}[0000-00-000 0.0.0 Slide Decks à la Power Point]
+% \CheckSum{0}
+%
+% \CharacterTable
+%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%   Digits        \0\1\2\3\4\5\6\7\8\9
+%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%   Dollar        \$     Percent       \%     Ampersand     \&
+%   Acute accent  \'     Left paren    \(     Right paren   \)
+%   Asterisk      \*     Plus          \+     Comma         \,
+%   Minus         \-     Point         \.     Solidus       \/
+%   Colon         \:     Semicolon     \;     Less than     \<
+%   Equals        \=     Greater than  \>     Question mark \?
+%   Commercial at \@     Left bracket  \[     Backslash     \\
+%   Right bracket \]     Circumflex    \^     Underscore    \_
+%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%   Right brace   \}     Tilde         \~}
 
+% \GetFileInfo{ppt-slies.dtx}
+% \DoNotIndex{\endgroup,\begingroup,\let,\else,\s,\n,\r,\\,\1,\fi}
+
+% \iffalse
+%<*driver>
+\ProvidesFile{ppt-slides.dtx}
+%</driver>
+%<package>\NeedsTeXFormat{LaTeX2e}
+%<package>\ProvidesPackage{ppt-slides}
+%<*package>
+[0000-00-00 0.0.0 Slide Decks a la Power Point]
+%</package>
+%<*driver>
+\documentclass{ltxdoc}
+\usepackage[T1]{fontenc}
+\usepackage[tt=false, type1=true]{libertine}
+\usepackage{microtype}
+\AddToHook{env/verbatim/begin}{\microtypesetup{protrusion=false}}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[runs=2,dtx,margin=0,small]{docshots}
+\usepackage{href-ul}
+\PageIndex
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+\begin{document}
+  \DocInput{ppt-slides.dtx}
+  \PrintChanges
+  \PrintIndex
+\end{document}
+%</driver>
+% \fi
+
+% \title{|ppt-slides|: \LaTeX{} Package for \\ Slide Decks \`{a} la Power Point\thanks{The sources are in GitHub at \href{https://github.com/yegor256/ppt-slides}{yegor256/ppt-slides}}}
+% \author{Yegor Bugayenko \\ \texttt{yegor256@gmail.com}}
+% \date{\filedate, \fileversion}
+%
+% \maketitle
+%
+% \section{Introduction}
+%
+% This package helps you render slide decks in PowerPoint\texttrademark{} style:
+% \begin{docshot}
+% \documentclass{article}
+% \usepackage[template,scheme=dark]{ppt-slides}
+% \begin{document}
+% \pptMiddle{\pptTitle{Hello, world!}{How are you?}}
+% \end{document}
+% \end{docshot}
+
+% It is recommended to use this package together with
+% \href{https://github.com/yegor256/clicks}{clicks}:
+% \begin{docshot}
+% \documentclass{article}
+% \usepackage[template,scheme=dark]{ppt-slides}
+% \usepackage[static]{clicks}
+% \begin{document}
+% This package helps you make slide decks in \LaTeX:
+% \plick{\pptBanner{Making Slides Is Easy}}
+% \plick{Just use this package...}
+% \plush{together with 'clicks' package.}
+% They will look similar to what PowerPoint can make,
+% but with the precision of \LaTeX. We recommend
+% to use this package together with ``clicks.''
+% \end{document}
+% \end{docshot}
+
+% \section{Package Options}
+
+% \DescribeMacro{template}
+% You start with a template for your slide deck:
+%\iffalse
+%<*verb>
+%\fi
+\begin{verbatim}
+\documentclass{article}
+\usepackage{clicks}
+\usepackage[template=9x6]{ppt-slides}
+\begin{document}
+...
+\end{document}
+\end{verbatim}
+%\iffalse
+%</verb>
+%\fi
+% There is only one template, which is used by default: |9x6|. If you don't
+% specify the name, it will be used. If you don't use the |template| option at all,
+% the default |article| will be rendered, which is not what you want.
+
+% \StopEventually{}
+
+% \section{Implementation}
+% \changes{0.0.1}{2022/09/11}{First draft.}
+% \changes{0.1.4}{2022/09/15}{The \texttt{nominutes} package option added.}
+% \changes{0.1.5}{2022/09/19}{The default directory fixed.}
+
+%    \begin{macrocode}
 \RequirePackage{pgfopts}
 \makeatletter
 \pgfkeys{
@@ -36,22 +151,28 @@
   nominutes/.estore in = \ppt@nominutes,
   directory
 }
-\ProcessPgfOptions*
+\ProcessPgfPackageOptions{/ppt-slides}
 \makeatother
+%    \end{macrocode}
 
+%    \begin{macrocode}
 \makeatletter\ifdefined\ppt@template
   \input{\ppt@directory ppt-templates/ppt-\ppt@template.tex}
 \else
   \message{^^Jppt: No template is loaded, because 'template' option is not specified}
 \fi\makeatother
+%    \end{macrocode}
 
+%    \begin{macrocode}
 \makeatletter\ifdefined\ppt@scheme
   \RequirePackage{xcolor}
   \input{\ppt@directory ppt-schemes/ppt-\ppt@scheme.tex}
 \else
-	\message{^^Jppt: No color scheme is loaded, because 'scheme' option is not specified}
+  \message{^^Jppt: No color scheme is loaded, because 'scheme' option is not specified}
 \fi\makeatother
+%    \end{macrocode}
 
+%    \begin{macrocode}
 \RequirePackage{ifthen} % for if/then/else in LaTeX
 \RequirePackage{href-ul} % for nice hyperlinks
 \RequirePackage{pagecolor} % to change page color
@@ -62,17 +183,28 @@
 \RequirePackage{tikzpagenodes} % for pptPin
 \RequirePackage[inline]{enumitem} % for lists in crumbs
 \RequirePackage{crumbs} % for crumbs
+%    \end{macrocode}
 
+% \begin{macro}{\pptMiddle}
+%    \begin{macrocode}
 \newcommand\pptMiddle[1]{%
   \vspace*{\fill}#1\vspace*{\fill}%
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{\pptBanner}
+%    \begin{macrocode}
 \newcommand\pptBanner[2][green]{%
   \par
   {\setlength{\fboxsep}{6pt}\colorbox{#1}{\color{\thepagecolor}\large #2}}
   \par
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{\pptChapter}
+%    \begin{macrocode}
 \newcommand\pptChapter[2][]{%
   \crumbection[#1]{#2}%
   \pptMiddle{%
@@ -81,23 +213,39 @@
     \rotatebox{1}{\pptBanner[blue]{\LARGE#2}}%
   }%
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{\pptSection}
+%    \begin{macrocode}
 \newcommand\pptSection[2][]{%
   \subcrumbection[#1]{#2}%
   \pptHeader{#2}%
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{\pptHeader}
+%    \begin{macrocode}
 \newcommand\pptHeader[1]{%
   \vspace*{-0.75in}\hspace*{-0.5in}%
   \rotatebox{1}{\pptBanner[orange]{\Large #1}}\vspace*{0.15in}%
   \par%
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{\pptTitle}
+%    \begin{macrocode}
 \newcommand\pptTitle[2]{%
   {\pptBanner{\Huge #1}}%
   {\pptBanner{\large #2}}%
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{\pptToc}
+%    \begin{macrocode}
 \newcommand*\pptTOC{}
 \newcommand\pptToc[1][]{%
   \renewcommand*\pptTOC{}%
@@ -128,7 +276,11 @@
   \end{@empty}%
   \ifdefined\flush\flush[1]\fi%
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{\pptQuote}
+%    \begin{macrocode}
 \RequirePackage{tabularx}
 \newcommand\pptQuote[3]{%
   \begin{tabularx}{\columnwidth}{c>{\raggedright\arraybackslash}X}%
@@ -144,7 +296,11 @@
     \\%
   \end{tabularx}%
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{\pptPic}
+%    \begin{macrocode}
 \newcommand\pptPic[2]{%
   {%
     \setlength{\fboxsep}{0pt}%
@@ -154,7 +310,11 @@
     }%
   }%
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{\pptPin}
+%    \begin{macrocode}
 \newcommand\pptPin[2][right]{%
   \begin{tikzpicture}[remember picture,overlay]%
     \ifthenelse{\equal{#1}{left}}
@@ -174,7 +334,11 @@
     }
   \end{tikzpicture}%
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{\pptThought}
+%    \begin{macrocode}
 \newcommand\pptThought[1]{%
   \pptMiddle{%
     \tikz{%
@@ -188,13 +352,21 @@
     }
   }
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{\pptSnippet}
+%    \begin{macrocode}
 \newcommand\pptSnippet[2][\small]{%
   \begin{samepage}%
     #1\verbatiminput{#2}%
   \end{samepage}%
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{\pptQR}
+%    \begin{macrocode}
 \newcommand\pptQR[2][2in]{%
   \tikz{%
     \node[draw=white]{%
@@ -204,7 +376,11 @@
     }%
   }
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{\pptPinQR}
+%    \begin{macrocode}
 \RequirePackage{seqsplit}
 \newcommand\pptPinQR[2][right]{%
   \pptPin[#1]{%
@@ -217,12 +393,28 @@
     \end{minipage}%
   }%
 }
+%    \end{macrocode}
+% \end{macro}
 
+% \begin{macro}{pptWide}
+%    \begin{macrocode}
 \newenvironment{pptWideOne}
   {\begin{adjustwidth}{-2in}{-1in}}
   {\end{adjustwidth}}
 \newenvironment{pptWide}[1]
   {\begin{pptWideOne}\begin{multicols}{#1}}
   {\end{multicols}\end{pptWideOne}}
+%    \end{macrocode}
+% \end{macro}
 
 \endinput
+
+% \Finale
+
+% \clearpage
+% \printbibliography
+% \clearpage
+
+% \PrintChanges
+% \clearpage
+% \PrintIndex
