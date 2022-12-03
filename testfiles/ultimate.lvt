@@ -3,7 +3,7 @@
 \usepackage[dry,increment]{crumbs}
 \usepackage[forget]{qrcode}
 \usepackage{clicks}
-\usepackage[template,scheme=dark]{ppt-slides}
+\usepackage[template,scheme=dark,directory=../../]{ppt-slides}
 \usepackage{titling}
 
 \begin{document}
