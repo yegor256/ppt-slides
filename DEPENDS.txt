@@ -12,3 +12,4 @@ hard crumbs
 hard tabularx
 hard seqsplit
 hard hardwrap
+hard ifoddpage
