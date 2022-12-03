@@ -345,6 +345,7 @@
 % \changes{0.1.4}{2022/09/15}{The \texttt{nominutes} package option added.}
 % \changes{0.1.5}{2022/09/19}{The default directory fixed.}
 
+% First, we parse the package options:
 %    \begin{macrocode}
 \RequirePackage{pgfopts}
 \makeatletter
@@ -363,6 +364,7 @@
 \makeatother
 %    \end{macrocode}
 
+% Then, we include the template:
 %    \begin{macrocode}
 \makeatletter\ifdefined\ppt@template
   \input{\ppt@directory ppt-templates/ppt-\ppt@template.tex}
@@ -371,6 +373,7 @@
 \fi\makeatother
 %    \end{macrocode}
 
+% Then, we include the scheme:
 %    \begin{macrocode}
 \makeatletter\ifdefined\ppt@scheme
   \RequirePackage{xcolor}
@@ -380,6 +383,7 @@
 \fi\makeatother
 %    \end{macrocode}
 
+% Then, we include a few packages:
 %    \begin{macrocode}
 \RequirePackage{ifthen} % for if/then/else in LaTeX
 \RequirePackage{href-ul} % for nice hyperlinks
@@ -402,16 +406,18 @@
 % \end{macro}
 
 % \begin{macro}{\pptBanner}
+% Then, we define |\pptBanner| command:
 %    \begin{macrocode}
 \newcommand\pptBanner[2][green]{%
-  \par
+  \par%
   {\setlength{\fboxsep}{6pt}\colorbox{#1}{\color{\thepagecolor}\large #2}}
-  \par
+  \par%
 }
 %    \end{macrocode}
 % \end{macro}
 
 % \begin{macro}{\pptChapter}
+% Then, we define |\pptChapter| command:
 %    \begin{macrocode}
 \newcommand\pptChapter[2][]{%
   \crumbection[#1]{#2}%
@@ -425,6 +431,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptSection}
+% Then, we define |\pptSection| command:
 %    \begin{macrocode}
 \newcommand\pptSection[2][]{%
   \subcrumbection[#1]{#2}%
@@ -434,6 +441,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptHeader}
+% Then, we define |\pptHeader| command:
 %    \begin{macrocode}
 \newcommand\pptHeader[1]{%
   \vspace*{-0.75in}\hspace*{-0.5in}%
@@ -444,6 +452,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptTitle}
+% Then, we define |\pptTitle| command:
 %    \begin{macrocode}
 \newcommand\pptTitle[2]{%
   {\pptBanner{\Huge #1}}%
@@ -453,6 +462,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptToc}
+% Then, we define |\pptToc| command:
 %    \begin{macrocode}
 \newcommand*\pptTOC{}
 \newcommand\pptToc[1][]{%
@@ -488,6 +498,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptQuote}
+% Then, we define |\pptQuote| command:
 %    \begin{macrocode}
 \RequirePackage{tabularx}
 \newcommand\pptQuote[3]{%
@@ -499,7 +510,7 @@
     \ifx\param\empty\else%
       \newline\newline%
       \small%
-      --- #3
+      --- #3%
     \fi%
     \\%
   \end{tabularx}%
@@ -508,6 +519,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptPic}
+% Then, we define |\pptPic| command:
 %    \begin{macrocode}
 \newcommand\pptPic[2]{%
   {%
@@ -522,30 +534,32 @@
 % \end{macro}
 
 % \begin{macro}{\pptPin}
+% Then, we define |\pptPin| command:
 %    \begin{macrocode}
 \newcommand\pptPin[2][right]{%
   \begin{tikzpicture}[remember picture,overlay]%
-    \ifthenelse{\equal{#1}{left}}
-    {
+    \ifthenelse{\equal{#1}{left}}%
+    {%
       \node[anchor=north east] at ($(current page text area.north west) - (24pt, 18pt)$) {%
         \begin{minipage}{0.25\textwidth}%
-          \raggedleft #2
-        \end{minipage}%
-      };
-    }
-    {
-      \node[anchor=north east] at (current page text area.north east) {%
-        \begin{minipage}{0.25\textwidth}%
-          \raggedright #2
+          \raggedleft #2%
         \end{minipage}%
       };%
-    }
+    }%
+    {%
+      \node[anchor=north east] at (current page text area.north east) {%
+        \begin{minipage}{0.25\textwidth}%
+          \raggedright #2%
+        \end{minipage}%
+      };%
+    }%
   \end{tikzpicture}%
 }
 %    \end{macrocode}
 % \end{macro}
 
 % \begin{macro}{\pptThought}
+% Then, we define |\pptThought| command:
 %    \begin{macrocode}
 \newcommand\pptThought[1]{%
   \pptMiddle{%
@@ -557,13 +571,14 @@
         \end{varwidth}
       };
       \path [draw=green,line width=8pt] (z.north west) -- (z.south west);
-    }
-  }
+    }%
+  }%
 }
 %    \end{macrocode}
 % \end{macro}
 
 % \begin{macro}{\pptSnippet}
+% Then, we define |\pptSnippet| command:
 %    \begin{macrocode}
 \newcommand\pptSnippet[2][\small]{%
   \begin{samepage}%
@@ -574,6 +589,7 @@
 % \end{macro}
 
 % \begin{macro}{\pptQR}
+% Then, we define |\pptQR| command:
 %    \begin{macrocode}
 \newcommand\pptQR[2][2in]{%
   \tikz{%
@@ -582,12 +598,13 @@
         \qrcode[height=#1]{#2}%
       }%
     }%
-  }
+  }%
 }
 %    \end{macrocode}
 % \end{macro}
 
 % \begin{macro}{\pptPinQR}
+% Then, we define |\pptPinQR| command:
 %    \begin{macrocode}
 \RequirePackage{seqsplit}
 \newcommand\pptPinQR[2][right]{%
@@ -596,7 +613,7 @@
       \raggedleft%
       \pptQR[1in]{#2}%
       \\[3pt]
-      \ttfamily\fontsize{8pt}{10pt}\selectfont\seqsplit{#2} \href{#2}{$\rightarrow$}
+      \ttfamily\fontsize{8pt}{10pt}\selectfont\seqsplit{#2} \href{#2}{$\rightarrow$}%
       \\
     \end{minipage}%
   }%
@@ -605,6 +622,7 @@
 % \end{macro}
 
 % \begin{macro}{pptWide}
+% Finally, we define |pptWide| and |pptWideOne| environments:
 %    \begin{macrocode}
 \newenvironment{pptWideOne}
   {\begin{adjustwidth}{-2in}{-1in}}
