@@ -5,7 +5,7 @@ install: |-
   sudo gem install texsc:0.6.0
   sudo gem install texqc:0.6.0
   sudo tlmgr --verify-repo=none update --self
-  sudo tlmgr --verify-repo=none install l3build docshots
+  sudo tlmgr --verify-repo=none update l3build docshots iexec
 release:
   script: |-
     make VERSION=${tag} set-version

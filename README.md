@@ -25,11 +25,10 @@ and then use in preamble:
 \end{document}
 ```
 
-The full example and all commands are available in
-[`ppt-slides.tex`](https://github.com/yegor256/ppt-slides/blob/master/ppt-slides.tex) file.
+Otherwise, you can download [`ppt-slides.sty`](https://raw.githubusercontent.com/yegor256/ppt-slides/gh-pages/ppt-slides/ppt-slides.sty) and add to your project.
 
-If you want to contribute yourself, make a fork, create a branch,
-then run `make` in root directory.
+If you want to contribute yourself, make a fork, then create a branch,
+then run `l3build ctan` in the root directory.
 It should compile everything without errors. If not, submit an issue and wait.
-Otherwise, make your changes and then run `make` again. If the build is
+Otherwise, make your changes and then run `l3build ctan` again. If the build is
 still clean, submit a pull request.
