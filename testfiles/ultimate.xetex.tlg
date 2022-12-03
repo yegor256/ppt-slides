@@ -1,0 +1,29 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LinuxBiolinumT-TLF' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+[1
+]
+LaTeX Font Info:    Calculating math sizes for size <24> on input line ....
+(../mt-cmr.cfg
+File: mt-cmr.cfg ....-..-.. v... microtype config. file: Computer Modern Roman (RS)
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <24> on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <16.79993> on input line ....
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line ....
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Warning: Font shape `TU/LinuxLibertineT-TLF/b/n' undefined
+(Font)              using `TU/LinuxLibertineT-TLF/m/n' instead on input line ....
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line ....
+! Interruption.
+MT@scale@factor ...m @tempcntb <csname MT@MT@feat 
+                                                  @minendcsname relax MT@exp...
+l. ...\pptToc[Agenda]
