@@ -13,3 +13,4 @@ hard hardwrap
 hard ifoddpage
 hard textpos
 hard anyfontsize
+hard fontsize
