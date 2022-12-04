@@ -53,6 +53,7 @@
 
 
 
+
 \RequirePackage{pgfopts}
 \makeatletter
 \pgfkeys{
@@ -95,9 +96,9 @@
 \RequirePackage[inline]{enumitem} % for lists in crumbs
 \RequirePackage{crumbs} % for crumbs
 
-\newcommand\pptMiddle[1]{%
-  \vspace*{\fill}#1\vspace*{\fill}%
-}
+\newenvironment{pptMiddle}
+  {\vspace*{\fill}}
+  {\vspace*{\fill}}
 
 \newcommand\pptBanner[2][green]{%
   \par%
@@ -108,11 +109,11 @@
 
 \newcommand\pptChapter[2][]{%
   \crumbection[#1]{#2}%
-  \pptMiddle{%
+  \begin{pptMiddle}%
     {\large\ttfamily Chapter \#\the\value{section}:}%
     \newline%
     \rotatebox{1}{\pptBanner[blue]{\LARGE#2}}%
-  }%
+  \end{pptMiddle}%
 }
 
 \newcommand\pptSection[2][]{%
@@ -210,7 +211,7 @@
 }
 
 \newcommand\pptThought[1]{%
-  \pptMiddle{%
+  \begin{pptMiddle}%
     \tikz{%
       \node [inner sep=18pt] (z) {%
         \begin{varwidth}{0.8\textwidth}
@@ -220,7 +221,7 @@
       };
       \path [draw=green,line width=8pt] (z.north west) -- (z.south west);
     }%
-  }%
+  \end{pptMiddle}%
 }
 
 \newcommand\pptSnippet[2][\small]{%
