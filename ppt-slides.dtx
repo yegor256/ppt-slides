@@ -87,7 +87,9 @@
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
 % \begin{document}
-% \pptMiddle{\pptTitle{Hello, world!}{How are you?}}
+% \begin{pptMiddle}
+% \pptTitle{Hello, world!}{How are you?}
+% \end{pptMiddle}
 % \end{document}
 % \end{docshot}
 
@@ -240,6 +242,16 @@
 % \pptThought{Socrates said that the only true
 % wisdom is in knowing you know nothing. Was he
 % a wise man?...}
+% \end{document}
+% \end{docshot}
+
+% \DescribeMacro{pptMiddle}
+% You can put your content vertically in the middle of the page, using the |pptMiddle| environment:
+% \begin{docshot}
+% \documentclass{article}
+% \usepackage[template,scheme=dark]{ppt-slides}
+% \begin{document}
+% \begin{pptMiddle}This is my text\end{pptMiddle}
 % \end{document}
 % \end{docshot}
 
@@ -410,11 +422,12 @@
 %    \end{macrocode}
 
 % \begin{macro}{\pptMiddle}
-% Then, we define the |\pptMiddle| command:
+% \changes{0.2.1}{2022/12/04}{The \texttt{\char`\\pptMiddle} command turned into \texttt{pptMiddle} environment.}
+% Then, we define the |pptMiddle| environment:
 %    \begin{macrocode}
-\newcommand\pptMiddle[1]{%
-  \vspace*{\fill}#1\vspace*{\fill}%
-}
+\newenvironment{pptMiddle}
+  {\vspace*{\fill}}
+  {\vspace*{\fill}}
 %    \end{macrocode}
 % \end{macro}
 
@@ -435,11 +448,11 @@
 %    \begin{macrocode}
 \newcommand\pptChapter[2][]{%
   \crumbection[#1]{#2}%
-  \pptMiddle{%
+  \begin{pptMiddle}%
     {\large\ttfamily Chapter \#\the\value{section}:}%
     \newline%
     \rotatebox{1}{\pptBanner[blue]{\LARGE#2}}%
-  }%
+  \end{pptMiddle}%
 }
 %    \end{macrocode}
 % \end{macro}
@@ -577,7 +590,7 @@
 % Then, we define the |\pptThought| command:
 %    \begin{macrocode}
 \newcommand\pptThought[1]{%
-  \pptMiddle{%
+  \begin{pptMiddle}%
     \tikz{%
       \node [inner sep=18pt] (z) {%
         \begin{varwidth}{0.8\textwidth}
@@ -587,7 +600,7 @@
       };
       \path [draw=green,line width=8pt] (z.north west) -- (z.south west);
     }%
-  }%
+  \end{pptMiddle}%
 }
 %    \end{macrocode}
 % \end{macro}
