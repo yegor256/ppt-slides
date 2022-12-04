@@ -1,4 +1,4 @@
-[![make](https://github.com/yegor256/ppt-slides/actions/workflows/latexmk.yml/badge.svg)](https://github.com/yegor256/ppt-slides/actions/workflows/latexmk.yml)
+[![make](https://github.com/yegor256/ppt-slides/actions/workflows/l3build.yml/badge.svg)](https://github.com/yegor256/ppt-slides/actions/workflows/l3build.yml)
 [![CTAN](https://img.shields.io/ctan/v/ppt-slides)](https://ctan.org/pkg/ppt-slides)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/ppt-slides/blob/master/LICENSE.txt)
 
