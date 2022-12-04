@@ -2,11 +2,12 @@ module = "ppt-slides"
 ctanupload = true
 typesetopts = "-interaction=batchmode -shell-escape -halt-on-error"
 checkopts = "-interaction=batchmode -shell-escape -halt-on-error"
-checkengines = {"pdftex"}
+checkengines = {"pdftex", "luatex", "xetex"}
 tagfiles = {"build.lua", "ppt-slides.dtx"}
 docfiles = {"socrates.jpg", "ppt-templates", "ppt-schemes"}
 cleanfiles = {"build", "_docshots", "*.run.xml", "*.log", "*.crumbs", "*.bcf", "*.glo", "*.fls", "*.idx", "*.out", "*.fdb_latexmk", "*.aux", "*.sty", "*.zip", "ppt-slides.pdf"}
 typesetruns = 2
+checkruns = 2
 
 uploadconfig = {
   update = true,
