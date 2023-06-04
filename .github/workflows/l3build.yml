@@ -18,7 +18,7 @@ jobs:
       - run: sudo apt-get install -y python3-pygments && sudo pip3 install pygments
         if: matrix.os == 'ubuntu-20.04'
       - run: |
-          pip3 install pygments=2.14.0
+          pip3 install pygments==2.14.0
           easy_install Pygments
           pygmentize -V
         if: matrix.os == 'macos-12'
