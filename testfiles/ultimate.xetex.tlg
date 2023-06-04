@@ -116,7 +116,7 @@ Overfull \vbox (91.69977pt too high) has occurred while \output is active
 ..........\kern 0.0
 ..........\special{color push rgb 0.93333 0.93333 0.93333}
 ..........\hbox(482.06094+0.0)x361.35
-...........\special{pdf:image bbox 0 0 499.99878 666.99835 clip 0 width 361.35pt (socrate\ETC.}
+...........\special{pdf:image bbox 0 0 499.99878 666.99835 clip 0 width 361.35pt (socrates.jpg) }
 ..........\special{color pop}
 ..........\kern 0.0
 .........\special{color pop}
