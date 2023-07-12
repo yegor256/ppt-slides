@@ -30,7 +30,7 @@ jobs:
           package-file: DEPENDS.txt
           packages: scheme-basic xetex ffcode libertine microtype hypdoc l3build href-ul newtx biblatex biber docshots pdfcrop acmart booktabs totpages setspace textcase hyperxmp ifmtarg manyfoot cmap caption comment standalone qrcode crumbs clicks
       - run: l3build ctan --show-log-on-error --halt-on-error
-      - uses: JamesIves/github-pages-deploy-action@v4.4.2
+      - uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
           branch: gh-pages
           folder: build/distrib/tds/tex/latex
