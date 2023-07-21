@@ -6,6 +6,9 @@ install: |-
   sudo tlmgr option repository ctan
   sudo tlmgr --verify-repo=none update --self
   sudo tlmgr --verify-repo=none update l3build docshots iexec
+merge:
+  script: |-
+    l3build ctan --show-log-on-error
 release:
   script: |-
     l3build tag ${tag}
