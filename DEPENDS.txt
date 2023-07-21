@@ -18,3 +18,4 @@ hard changepage
 hard soul
 hard lastpage
 hard titling
+soft clicks
