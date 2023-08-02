@@ -36,7 +36,6 @@ soft ifmtarg
 soft l3build
 soft libertine
 soft libertine
-soft manyfoot
 soft microtype
 soft newtx
 soft pdfcrop
