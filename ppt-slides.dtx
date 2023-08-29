@@ -482,11 +482,16 @@
 % \end{macro}
 
 % \begin{macro}{\pptTitle}
-% Then, we define the |\pptTitle| command:
+% Then, we define the |\pptTitle| command, which prints the |title| and |subtitle| on the
+% first page. The first argument is the title, the second is the subtitle. If the second
+% argument is empty, it won't be printed:
 %    \begin{macrocode}
 \newcommand\pptTitle[2]{%
   {\pptBanner{\Huge #1}}%
-  {\pptBanner{\large #2}}%
+  \def\param{#1}%
+  \ifx\param\empty\else%
+    {\pptBanner{\large #2}}%
+  \fi%
 }
 %    \end{macrocode}
 % \end{macro}
