@@ -129,7 +129,10 @@
 
 \newcommand\pptTitle[2]{%
   {\pptBanner{\Huge #1}}%
-  {\pptBanner{\large #2}}%
+  \def\param{#1}%
+  \ifx\param\empty\else%
+    {\pptBanner{\large #2}}%
+  \fi%
 }
 
 \newcommand*\pptTOC{}
