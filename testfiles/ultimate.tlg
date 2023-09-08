@@ -53,7 +53,7 @@ File: socrates.jpg Graphic file (type jpg)
 <use socrates.jpg>
 Package pdftex.def Info: socrates.jpg  used on input line ....
 (pdftex.def)             Requested size: 361.35pt x 482.06096pt.
-Overfull \vbox (93.01468pt too high) has occurred while \output is active
+Overfull \vbox (92.91013pt too high) has occurred while \output is active
 \vbox(433.62+0.0)x722.70001
 .\glue(\topskip) 0.00002
 .\rule(0.0+0.0)x*
@@ -63,13 +63,13 @@ Overfull \vbox (93.01468pt too high) has occurred while \output is active
 .\glue(\parskip) 18.0
 .\glue(\parskip) 0.0
 .\glue(\lineskip) 1.0
-.\hbox(34.78214+14.154)x722.70001, glue set 248.45117fil
+.\hbox(34.67758+14.154)x722.70001, glue set 251.45071fil
 ..\hbox(0.0+0.0)x0.0
 ..\rule(*+*)x0.0
 ..\penalty 10000
 ..\glue -36.135
 ..\glue 0.0
-..\hbox(34.78214+14.154)x261.93266
+..\hbox(34.67758+14.154)x255.93358
 ...\kern 0.52686
 ...\hbox(30.23523+14.15617)x0.0
 ....\pdfsave
@@ -106,7 +106,6 @@ Overfull \vbox (93.01468pt too high) has occurred while \output is active
 ......\pdfcolorstack 0 pop
 ......\kern 6.0
 .....\pdfcolorstack 0 pop
-.....\glue 6.0 plus 3.0 minus 1.99919
 ....\pdfrestore
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil

@@ -41,7 +41,7 @@ File: socrates.jpg Graphic file (type jpg)
 <use socrates.jpg>
 Package luatex.def Info: socrates.jpg  used on input line ....
 (luatex.def)             Requested size: 361.35pt x 482.06096pt.
-Overfull \vbox (91.6998pt too high) has occurred while \output is active
+Overfull \vbox (91.5735pt too high) has occurred while \output is active
 \vbox(433.62+0.0)x722.70001, direction TLT
 .\glue(\topskip) 0.00002
 .\rule(0.0+0.0)x*
@@ -51,7 +51,7 @@ Overfull \vbox (91.6998pt too high) has occurred while \output is active
 .\glue(\parskip) 18.0
 .\glue(\parskip) 0.0
 .\glue(\lineskip) 1.0
-.\hbox(34.60757+13.01369)x722.70001, glue set 246.28436fil, direction TLT
+.\hbox(34.48128+13.01369)x722.70001, glue set 249.9078fil, direction TLT
 ..\localpar
 ...\localinterlinepenalty=0
 ...\localbrokenpenalty=0
@@ -62,7 +62,7 @@ Overfull \vbox (91.6998pt too high) has occurred while \output is active
 ..\penalty 10000
 ..\glue -36.135
 ..\glue 0.0
-..\hbox(34.60757+13.01369)x266.26628, direction TLT
+..\hbox(34.48128+13.01369)x259.01938, direction TLT
 ...\kern0.52249
 ...\hbox(29.98468+13.01569)x0.0, direction TLT
 ....\pdfsave
@@ -98,7 +98,6 @@ Overfull \vbox (91.6998pt too high) has occurred while \output is active
 ......\pdfcolorstack 0 pop
 ......\kern6.0
 .....\pdfcolorstack 0 pop
-.....\glue(\spaceskip) 7.248 plus 3.624 minus 2.416
 ....\pdfrestore
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil

@@ -38,7 +38,7 @@ LaTeX Warning: Reference `LastPage' on page 8 undefined on input line ....
 [8]
 File: socrates.jpg Graphic file (type bmp)
 <socrates.jpg>
-Overfull \vbox (91.69977pt too high) has occurred while \output is active
+Overfull \vbox (91.57347pt too high) has occurred while \output is active
 \vbox(433.62+0.0)x722.70001
 .\glue(\topskip) 0.00002
 .\rule(0.0+0.0)x*
@@ -48,17 +48,17 @@ Overfull \vbox (91.69977pt too high) has occurred while \output is active
 .\glue(\parskip) 18.0
 .\glue(\parskip) 0.0
 .\glue(\lineskip) 1.0
-.\hbox(34.60757+13.01367)x722.70001, glue set 246.28436fil
+.\hbox(34.48128+13.01367)x722.70001, glue set 249.9078fil
 ..\hbox(0.0+0.0)x0.0
 ..\rule(*+*)x0.0
 ..\penalty 10000
 ..\glue -36.135
 ..\glue 0.0
-..\hbox(34.60757+13.01367)x266.2663
+..\hbox(34.48128+13.01367)x259.0194
 ...\kern 0.52249
-...\hbox(29.98468+13.01567)x265.55754
+...\hbox(29.98468+13.01567)x258.30954
 ....\special{pdf:btrans rotate 1}
-....\hbox(29.98468+13.01567)x265.55754
+....\hbox(29.98468+13.01567)x258.30954
 .....\special{color push rgb 0.9412 0.39609 0.26276}
 .....\special{color push rgb 0.9412 0.39609 0.26276}
 .....\hbox(29.98468+13.01567)x0.0, glue set - 258.30954fil
@@ -80,7 +80,6 @@ Overfull \vbox (91.69977pt too high) has occurred while \output is active
 ......\special{color pop}
 ......\kern 6.0
 .....\special{color pop}
-.....\glue 7.248 plus 3.624 minus 2.416
 ....\special{pdf:etrans}
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
