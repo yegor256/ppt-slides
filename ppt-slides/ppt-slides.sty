@@ -103,7 +103,7 @@
 \newcommand\pptBanner[2][green]{%
   \par%
   {\setlength{\fboxsep}{6pt}%
-    \colorbox{#1}{\color{\thepagecolor}\large #2}}
+    \colorbox{#1}{\color{\thepagecolor}\large #2}}%
   \par%
 }
 
@@ -129,7 +129,7 @@
 
 \newcommand\pptTitle[2]{%
   {\pptBanner{\Huge #1}}%
-  \def\param{#1}%
+  \def\param{#2}%
   \ifx\param\empty\else%
     {\pptBanner{\large #2}}%
   \fi%
@@ -217,10 +217,9 @@
   \begin{pptMiddle}%
     \tikz{%
       \node [inner sep=18pt] (z) {%
-        \begin{varwidth}{0.8\textwidth}
-          \Large
-          #1
-        \end{varwidth}
+        \begin{varwidth}{0.8\textwidth}%
+          \Large #1%
+        \end{varwidth}%
       };
       \path [draw=green,line width=8pt] (z.north west) -- (z.south west);
     }%
