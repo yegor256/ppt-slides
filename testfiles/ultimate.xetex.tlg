@@ -158,26 +158,6 @@ LaTeX Warning: Reference `LastPage' on page 12 undefined on input line ....
 [12]
 LaTeX Warning: Reference `LastPage' on page 13 undefined on input line ....
 [13]
-Overfull \hbox (3.72557pt too wide) detected at line 47
-[]\TU/LinuxBiolinumT-TLF/m/n/34.56006 Overthinking is the biggest cause of unhap-
-\hbox(24.26115+7.05023)x578.1622, glue set - 1.0
-.\kern 0.0
-.\hbox(0.0+0.0)x0.0
-.\TU/LinuxBiolinumT-TLF/m/n/34.56006 Overthinking
-.\glue 10.43713 plus 5.21857 minus 3.47903
-.\TU/LinuxBiolinumT-TLF/m/n/34.56006 is
-.\glue 10.43713 plus 5.21857 minus 3.47903
-.\TU/LinuxBiolinumT-TLF/m/n/34.56006 the
-.\glue 10.43713 plus 5.21857 minus 3.47903
-.\TU/LinuxBiolinumT-TLF/m/n/34.56006 biggest
-.\glue 10.43713 plus 5.21857 minus 3.47903
-.\TU/LinuxBiolinumT-TLF/m/n/34.56006 cause
-.\glue 10.43713 plus 5.21857 minus 3.47903
-.\TU/LinuxBiolinumT-TLF/m/n/34.56006 of
-.\glue 10.43713 plus 5.21857 minus 3.47903
-.\TU/LinuxBiolinumT-TLF/m/n/34.56006 unhap-
-.\glue(\rightskip) 0.0
-.\kern 0.0
 LaTeX Warning: Reference `LastPage' on page 14 undefined on input line ....
 [14]
 LaTeX Warning: Reference `LastPage' on page 15 undefined on input line ....
