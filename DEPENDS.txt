@@ -1,4 +1,3 @@
-
 hard anyfontsize
 hard changepage
 hard crumbs
@@ -40,6 +39,7 @@ soft microtype
 soft newtx
 soft pdfcrop
 soft qrcode
+soft upquote
 soft scheme-basic
 soft setspace
 soft standalone

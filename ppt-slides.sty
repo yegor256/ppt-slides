@@ -167,16 +167,22 @@
 }
 
 \RequirePackage{tabularx}
-\newcommand\pptQuote[3]{%
+\newcommand\pptQuote[4][]{%
   \begin{tabularx}{\columnwidth}{c>{\raggedright\arraybackslash}X}%
-    \raisebox{\dimexpr-\height+\ht\strutbox}{\pptPic{0.25}{#1}}%
+    \def\person{#1}%
+    \ifx\person\empty\else%
+      \newline%
+      \small%
+      \person%
+    \fi%
+    \raisebox{\dimexpr-\height+\ht\strutbox}{\pptPic{0.25}{#2}}%
     &%
-    ``#2''%
-    \def\param{#3}%
+    ``#3''%
+    \def\param{#4}%
     \ifx\param\empty\else%
       \newline\newline%
       \small%
-      --- #3%
+      --- \param%
     \fi%
     \\%
   \end{tabularx}%
