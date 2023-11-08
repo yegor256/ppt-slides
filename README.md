@@ -25,7 +25,7 @@ and then use in preamble:
 \end{document}
 ```
 
-Otherwise, you can download [`ppt-slides.sty`](https://raw.githubusercontent.com/yegor256/ppt-slides/gh-pages/ppt-slides/ppt-slides.sty) and add to your project.
+Otherwise, you can download [`ppt-slides.sty`](https://yegor256.github.io/ppt-slides/ppt-slides.sty) and add to your project.
 
 If you want to contribute yourself, make a fork, then create a branch,
 then run `l3build ctan` in the root directory.
