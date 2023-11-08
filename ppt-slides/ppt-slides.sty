@@ -170,13 +170,16 @@
 \newcommand\pptQuote[4][]{%
   \begin{tabularx}{\columnwidth}{c>{\raggedright\arraybackslash}X}%
     \raisebox{\dimexpr-\height+\ht\strutbox}{
-      \pptPic{0.25}{#2}
-      \def\person{#1}%
-      \ifx\person\empty\else%
-        \\%
-        \small%
-        \person%
-      \fi%
+      \parbox{0.25\textwidth+2pt}{%
+        \raggedright%
+        \pptPic{0.25}{#2}%
+        \def\person{#1}%
+        \ifx\person\empty\else%
+          \par%
+          \small%
+          \person%
+        \fi%
+      }%
     }%
     &%
     ``#3''%
