@@ -190,6 +190,71 @@ File: socrates.jpg Graphic file (type jpg)
 <use socrates.jpg>
 Package luatex.def Info: socrates.jpg  used on input line ....
 (luatex.def)             Requested size: 180.675pt x 241.02026pt.
+Overfull \hbox (2.0pt too wide) in paragraph at lines 43--43
+[][][][]  
+\hbox(242.02026+1.0)x180.675, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x0.0, direction TLT
+.\pdfcolorstack 0 push {0.5 g 0.5 G}
+.\hbox(242.02026+1.0)x182.675, direction TLT
+..\hbox(242.02026+1.0)x182.675, direction TLT
+...\hbox(243.02026+0.0)x182.675, shifted 1.0, direction TLT
+....\vbox(243.02026+0.0)x182.675, direction TLT
+.....\kern1.0
+.....\hbox(241.02026+0.0)x182.675, direction TLT
+......\kern1.0
+......\vbox(241.02026+0.0)x180.675, direction TLT
+.......\kern0.0
+.......\hbox(241.02026+0.0)x180.675, direction TLT
+........\kern0.0
+........\pdfcolorstack 0 push {0.93333 0.93333 0.93333 rg 0.93333 0.93333 0.93333 RG}
+........\pdfcolorstack 0 push {0.93333 0.93333 0.93333 rg 0.93333 0.93333 0.93333 RG}
+........\hbox(241.02026+0.0)x0.0, glue set - 180.675fil, direction TLT
+.........\rule(241.02026+0.0)x180.675
+.........\glue 0.0 plus 1.0fil minus 1.0fil
+........\pdfcolorstack 0 pop
+........\hbox(241.02026+0.0)x180.675, direction TLT
+.........\kern0.0
+.........\pdfcolorstack 0 push {0.93333 0.93333 0.93333 rg 0.93333 0.93333 0.93333 RG}
+.........\hbox(241.02026+0.0)x180.675, direction TLT
+..........\hbox(241.02086+0.0)x180.6753, direction TLT
+...........\hbox(241.02086+0.0)x180.6753, direction TLT
+............\hbox(241.02086+0.0)x0.0, direction TLT
+.............\pdfsave
+.............\pdfsetmatrix{.36 0 0 .36}
+.............\hbox(669.50125+0.0)x0.0, glue set - 501.875fil, direction TLT
+..............\hbox(669.50125+0.0)x501.875, direction TLT
+...............\image(669.50125+0.0)x501.875
+..............\glue 0.0 plus 1.0fil minus 1.0fil
+.............\pdfrestore
+............\kern180.6753
+............\glue 0.0 plus 1.0fil minus 1.0fil
+.........\pdfcolorstack 0 pop
+.........\kern0.0
+........\pdfcolorstack 0 pop
+........\kern0.0
+.......\kern0.0
+......\kern1.0
+.....\kern1.0
+..\kern-182.675
+..\hbox(242.02026+1.0)x182.675, direction TLT
+...\vbox(243.02026+0.0)x182.675, shifted 1.0, direction TLT
+....\rule(1.0+0.0)x*
+....\kern-0.5
+....\hbox(242.02026+0.0)x182.675, direction TLT
+.....\rule(242.02026+0.0)x1.0
+.....\kern180.675
+.....\rule(242.02026+0.0)x1.0
+....\kern-0.5
+....\rule(1.0+0.0)x*
+.\pdfcolorstack 0 pop
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.\glue(\rightskip) 0.0 plus 1.0fil
 LaTeX Warning: Reference `LastPage' on page 12 undefined on input line ....
 [12]
 LaTeX Warning: Reference `LastPage' on page 13 undefined on input line ....
