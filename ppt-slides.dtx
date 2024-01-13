@@ -470,6 +470,18 @@
 \RequirePackage{calc}
 %    \end{macrocode}
 
+% Then, we include \href{https://ctan.org/pkg/tabularx}{tabularx}
+% in order to render |\pptQuote|:
+%    \begin{macrocode}
+\RequirePackage{tabularx}
+%    \end{macrocode}
+
+% Then, we include \href{https://ctan.org/pkg/seqsplit}{seqsplit}
+% in order to split long links:
+%    \begin{macrocode}
+\RequirePackage{seqsplit}
+%    \end{macrocode}
+
 % \begin{macro}{\pptMiddle}
 % \changes{0.2.1}{2022/12/04}{The \texttt{\char`\\pptMiddle} command turned into \texttt{pptMiddle} environment.}
 % Then, we define the |pptMiddle| environment:
@@ -582,7 +594,6 @@
 % Then, we define the |\pptQuote| command, with one optional and three mandatory arguments:
 % \changes{0.3.0}{2023/11/08}{The \texttt{\char`\\pptQuote} command has got an optional parameter, where the name of the person on the photo can be specified.}
 %    \begin{macrocode}
-\RequirePackage{tabularx}
 \newcommand\pptQuote[4][]{%
   \begin{tabularx}{\columnwidth}{c>{\raggedright\arraybackslash}X}%
     \raisebox{\dimexpr-\height+\ht\strutbox}{
@@ -700,7 +711,6 @@
 % \begin{macro}{\pptPinQR}
 % Then, we define the |\pptPinQR| command:
 %    \begin{macrocode}
-\RequirePackage{seqsplit}
 \newcommand\pptPinQR[2][right]{%
   \pptPin[#1]{%
     \begin{minipage}{1.4in}%
