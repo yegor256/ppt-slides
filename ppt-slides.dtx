@@ -410,17 +410,57 @@
 \fi\makeatother
 %    \end{macrocode}
 
-% Then, we include a few packages:
+% Then, we include \href{https://ctan.org/pkg/ifthen}{ifthen}
+% in order to enable |if/then/else| commands:
 %    \begin{macrocode}
 \RequirePackage{ifthen} % for if/then/else in LaTeX
+%    \end{macrocode}
+
+% Then, we include \href{https://ctan.org/pkg/href-ul}{href-ul}
+% in order to enable underlined hyperlinks:
+%    \begin{macrocode}
 \RequirePackage{href-ul} % for nice hyperlinks
+%    \end{macrocode}
+
+% Then, we include \href{https://ctan.org/pkg/pagecolor}{pagecolor}
+% in order to make it possible to change the background color of a page:
+%    \begin{macrocode}
 \RequirePackage{pagecolor} % to change page color
+%    \end{macrocode}
+
+% Then, we include \href{https://ctan.org/pkg/varwidth}{varwidth}
+% in order to change the width of the page, inside |pptWide|:
+%    \begin{macrocode}
 \RequirePackage{varwidth} % for pptWide
+%    \end{macrocode}
+
+% Then, we include \href{https://ctan.org/pkg/qrcode}{qrcode}
+% in order to render QR codes:
+%    \begin{macrocode}
 \RequirePackage{qrcode} % to print QR codes
+%    \end{macrocode}
+
+% Then, we include \href{https://ctan.org/pkg/tikz}{tikz}
+% in order to position elements on the page, especially in the Table of Contents:
+%    \begin{macrocode}
 \RequirePackage{tikz} % for drawings in TOC
-  \usetikzlibrary{calc} % for positioning of pinned boxes
+%    \end{macrocode}
+
+% Then, we include \href{https://ctan.org/pkg/tikzpagenodes}{tikzpagenodes}
+% in order to pin a block in |\pptPin|:
+%    \begin{macrocode}
 \RequirePackage{tikzpagenodes} % for pptPin
+%    \end{macrocode}
+
+% Then, we include \href{https://ctan.org/pkg/enumitem}{enumitem}
+% in order to render inline lists in crumbs:
+%    \begin{macrocode}
 \RequirePackage[inline]{enumitem} % for lists in crumbs
+%    \end{macrocode}
+
+% Then, we include \href{https://ctan.org/pkg/crumbs}{crumbs}
+% in order to show top-page menus:
+%    \begin{macrocode}
 \RequirePackage{crumbs} % for crumbs
 %    \end{macrocode}
 
