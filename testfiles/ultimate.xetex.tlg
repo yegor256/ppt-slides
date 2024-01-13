@@ -154,55 +154,6 @@ LaTeX Warning: Reference `LastPage' on page 11 undefined on input line ....
 [11]
 File: socrates.jpg Graphic file (type bmp)
 <socrates.jpg>
-Overfull \hbox (2.0pt too wide) in paragraph at lines 43--43
-[][][][]  
-\hbox(242.02025+1.0)x180.675
-.\hbox(0.0+0.0)x0.0
-.\special{color push gray 0.5}
-.\hbox(242.02025+1.0)x182.675
-..\hbox(242.02025+1.0)x182.675
-...\hbox(243.02025+0.0)x182.675, shifted 1.0
-....\vbox(243.02025+0.0)x182.675
-.....\kern 1.0
-.....\hbox(241.02025+0.0)x182.675
-......\kern 1.0
-......\vbox(241.02025+0.0)x180.675
-.......\kern 0.0
-.......\hbox(241.02025+0.0)x180.675
-........\kern 0.0
-........\special{color push rgb 0.93333 0.93333 0.93333}
-........\special{color push rgb 0.93333 0.93333 0.93333}
-........\hbox(241.02025+0.0)x0.0, glue set - 180.675fil
-.........\rule(241.02025+0.0)x180.675
-.........\glue 0.0 plus 1.0fil minus 1.0fil
-........\special{color pop}
-........\hbox(241.02025+0.0)x180.675
-.........\kern 0.0
-.........\special{color push rgb 0.93333 0.93333 0.93333}
-.........\hbox(241.02025+0.0)x180.675
-..........\special{pdf:image bbox 0 0 499.99878 666.99835 clip 0 width 180.675pt (socrates.jpg) }
-.........\special{color pop}
-.........\kern 0.0
-........\special{color pop}
-........\kern 0.0
-.......\kern 0.0
-......\kern 1.0
-.....\kern 1.0
-..\kern -182.675
-..\hbox(242.02025+1.0)x182.675
-...\vbox(243.02025+0.0)x182.675, shifted 1.0
-....\rule(1.0+0.0)x*
-....\kern -0.5
-....\hbox(242.02025+0.0)x182.675
-.....\rule(242.02025+0.0)x1.0
-.....\kern 180.675
-.....\rule(242.02025+0.0)x1.0
-....\kern -0.5
-....\rule(1.0+0.0)x*
-.\special{color pop}
-.\penalty 10000
-.\glue(\parfillskip) 0.0 plus 1.0fil
-.\glue(\rightskip) 0.0 plus 1.0fil
 LaTeX Warning: Reference `LastPage' on page 12 undefined on input line ....
 [12]
 LaTeX Warning: Reference `LastPage' on page 13 undefined on input line ....
