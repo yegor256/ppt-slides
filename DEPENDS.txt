@@ -18,6 +18,7 @@ hard tikzpagenodes
 hard titling
 hard varwidth
 hard xcolor
+hard listings
 soft acmart
 soft biber
 soft biblatex
