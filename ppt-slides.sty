@@ -7,7 +7,7 @@
 %% ppt-slides.dtx  (with options: `package')
 %% (The MIT License)
 %% 
-%% Copyright (c) 2021-2023 Yegor Bugayenko
+%% Copyright (c) 2021-2024 Yegor Bugayenko
 %% 
 %% Permission is hereby granted, free of charge, to any person obtaining a copy
 %% of this software and associated documentation files (the 'Software'), to deal
@@ -31,7 +31,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ppt-slides}
-[2023-12-16 04.48.56 Slide Decks a la Power Point]
+[2024-01-16 02.21.52 Slide Decks a la Power Point]
 
 
 
@@ -85,16 +85,29 @@
     the 'scheme' option is not specified}
 \fi\makeatother
 
-\RequirePackage{ifthen} % for if/then/else in LaTeX
-\RequirePackage{href-ul} % for nice hyperlinks
-\RequirePackage{pagecolor} % to change page color
-\RequirePackage{varwidth} % for pptWide
-\RequirePackage{qrcode} % to print QR codes
-\RequirePackage{tikz} % for drawings in TOC
-  \usetikzlibrary{calc} % for positioning of pinned boxes
-\RequirePackage{tikzpagenodes} % for pptPin
-\RequirePackage[inline]{enumitem} % for lists in crumbs
-\RequirePackage{crumbs} % for crumbs
+\RequirePackage{ifthen}
+
+\RequirePackage{href-ul}
+
+\RequirePackage{pagecolor}
+
+\RequirePackage{varwidth}
+
+\RequirePackage{qrcode}
+
+\RequirePackage{tikz}
+
+\RequirePackage{tikzpagenodes}
+
+\RequirePackage[inline]{enumitem}
+
+\RequirePackage{crumbs}
+
+\RequirePackage{calc}
+
+\RequirePackage{tabularx}
+
+\RequirePackage{seqsplit}
 
 \newenvironment{pptMiddle}
   {\vspace*{\fill}}
@@ -166,7 +179,6 @@
   \ifdefined\flush\flush[1]\fi%
 }
 
-\RequirePackage{tabularx}
 \newcommand\pptQuote[4][]{%
   \begin{tabularx}{\columnwidth}{c>{\raggedright\arraybackslash}X}%
     \raisebox{\dimexpr-\height+\ht\strutbox}{
@@ -253,7 +265,6 @@
   }%
 }
 
-\RequirePackage{seqsplit}
 \newcommand\pptPinQR[2][right]{%
   \pptPin[#1]{%
     \begin{minipage}{1.4in}%
