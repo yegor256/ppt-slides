@@ -31,7 +31,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ppt-slides}
-[2024-01-16 02.24.11 Slide Decks a la Power Point]
+[2024-01-23 10.20.46 Slide Decks a la Power Point]
 
 
 
@@ -197,9 +197,10 @@
     ``#3''%
     \def\param{#4}%
     \ifx\param\empty\else%
-      \newline\newline%
+      \par\vspace*{1em}%
       \small%
       --- \param%
+      \par%
     \fi%
     \\%
   \end{tabularx}%
