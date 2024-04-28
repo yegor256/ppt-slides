@@ -1,3 +1,5 @@
+# LaTeX Slidedeck à la PPT
+
 [![make](https://github.com/yegor256/ppt-slides/actions/workflows/l3build.yml/badge.svg)](https://github.com/yegor256/ppt-slides/actions/workflows/l3build.yml)
 [![CTAN](https://img.shields.io/ctan/v/ppt-slides)](https://ctan.org/pkg/ppt-slides)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/ppt-slides/blob/master/LICENSE.txt)
@@ -8,7 +10,8 @@ but more precise, uniform, and visually strict.
 Check [this series of lectures](https://github.com/yegor256/ssd16)
 fully designed with the use of this package.
 
-First, [install it](https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages)
+First,
+[install it](https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages)
 from [CTAN](https://ctan.org/pkg/ppt-slides)
 and then use in preamble:
 
@@ -25,7 +28,9 @@ and then use in preamble:
 \end{document}
 ```
 
-Otherwise, you can download [`ppt-slides.sty`](https://yegor256.github.io/ppt-slides/ppt-slides.sty) and add to your project.
+Otherwise, you can download
+[`ppt-slides.sty`](https://yegor256.github.io/ppt-slides/ppt-slides.sty)
+and add to your project.
 
 If you want to contribute yourself, make a fork, then create a branch,
 then run `l3build ctan` in the root directory.
