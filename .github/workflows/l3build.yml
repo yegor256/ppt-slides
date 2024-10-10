@@ -46,7 +46,7 @@ jobs:
         if: matrix.os == 'macos-12'
       - run: sudo apt-get -y install ghostscript
         if: matrix.os == 'ubuntu-22.04'
-      - uses: teatimeguest/setup-texlive-action@v3.3.0
+      - uses: teatimeguest/setup-texlive-action@v3.3.1
         with:
           update-all-packages: true
           package-file: DEPENDS.txt
