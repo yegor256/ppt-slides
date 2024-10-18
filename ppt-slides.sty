@@ -7,7 +7,7 @@
 %% ppt-slides.dtx  (with options: `package')
 %% (The MIT License)
 %% 
-%% Copyright (c) 2021-2024 Yegor Bugayenko
+%% Copyright (c) 2022-2024 Yegor Bugayenko
 %% 
 %% Permission is hereby granted, free of charge, to any person obtaining a copy
 %% of this software and associated documentation files (the 'Software'), to deal
@@ -21,7 +21,7 @@
 %% 
 %% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 %% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
 %% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 %% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 %% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
@@ -31,7 +31,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ppt-slides}
-[2024-10-18 11.55.28 Slide Decks a la Power Point]
+[2024-10-18 12.08.32 Slide Decks a la Power Point]
 
 
 
@@ -120,10 +120,11 @@
   \par%
 }
 
+\newcommand\pptChapterLabel{Chapter}
 \newcommand\pptChapter[2][]{%
   \crumbection[#1]{#2}%
   \begin{pptMiddle}%
-    {\large\ttfamily Chapter \#\the\value{section}:}%
+    {\large\ttfamily \pptChapterLabel{} \#\the\value{section}:}%
     \newline%
     \rotatebox{1}{\pptBanner[blue]{\LARGE#2}}%
   \end{pptMiddle}%
