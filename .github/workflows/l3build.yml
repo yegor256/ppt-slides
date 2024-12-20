@@ -33,7 +33,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-22.04, macos-12]
+        os: [ubuntu-22.04, macos-15]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -45,7 +45,7 @@ jobs:
       - run: |
           pip3 install pygments==2.14.0
           pygmentize -V
-        if: matrix.os == 'macos-12'
+        if: matrix.os == 'macos-15'
       - run: sudo apt-get -y install ghostscript
         if: matrix.os == 'ubuntu-22.04'
       - uses: teatimeguest/setup-texlive-action@v3.3.4
