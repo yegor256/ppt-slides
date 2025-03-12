@@ -436,7 +436,8 @@
 % Then, we include \href{https://ctan.org/pkg/enumitem}{enumitem}
 % in order to render inline lists in crumbs:
 %    \begin{macrocode}
-\RequirePackage[inline]{enumitem}
+\PassOptionsToPackage{inline}{enumitem}
+\RequirePackage{enumitem}
 %    \end{macrocode}
 
 % Then, we include \href{https://ctan.org/pkg/crumbs}{crumbs}
