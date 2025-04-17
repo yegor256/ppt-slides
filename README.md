@@ -7,7 +7,7 @@
 This LaTeX package helps you create slide decks as good looking
 as with [PowerPoint™](https://en.wikipedia.org/wiki/Microsoft_PowerPoint),
 but more precise, uniform, and visually strict.
-Check [this series of lectures](https://github.com/yegor256/ssd16)
+Check [this series of lectures](https://github.com/yegor256/sqm)
 fully designed using this package.
 
 First,
