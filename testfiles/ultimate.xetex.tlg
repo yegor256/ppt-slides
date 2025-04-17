@@ -38,7 +38,7 @@ LaTeX Warning: Reference `LastPage' on page 8 undefined on input line ....
 [8]
 File: socrates.jpg Graphic file (type bmp)
 <socrates.jpg>
-Overfull \vbox (91.57347pt too high) has occurred while \output is active
+Overfull \vbox (91.57343pt too high) has occurred while \output is active
 \vbox(433.62+0.0)x722.70001
 .\glue(\topskip) 0.00002
 .\rule(0.0+0.0)x*
@@ -48,34 +48,34 @@ Overfull \vbox (91.57347pt too high) has occurred while \output is active
 .\glue(\parskip) 18.0
 .\glue(\parskip) 0.0
 .\glue(\lineskip) 1.0
-.\hbox(34.48128+13.01367)x722.70001, glue set 249.9078fil
+.\hbox(34.48123+13.01367)x722.70001, glue set 249.90802fil
 ..\hbox(0.0+0.0)x0.0
 ..\rule(*+*)x0.0
 ..\penalty 10000
 ..\glue -36.135
 ..\glue 0.0
-..\hbox(34.48128+13.01367)x259.0194
+..\hbox(34.48123+13.01367)x259.01897
 ...\kern 0.52249
-...\hbox(29.98468+13.01567)x258.30954
+...\hbox(29.98463+13.01567)x258.30911
 ....\special{pdf:btrans rotate 1}
-....\hbox(29.98468+13.01567)x258.30954
+....\hbox(29.98463+13.01567)x258.30911
 .....\special{color push rgb 0.9412 0.39609 0.26276}
 .....\special{color push rgb 0.9412 0.39609 0.26276}
-.....\hbox(29.98468+13.01567)x0.0, glue set - 258.30954fil
-......\rule(29.98468+13.01567)x258.30954
+.....\hbox(29.98463+13.01567)x0.0, glue set - 258.30911fil
+......\rule(29.98463+13.01567)x258.30911
 ......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\special{color pop}
-.....\hbox(29.98468+13.01567)x258.30954
+.....\hbox(29.98463+13.01567)x258.30911
 ......\kern 6.0
 ......\special{color push rgb 0.93333 0.93333 0.93333}
 ......\special{color push rgb 0.13725 0.14511 0.15294}
-......\TU/LinuxBiolinumT-TLF/m/n/34.56006 This
-......\glue 10.43713 plus 5.21857 minus 3.47903
-......\TU/LinuxBiolinumT-TLF/m/n/34.56006 Is
-......\glue 10.43713 plus 5.21857 minus 3.47903
-......\TU/LinuxBiolinumT-TLF/m/n/34.56006 My
-......\glue 10.43713 plus 5.21857 minus 3.47903
-......\TU/LinuxBiolinumT-TLF/m/n/34.56006 Photo
+......\TU/LinuxBiolinumT-TLF/m/n/34.56 This
+......\glue 10.43712 plus 5.21855 minus 3.47903
+......\TU/LinuxBiolinumT-TLF/m/n/34.56 Is
+......\glue 10.43712 plus 5.21855 minus 3.47903
+......\TU/LinuxBiolinumT-TLF/m/n/34.56 My
+......\glue 10.43712 plus 5.21855 minus 3.47903
+......\TU/LinuxBiolinumT-TLF/m/n/34.56 Photo
 ......\special{color pop}
 ......\special{color pop}
 ......\kern 6.0
@@ -161,7 +161,7 @@ LaTeX Warning: Reference `LastPage' on page 13 undefined on input line ....
 LaTeX Warning: Reference `LastPage' on page 14 undefined on input line ....
 [14]
 LaTeX Warning: Reference `LastPage' on page 15 undefined on input line ....
-[15]
+[15] 
 <QR code requested for "https://www.yegor256.com" in version 0-M.>
 <Calculating QR code for "https://www.yegor256.com" in version 2-M.>
 <Splitting off block 1> <Making error block 1> <Interleaving datablocks of length 28\ and 29:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, .> <Interleaving errorblocks of length 16:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, .><Interleaving complete.> <Writing data... done.>
@@ -180,7 +180,7 @@ LaTeX Warning: Reference `LastPage' on page 15 undefined on input line ....
 <Writing QR code to aux file... done.>
 <Printing matrix... done.>
 LaTeX Warning: Reference `LastPage' on page 16 undefined on input line ....
-[16]
+[16] 
 <QR code requested for "https://www.yegor256.com" in version 0-M.>
 <Calculating QR code for "https://www.yegor256.com" in version 2-M.>
 <Splitting off block 1> <Making error block 1> <Interleaving datablocks of length 28\ and 29:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, .> <Interleaving errorblocks of length 16:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, .><Interleaving complete.> <Writing data... done.>
@@ -199,7 +199,7 @@ LaTeX Warning: Reference `LastPage' on page 16 undefined on input line ....
 <Writing QR code to aux file... done.>
 <Printing matrix... done.>
 LaTeX Warning: Reference `LastPage' on page 17 undefined on input line ....
-[17]
+[17] 
 <QR code requested for "https://www.yegor256.com" in version 0-M.>
 <Calculating QR code for "https://www.yegor256.com" in version 2-M.>
 <Splitting off block 1> <Making error block 1> <Interleaving datablocks of length 28\ and 29:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, .> <Interleaving errorblocks of length 16:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, .><Interleaving complete.> <Writing data... done.>
@@ -218,7 +218,7 @@ LaTeX Warning: Reference `LastPage' on page 17 undefined on input line ....
 <Writing QR code to aux file... done.>
 <Printing matrix... done.>
 LaTeX Warning: Reference `LastPage' on page 18 undefined on input line ....
-[18]
+[18] 
 <QR code requested for "https://www.yegor256.com" in version 0-M.>
 <Calculating QR code for "https://www.yegor256.com" in version 2-M.>
 <Splitting off block 1> <Making error block 1> <Interleaving datablocks of length 28\ and 29:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, .> <Interleaving errorblocks of length 16:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, .><Interleaving complete.> <Writing data... done.>
@@ -237,7 +237,7 @@ LaTeX Warning: Reference `LastPage' on page 18 undefined on input line ....
 <Writing QR code to aux file... done.>
 <Printing matrix... done.>
 LaTeX Warning: Reference `LastPage' on page 19 undefined on input line ....
-[19]
+[19] 
 <QR code requested for "https://www.yegor256.com" in version 0-M.>
 <Calculating QR code for "https://www.yegor256.com" in version 2-M.>
 <Splitting off block 1> <Making error block 1> <Interleaving datablocks of length 28\ and 29:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, .> <Interleaving errorblocks of length 16:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, .><Interleaving complete.> <Writing data... done.>
@@ -258,7 +258,7 @@ LaTeX Warning: Reference `LastPage' on page 19 undefined on input line ....
 LaTeX Warning: Reference `LastPage' on page 20 undefined on input line ....
 [20]
 LaTeX Warning: Reference `LastPage' on page 21 undefined on input line ....
-[21]
+[21] 
 <QR code requested for "https://www.yegor256.com" in version 0-M.>
 <Calculating QR code for "https://www.yegor256.com" in version 2-M.>
 <Splitting off block 1> <Making error block 1> <Interleaving datablocks of length 28\ and 29:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, .> <Interleaving errorblocks of length 16:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, .><Interleaving complete.> <Writing data... done.>
@@ -283,7 +283,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line ....
 LaTeX Warning: Reference `LastPage' on page 22 undefined on input line ....
-[22]
+[22] 
 <QR code requested for "https://www.yegor256.com" in version 0-M.>
 <Calculating QR code for "https://www.yegor256.com" in version 2-M.>
 <Splitting off block 1> <Making error block 1> <Interleaving datablocks of length 28\ and 29:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, .> <Interleaving errorblocks of length 16:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, .><Interleaving complete.> <Writing data... done.>
@@ -302,7 +302,7 @@ LaTeX Warning: Reference `LastPage' on page 22 undefined on input line ....
 <Writing QR code to aux file... done.>
 <Printing matrix... done.>
 LaTeX Warning: Reference `LastPage' on page 23 undefined on input line ....
-[23]
+[23] 
 <QR code requested for "https://www.yegor256.com" in version 0-M.>
 <Calculating QR code for "https://www.yegor256.com" in version 2-M.>
 <Splitting off block 1> <Making error block 1> <Interleaving datablocks of length 28\ and 29:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, .> <Interleaving errorblocks of length 16:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, .><Interleaving complete.> <Writing data... done.>
@@ -321,7 +321,7 @@ LaTeX Warning: Reference `LastPage' on page 23 undefined on input line ....
 <Writing QR code to aux file... done.>
 <Printing matrix... done.>
 LaTeX Warning: Reference `LastPage' on page 24 undefined on input line ....
-[24]
+[24] 
 <QR code requested for "https://www.yegor256.com" in version 0-M.>
 <Calculating QR code for "https://www.yegor256.com" in version 2-M.>
 <Splitting off block 1> <Making error block 1> <Interleaving datablocks of length 28\ and 29:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, .> <Interleaving errorblocks of length 16:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, .><Interleaving complete.> <Writing data... done.>
@@ -340,7 +340,7 @@ LaTeX Warning: Reference `LastPage' on page 24 undefined on input line ....
 <Writing QR code to aux file... done.>
 <Printing matrix... done.>
 LaTeX Warning: Reference `LastPage' on page 25 undefined on input line ....
-[25]
+[25] 
 <QR code requested for "https://www.yegor256.com" in version 0-M.>
 <Calculating QR code for "https://www.yegor256.com" in version 2-M.>
 <Splitting off block 1> <Making error block 1> <Interleaving datablocks of length 28\ and 29:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, .> <Interleaving errorblocks of length 16:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, .><Interleaving complete.> <Writing data... done.>
