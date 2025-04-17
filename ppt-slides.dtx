@@ -343,6 +343,19 @@
 %</verb>
 %\fi
 
+% \DescribeMacro{nominutes}
+% By default, the top left corner of each slide has so called crumbs. You can get rid of them
+% with the help of the |nocrumbs| package option:
+%\iffalse
+%<*verb>
+%\fi
+\begin{verbatim}
+\usepackage[nocrumbs]{ppt-slides}
+\end{verbatim}
+%\iffalse
+%</verb>
+%\fi
+
 % \StopEventually{}
 
 % \section{Implementation}
@@ -350,6 +363,7 @@
 % \changes{0.1.4}{2022/09/15}{The \texttt{nominutes} package option added.}
 % \changes{0.1.5}{2022/09/19}{The default directory fixed.}
 % \changes{0.2.0}{2022/12/03}{We migrated to the \texttt{ltxdoc} format and \texttt{.dtx} file.}
+% \changes{0.5.0}{2025/04/17}{The \texttt{nocrumbs} package option was introduced.}
 
 % First, we parse the package options:
 %    \begin{macrocode}
@@ -364,6 +378,7 @@
   directory/.estore in = \ppt@directory,
   directory/.default = ,
   nominutes/.estore in = \ppt@nominutes,
+  nocrumbs/.estore in = \ppt@nocrumbs,
   directory
 }
 \ProcessPgfPackageOptions{/ppt-slides}

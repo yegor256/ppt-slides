@@ -16,6 +16,7 @@
 \RequirePackage{tikz} % for drawing circles
 \RequirePackage{lastpage} % to count pages and show total
 
+\makeatletter\ifdefined\ppt@nocrumbs\else
 \RequirePackage{crumbs}
   \renewcommand\crumb[2]{%
     \ifnum\value{crumbi}=1\else\hspace{1em}\fi
@@ -33,6 +34,8 @@
       #1%
     \fi%
   }
+\fi
+\makeatother
 
 \RequirePackage{fancyhdr}
   \pagestyle{fancy}
@@ -88,16 +91,21 @@
   }
 }
 
+\makeatletter
 \AtBeginDocument{%
   \raggedbottom%
   \raggedright%
   \raggedcolumns%
   \setlength\topskip{0pt}%
-  \setlength\headheight{32pt}%
   \setlength\footskip{32pt}%
   \setlength\parindent{0pt}%
   \setlength\parskip{18pt}%
   \setlength\columnsep{32pt}%
+  \ifdefined\ppt@nocrumbs%
+    \setlength\headheight{6pt}%
+  \else%
+    \setlength\headheight{32pt}%
+  \fi%
   \normalsize%
   \sffamily%
 }
