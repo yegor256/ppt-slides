@@ -1,3 +1,6 @@
+_minted-*
+.DS_Store
+.idea/
 *.aux
 *.bbl
 *.bcf
@@ -19,9 +22,6 @@
 *.synctex.gz
 *.toc
 *.zip
-.DS_Store
-.idea/
-_minted-*
 build/
 node_modules/
 package/
