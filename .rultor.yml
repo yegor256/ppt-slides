@@ -13,8 +13,8 @@ release:
   pre: false
   script: |-
     l3build tag ${tag}
-    # l3build ctan --show-log-on-error
-    l3build doc
+    rm -rf testfiles
+    l3build ctan --show-log-on-error
     texsc
     texqc
     git commit -am "version set to ${tag}"
