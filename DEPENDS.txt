@@ -1,12 +1,14 @@
 hard anyfontsize
 hard changepage
 hard crumbs
+hard csquotes
 hard enumitem
 hard fontsize
 hard hardwrap
 hard href-ul
 hard ifoddpage
 hard lastpage
+hard listings
 hard pagecolor
 hard pgf
 hard pgfopts
@@ -18,7 +20,6 @@ hard tikzpagenodes
 hard titling
 hard varwidth
 hard xcolor
-hard listings
 soft acmart
 soft biber
 soft biblatex
@@ -40,11 +41,11 @@ soft microtype
 soft newtx
 soft pdfcrop
 soft qrcode
-soft upquote
 soft scheme-basic
 soft setspace
 soft standalone
 soft textcase
 soft tools
 soft totpages
+soft upquote
 soft xetex
