@@ -1,9 +1,5 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `LinuxBiolinumT-TLF' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 [1
 ]
 LaTeX Font Info:    Calculating math sizes for size <24> on input line ....
@@ -20,8 +16,6 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Warning: Font shape `TU/LinuxLibertineT-TLF/b/n' undefined
-(Font)              using `TU/LinuxLibertineT-TLF/m/n' instead on input line ....
 LaTeX Warning: Reference `LastPage' on page 2 undefined on input line ....
 [2]
 LaTeX Warning: Reference `LastPage' on page 3 undefined on input line ....
@@ -69,13 +63,13 @@ Overfull \vbox (91.57343pt too high) has occurred while \output is active
 ......\kern 6.0
 ......\special{color push rgb 0.93333 0.93333 0.93333}
 ......\special{color push rgb 0.13725 0.14511 0.15294}
-......\TU/LinuxBiolinumT-TLF/m/n/34.56 This
+......\TU/lmr/m/n/34.56 This
 ......\glue 10.43712 plus 5.21855 minus 3.47903
-......\TU/LinuxBiolinumT-TLF/m/n/34.56 Is
+......\TU/lmr/m/n/34.56 Is
 ......\glue 10.43712 plus 5.21855 minus 3.47903
-......\TU/LinuxBiolinumT-TLF/m/n/34.56 My
+......\TU/lmr/m/n/34.56 My
 ......\glue 10.43712 plus 5.21855 minus 3.47903
-......\TU/LinuxBiolinumT-TLF/m/n/34.56 Photo
+......\TU/lmr/m/n/34.56 Photo
 ......\special{color pop}
 ......\special{color pop}
 ......\kern 6.0

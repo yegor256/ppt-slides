@@ -1,15 +1,8 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
-LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 28.8pt on input line ....
-LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 59.712pt on input line ....
 [1
 ]
 LaTeX Font Info:    Calculating math sizes for size <24> on input line ....
-(../mt-cmr.cfg
-File: mt-cmr.cfg ....-..-.. v... microtype config. file: Computer Modern Roman (RS)
-)
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <24> on input line ....
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -20,24 +13,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 20.00015pt on input line ....
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 20.00015pt on input line ....
 LaTeX Warning: Reference `LastPage' on page 2 undefined on input line ....
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 16.00008pt on input line ....
 [2]
 LaTeX Warning: Reference `LastPage' on page 3 undefined on input line ....
 [3]
-LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 41.472pt on input line ....
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 21.9pt on input line ....
 LaTeX Warning: Reference `LastPage' on page 4 undefined on input line ....
 [4]
-LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 34.56pt on input line ....
 LaTeX Warning: Reference `LastPage' on page 5 undefined on input line ....
 [5]
 LaTeX Warning: Reference `LastPage' on page 6 undefined on input line ....
@@ -51,7 +32,7 @@ File: socrates.jpg Graphic file (type jpg)
 <use socrates.jpg>
 Package pdftex.def Info: socrates.jpg  used on input line ....
 (pdftex.def)             Requested size: 361.35pt x 482.06096pt.
-Overfull \vbox (92.91006pt too high) has occurred while \output is active
+Overfull \vbox (91.29437pt too high) has occurred while \output is active
 \vbox(433.62+0.0)x722.70001
 .\glue(\topskip) 0.00002
 .\rule(0.0+0.0)x*
@@ -61,45 +42,44 @@ Overfull \vbox (92.91006pt too high) has occurred while \output is active
 .\glue(\parskip) 18.0
 .\glue(\parskip) 0.0
 .\glue(\lineskip) 1.0
-.\hbox(34.67754+14.15399)x722.70001, glue set 251.45094fil
+.\hbox(34.49557+12.72026)x722.70001, glue set 249.93976fil
 ..\hbox(0.0+0.0)x0.0
 ..\rule(*+*)x0.0
 ..\penalty 10000
 ..\glue -36.135
 ..\glue 0.0
-..\hbox(34.67754+14.15399)x255.93312
-...\kern 0.52686
-...\hbox(30.2352+14.15616)x0.0
+..\hbox(34.49557+12.72026)x258.95549
+...\kern 0.52277
+...\hbox(30.0+12.72221)x0.0
 ....\pdfsave
 ....\pdfsetmatrix{.99985 .01743 -.01743 .99985}
-....\hbox(30.2352+14.15616)x0.0
+....\hbox(30.0+12.72221)x0.0
 .....\pdfcolorstack 0 push {0.9412 0.39609 0.26276 rg 0.9412 0.39609 0.26276 RG}
 .....\pdfcolorstack 0 push {0.9412 0.39609 0.26276 rg 0.9412 0.39609 0.26276 RG}
-.....\hbox(30.2352+14.15616)x0.0, glue set - 255.19853fil
-......\rule(30.2352+14.15616)x255.19853
+.....\hbox(30.0+12.72221)x0.0, glue set - 258.25046fil
+......\rule(30.0+12.72221)x258.25046
 ......\glue 0.0 plus 1.0fil minus 1.0fil
 .....\pdfcolorstack 0 pop
-.....\hbox(30.2352+14.15616)x255.19853
+.....\hbox(30.0+12.72221)x258.25046
 ......\kern 6.0
 ......\pdfcolorstack 0 push {0.93333 0.93333 0.93333 rg 0.93333 0.93333 0.93333 RG}
 ......\pdfcolorstack 0 push {0.13725 0.14511 0.15294 rg 0.13725 0.14511 0.15294 RG}
-......\OT1/LinuxBiolinumT-TLF/m/n/34.56 T
-......\OT1/LinuxBiolinumT-TLF/m/n/34.56 h
-......\OT1/LinuxBiolinumT-TLF/m/n/34.56 i
-......\OT1/LinuxBiolinumT-TLF/m/n/34.56 s
-......\glue 8.64 plus 4.31999 minus 2.87883
-......\OT1/LinuxBiolinumT-TLF/m/n/34.56 I
-......\OT1/LinuxBiolinumT-TLF/m/n/34.56 s
-......\glue 8.64 plus 4.31999 minus 2.87883
-......\OT1/LinuxBiolinumT-TLF/m/n/34.56 M
-......\OT1/LinuxBiolinumT-TLF/m/n/34.56 y
-......\glue 8.64 plus 4.31999 minus 2.87883
-......\OT1/LinuxBiolinumT-TLF/m/n/34.56 P
-......\kern0.41472
-......\OT1/LinuxBiolinumT-TLF/m/n/34.56 h
-......\OT1/LinuxBiolinumT-TLF/m/n/34.56 o
-......\OT1/LinuxBiolinumT-TLF/m/n/34.56 t
-......\OT1/LinuxBiolinumT-TLF/m/n/34.56 o
+......\OT1/cmr/m/n/24.88 T
+......\OT1/cmr/m/n/24.88 h
+......\OT1/cmr/m/n/24.88 i
+......\OT1/cmr/m/n/24.88 s
+......\glue 10.43323 plus 5.41661 minus 3.61108
+......\OT1/cmr/m/n/24.88 I
+......\OT1/cmr/m/n/24.88 s
+......\glue 10.43323 plus 5.41661 minus 3.61108
+......\OT1/cmr/m/n/24.88 M
+......\OT1/cmr/m/n/24.88 y
+......\glue 10.43323 plus 5.41661 minus 3.61108
+......\OT1/cmr/m/n/24.88 P
+......\OT1/cmr/m/n/24.88 h
+......\OT1/cmr/m/n/24.88 o
+......\OT1/cmr/m/n/24.88 t
+......\OT1/cmr/m/n/24.88 o
 ......\pdfcolorstack 0 pop
 ......\pdfcolorstack 0 pop
 ......\kern 6.0

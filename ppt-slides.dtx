@@ -430,6 +430,12 @@
 \RequirePackage{varwidth}
 %    \end{macrocode}
 
+% Then, we include \href{https://ctan.org/pkg/csquotes}{csquotes}
+% in order to use double quotes:
+%    \begin{macrocode}
+\RequirePackage{csquotes}
+%    \end{macrocode}
+
 % Then, we include \href{https://ctan.org/pkg/qrcode}{qrcode}
 % in order to render QR codes:
 %    \begin{macrocode}
@@ -609,7 +615,7 @@
       }%
     }%
     &%
-    ``#3{}''%
+    \enquote{#3{}}%
     \def\param{#4}%
     \ifx\param\empty\else%
       \par\vspace*{1em}%
