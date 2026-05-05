@@ -35,6 +35,7 @@ soft hypdoc
 soft hyperxmp
 soft ifmtarg
 soft l3build
+soft lmodern
 soft microtype
 soft newtx
 soft pdfcrop

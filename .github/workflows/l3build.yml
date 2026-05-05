@@ -39,6 +39,11 @@ jobs:
           package_file: .texlive-packages.txt
           texlive_version: 2025
       - run: l3build ctan --show-log-on-error --halt-on-error
+      - if: failure()
+        run: |
+          echo '::group::ppt-slides.log'
+          cat build/doc/ppt-slides.log 2>/dev/null || echo 'no build/doc/ppt-slides.log'
+          echo '::endgroup::'
       - run: |
           mkdir build/gh-pages
           cp build/distrib/tds/tex/latex/ppt-slides/ppt-slides.sty \
