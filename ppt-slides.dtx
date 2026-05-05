@@ -62,7 +62,7 @@
 %
 % \section{Introduction}
 %
-% This package helps you render slide decks in PowerPoint\texttrademark{} style:
+% This package renders slide decks in the PowerPoint\texttrademark{} style:
 % \begin{docshot}
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
@@ -73,20 +73,20 @@
 % \end{document}
 % \end{docshot}
 
-% It is recommended to use this package together with
+% It is recommended that this package be employed in conjunction with
 % \href{https://github.com/yegor256/clicks}{clicks}:
 % \begin{docshot}
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
 % \usepackage[static]{clicks}
 % \begin{document}
-% We help you make slide decks in \LaTeX:
+% Slide decks may be composed in \LaTeX:
 % \plick{\pptBanner{Making Slides Is Easy}}
-% \plick{Just use this package...}
-% \plush{together with 'clicks' package.}
-% They will look similar to what PowerPoint can
-% make, but with the precision of \LaTeX. We
-% recommend using us together with ``clicks.''
+% \plick{Simply employ this package\ldots}
+% \plush{together with the 'clicks' package.}
+% The result resembles what PowerPoint
+% produces, yet with the precision of \LaTeX.
+% Use in concert with ``clicks'' is recommended.
 % \end{document}
 % \end{docshot}
 
@@ -94,7 +94,7 @@
 
 % \DescribeMacro{\pptToc}
 % \DescribeMacro{\pptChapter}
-% First, split your story into chapters:
+% First, the narrative is divided into chapters:
 %\iffalse
 %<*verb>
 %\fi
@@ -115,12 +115,12 @@
 %\iffalse
 %</verb>
 %\fi
-% |\pptToc| will render the table of contents in an interactive ``clickable'' format.
-% Thanks to the use of \href{https://github.com/yegor256/crumbs}{crumbs}, there will
-% be a navigation at the top left corner.
+% |\pptToc| renders the table of contents in an interactive ``clickable'' format.
+% Through the use of \href{https://github.com/yegor256/crumbs}{crumbs}, a navigation
+% appears at the upper left corner.
 
 % \DescribeMacro{\pptSection}
-% Then, put sections inside chapters:
+% Sections are then placed within chapters:
 %\iffalse
 %<*verb>
 %\fi
@@ -140,12 +140,12 @@
 %\iffalse
 %</verb>
 %\fi
-% The |\pptChapter| and |\pptSection| commands used together will render
-% a nice two-level navigation menu at the top left corner.
+% The |\pptChapter| and |\pptSection| commands employed in tandem render
+% an elegant two-level navigation menu at the upper left corner.
 
 % \DescribeMacro{\pptLeft}
 % \DescribeMacro{\pptRight}
-% You can place the title of the presentation and your name at the bottom
+% The title of the presentation and the author's name may be placed at the foot
 % of each slide, on the left and on the right respectively:
 %\iffalse
 %<*verb>
@@ -163,15 +163,14 @@
 %\iffalse
 %</verb>
 %\fi
-% If you don't use the |\pptLeft| or |\pptRight| commands, nothing will
-% be printed at the bottom.
+% Should neither the |\pptLeft| nor the |\pptRight| command be used, nothing
+% is printed at the foot.
 
 % \section{Commands}
 
 % \DescribeMacro{\pptPic}
-% You can add an image to the slide (the first argument is the width
-% of the image in relation to |\textwidth|,
-% while the second one is the path of it):
+% An image may be added to a slide (the first argument denotes the width
+% of the image relative to |\textwidth|, while the second supplies its path):
 % \begin{docshot}
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
@@ -182,7 +181,7 @@
 % \end{docshot}
 
 % \DescribeMacro{\pptHeader}
-% You can add a piece of code to the slide (we recommend using \href{https://github.com/yegor256/ffcode}{ffcode}):
+% A code fragment may be added to a slide (the use of \href{https://github.com/yegor256/ffcode}{ffcode} is recommended):
 % \begin{docshot}
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
@@ -196,84 +195,84 @@
 % \end{ffcode}
 % \end{document}
 % \end{docshot}
-% Don't use |\plick| or |\plush|, they won't work with code snippets.
-% The |\pptHeader| command prints a header similar to what the |\pptSection| command prints, but
-% doesn't start a new section.
+% |\plick| or |\plush| should not be used here, as they do not function with code snippets.
+% The |\pptHeader| command prints a header similar to that produced by the |\pptSection| command,
+% yet without commencing a new section.
 
 % \DescribeMacro{\pptQuote}
 % \DescribeMacro{\pptBanner}
-% You can put a quote next to the image, by using the |\pptQuote| command:
+% A quotation may be placed beside an image by means of the |\pptQuote| command:
 % \begin{docshot}
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
 % \begin{document}
-% \pptBanner{My Favorite Quote}
+% \pptBanner{A Cherished Quote}
 % \pptQuote{socrates.jpg}{The only true wisdom
-% is in knowing you know nothing}{Socrates}
+% lies in knowing that one knows nothing}{Socrates}
 % \end{document}
 % \end{docshot}
 
 % \DescribeMacro{\pptThought}
-% For an interesting thought in the middle of the slide, use |\pptThought|:
+% For a noteworthy thought to be placed at the centre of the slide, |\pptThought| is employed:
 % \begin{docshot}
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
 % \begin{document}
 % \pptThought{Socrates said that the only true
-% wisdom is in knowing you know nothing. Was he
-% a wise man?...}
+% wisdom lies in knowing that one knows nothing.
+% Was he a wise man?...}
 % \end{document}
 % \end{docshot}
 
 % \DescribeMacro{pptMiddle}
-% You can put your content vertically in the middle of the page, using the |pptMiddle| environment:
+% Content may be positioned vertically at the centre of the page by means of the |pptMiddle| environment:
 % \begin{docshot}
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
 % \begin{document}
 % \begin{pptMiddle}
-% ``Your time is limited, so don't waste it
-% living someone else's life.'' --- Steve Jobs
+% ``One's time is limited; it ought not be
+% wasted living someone else's life.'' --- Steve Jobs
 % \end{pptMiddle}
 % \end{document}
 % \end{docshot}
 
 % \DescribeMacro{\pptQR}
-% Sometimes it's convenient to show a QR code to your audience instead of
-% a URL, since it's easier to use --- they can scan it:
+% On occasion, it is more convenient to present a QR code to the audience in lieu of
+% a URL, since the former is more readily consulted---it may simply be scanned:
 % \begin{docshot}
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
 % \begin{document}
-% Check my blog post by this link: \\
+% The blog post may be consulted at: \\
 % \pptQR{https://www.yegor256.com}
 % \end{document}
 % \end{docshot}
-% The code will look like this, thanks to \href{https://ctan.org/pkg/qrcode}{qrcode} package that
-% we use behind the scenes.
+% The code is rendered thus by virtue of the \href{https://ctan.org/pkg/qrcode}{qrcode} package
+% employed internally.
 
 % \DescribeMacro{pptWide}
 % \DescribeMacro{pptWideOne}
-% Sometimes you need your slide content to take all visible horizontal space:
+% Slide content occasionally needs to occupy the entire visible horizontal width:
 % \begin{docshot}
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
 % \begin{document}
 % \begin{pptWideOne}
-% This paragraph is too long for some reasons,
-% that's why it must take all visible horizontal
-% space, while normally the content has a wide
-% margin on the left side of the page.
+% This paragraph happens to be unusually long,
+% and must therefore occupy the entire visible
+% horizontal width, although the content
+% ordinarily bears a generous left margin.
 % \end{pptWideOne}
 % \end{document}
 % \end{docshot}
-% You can also use |\begin{pptWide}{X}|,
-% where |X| is the number of columns to render.
+% The form |\begin{pptWide}{X}| is likewise admissible,
+% where |X| denotes the number of columns to be rendered.
 
 % \section{Package Options}
 
 % \DescribeMacro{template}
-% You start with a template for your slide deck:
+% Each slide deck begins with a template:
 %\iffalse
 %<*verb>
 %\fi
@@ -287,12 +286,13 @@
 %\iffalse
 %</verb>
 %\fi
-% There is only one template, which is used by default: |9x6|. If you don't
-% specify the name, it will be used. If you don't use the |template| option at all,
-% the default |article| will be rendered, which is not what you want.
+% Only one template is supplied and is used by default: |9x6|. Should the
+% name be omitted, this template is selected. Should the |template| option
+% itself be omitted entirely, the default |article| is rendered, which is
+% rarely the desired outcome.
 
 % \DescribeMacro{scheme}
-% You can choose a color scheme for your slides, using the |scheme| option
+% A colour scheme for the slides may be selected by means of the |scheme| option
 % of the package:
 %\iffalse
 %<*verb>
@@ -303,9 +303,9 @@
 %\iffalse
 %</verb>
 %\fi
-% There are a few out-of-the-box schemes available: |light|, |dark|,
-% |light-mono|, and |dark-mono|. You can design your own, using
-% |ppt-light.tex| file as an example:
+% Several schemes are available out of the box: |light|, |dark|,
+% |light-mono|, and |dark-mono|. A bespoke scheme may also be devised, taking
+% the |ppt-light.tex| file as a model:
 %\iffalse
 %<*verb>
 %\fi
@@ -317,7 +317,7 @@
 %\fi
 
 % \DescribeMacro{directory}
-% You can change the location of the templates and schemes by means of the |directory| package option:
+% The location of the templates and schemes may be altered by means of the |directory| package option:
 %\iffalse
 %<*verb>
 %\fi
@@ -329,9 +329,9 @@
 %\fi
 
 % \DescribeMacro{nominutes}
-% By default, if you render your slide deck in non-static mode (the |static| option for the ``clicks'' package),
-% there will be minutes tracking in the right top corner of each slide. You can turn this off
-% by using the |nominutes| option of the package:
+% By default, when the slide deck is rendered in non-static mode (the |static| option of the ``clicks'' package being absent),
+% a minute tracker appears at the upper right corner of each slide. This may be disabled
+% by means of the |nominutes| option of the package:
 %\iffalse
 %<*verb>
 %\fi
@@ -343,8 +343,8 @@
 %\fi
 
 % \DescribeMacro{nocrumbs}
-% By default, the top left corner of each slide has so called crumbs. You can get rid of them
-% with the help of the |nocrumbs| package option:
+% By default, the upper left corner of each slide bears so-called crumbs. These may be removed
+% by means of the |nocrumbs| package option:
 %\iffalse
 %<*verb>
 %\fi
