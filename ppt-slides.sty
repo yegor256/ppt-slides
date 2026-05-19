@@ -31,7 +31,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ppt-slides}
-[2026-05-19 06.11.14 Slide Decks a la Power Point]
+[2026-05-19 06.18.08 Slide Decks a la Power Point]
 
 
 
@@ -254,6 +254,12 @@
       \path [draw=green,line width=8pt] (z.north west) -- (z.south west);
     }%
   \end{pptMiddle}%
+}
+
+\newcommand\pptPunch[1]{%
+  \begin{textblock}{16}[0.5,0.5](8,8)%
+    \centering #1%
+  \end{textblock}%
 }
 
 \newcommand\pptSnippet[2][\small]{%
