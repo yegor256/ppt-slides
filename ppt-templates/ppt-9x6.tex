@@ -37,7 +37,6 @@
 \makeatother
 
 \RequirePackage{fancyhdr}
-\makeatletter
   \pagestyle{fancy}
   \renewcommand{\headrulewidth}{0pt}
   \fancyhf{}
@@ -54,6 +53,7 @@
       \end{textblock}%
     \fi
   }
+  \makeatletter
   \fancyhead[R]{%
     \ifnum\value{page}=1\else%
       \begin{textblock}{4}[1,0](15,1)%
@@ -63,14 +63,17 @@
         \ifcsname c@minutes\endcsname
           \ifnum\value{minutes}=0\else%
             \begin{textblock}{1}[1,0](15.8,0.2)%
-              \tikz{\node[inner sep=2pt,circle,draw=grey]{\color{grey}\scriptsize\ttfamily\theminutes{}};}
+              \tikz{
+                \node[inner sep=2pt,circle,draw=grey]
+                {\color{grey}\scriptsize\ttfamily\theminutes{}};
+              }
             \end{textblock}%
           \fi
         \fi
       \fi
     \fi
   }
-\makeatother
+  \makeatother
 
 \newcommand\pptLeft[1]{%
   \fancyfoot[L]{%
