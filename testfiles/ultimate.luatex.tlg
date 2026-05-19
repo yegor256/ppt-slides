@@ -35,7 +35,7 @@ File: socrates.jpg Graphic file (type jpg)
 <use socrates.jpg>
 Package luatex.def Info: socrates.jpg  used on input line ....
 (luatex.def)             Requested size: 361.35pt x 482.06096pt.
-Overfull \vbox (91.57344pt too high) has occurred while \output is active
+Overfull \vbox (92.57344pt too high) has occurred while \output is active
 \vbox(433.62+0.0)x722.70001, direction TLT
 .\glue(\topskip) 0.00002
 .\rule(0.0+0.0)x*
@@ -170,7 +170,6 @@ Overfull \vbox (91.57344pt too high) has occurred while \output is active
 .\penalty 10000
 .\glue 0.0
 .\glue 0.0
-.\glue -1.0
 .\glue 0.0 plus 1.0fil
 .\glue 0.0
 .\glue 0.0 plus 0.0001fil

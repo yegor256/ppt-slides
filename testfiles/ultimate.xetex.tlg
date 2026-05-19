@@ -32,7 +32,7 @@ LaTeX Warning: Reference `LastPage' on page 8 undefined on input line ....
 [8]
 File: socrates.jpg Graphic file (type bmp)
 <socrates.jpg>
-Overfull \vbox (91.57343pt too high) has occurred while \output is active
+Overfull \vbox (92.57343pt too high) has occurred while \output is active
 \vbox(433.62+0.0)x722.70001
 .\glue(\topskip) 0.00002
 .\rule(0.0+0.0)x*
@@ -136,7 +136,6 @@ Overfull \vbox (91.57343pt too high) has occurred while \output is active
 .\penalty 10000
 .\glue 0.0
 .\glue 0.0
-.\glue -1.0
 .\glue 0.0 plus 1.0fil
 .\glue 0.0
 .\glue 0.0 plus 0.0001fil

@@ -37,6 +37,7 @@
 \makeatother
 
 \RequirePackage{fancyhdr}
+\makeatletter
   \pagestyle{fancy}
   \renewcommand{\headrulewidth}{0pt}
   \fancyhf{}
@@ -58,7 +59,7 @@
       \begin{textblock}{4}[1,0](15,1)%
         {\ttfamily\normalsize {\thepage{}}{\footnotesize{\color{grey}/\pageref{LastPage}}}}
       \end{textblock}%
-      \makeatletter\ifdefined\ppt@nominutes\else
+      \ifdefined\ppt@nominutes\else
         \ifcsname c@minutes\endcsname
           \ifnum\value{minutes}=0\else%
             \begin{textblock}{1}[1,0](15.8,0.2)%
@@ -66,9 +67,10 @@
             \end{textblock}%
           \fi
         \fi
-      \fi\makeatother
+      \fi
     \fi
   }
+\makeatother
 
 \newcommand\pptLeft[1]{%
   \fancyfoot[L]{%
