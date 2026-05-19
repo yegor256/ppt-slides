@@ -689,6 +689,19 @@
 %    \end{macrocode}
 % \end{macro}
 
+% \begin{macro}{\pptPunch}
+% \changes{0.7.0}{2026/05/19}{The \texttt{\char`\\pptPunch} command places content right
+% in the middle of the slide, both vertically and horizontally.}
+% Then, we define the |\pptPunch| command:
+%    \begin{macrocode}
+\newcommand\pptPunch[1]{%
+  \begin{textblock}{16}[0.5,0.5](8,8)%
+    \centering #1%
+  \end{textblock}%
+}
+%    \end{macrocode}
+% \end{macro}
+
 % \begin{macro}{\pptSnippet}
 % Then, we define the |\pptSnippet| command:
 %    \begin{macrocode}
