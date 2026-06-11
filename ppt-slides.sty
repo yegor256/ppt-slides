@@ -31,7 +31,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ppt-slides}
-[2026-06-04 02.58.44 Slide Decks a la Power Point]
+[2026-06-11 04.34.46 Slide Decks a la Power Point]
 
 
 
@@ -123,6 +123,12 @@
   {\setlength{\fboxsep}{6pt}%
     \colorbox{#1}{\color{\thepagecolor}\large #2}}%
   \par%
+}
+
+\AtBeginDocument{%
+  \ifdefined\printbibliography%
+    \defbibheading{bibliography}[\refname]{\pptBanner{#1}}%
+  \fi%
 }
 
 \newcommand\pptChapterLabel{Chapter}
