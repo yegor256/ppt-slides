@@ -508,6 +508,21 @@
 %    \end{macrocode}
 % \end{macro}
 
+% \changes{0.8.0}{2026/06/11}{A \texttt{biblatex}-compatible bibliography heading defined.}
+% Then, when \href{https://ctan.org/pkg/biblatex}{biblatex} is loaded, we declare
+% a bibliography heading that uses |\pptBanner| instead of |\section*|. The
+% |crumbs| package redefines |\section| in a way that does not understand its
+% starred form, so |biblatex|'s default heading (which issues |\section*{\refname}|)
+% would otherwise render as a bogus numbered section. This also makes the references
+% slide visually consistent with other |\pptBanner| headings:
+%    \begin{macrocode}
+\AtBeginDocument{%
+  \ifdefined\printbibliography%
+    \defbibheading{bibliography}[\refname]{\pptBanner{#1}}%
+  \fi%
+}
+%    \end{macrocode}
+
 % \begin{macro}{\pptChapter}
 % \changes{0.4.0}{2024/10/18}{The \texttt{\char`\\pptChapterLabel} command introduced.}
 % Then, we define the |\pptChapter| and |\pptChapterLabel| commands:
