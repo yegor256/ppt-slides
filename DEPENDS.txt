@@ -23,6 +23,7 @@ hard xcolor
 soft acmart
 soft biber
 soft biblatex
+soft bookmark
 soft booktabs
 soft caption
 soft clicks
@@ -30,6 +31,7 @@ soft cmap
 soft comment
 soft crumbs
 soft docshots
+soft fail-fast
 soft ffcode
 soft hypdoc
 soft hyperxmp
@@ -42,6 +44,7 @@ soft pdfcrop
 soft qrcode
 soft scheme-basic
 soft setspace
+soft silence
 soft standalone
 soft textcase
 soft tools
