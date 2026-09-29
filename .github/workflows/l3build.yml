@@ -23,6 +23,7 @@ jobs:
         with:
           python-version: '3.14'
       - run: |
+          sudo apt-get update --yes
           sudo apt-get install --yes python3-pygments && sudo pip3 install pygments
         if: matrix.os == 'ubuntu-24.04'
       - run: |
