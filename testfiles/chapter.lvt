@@ -1,0 +1,14 @@
+% SPDX-FileCopyrightText: Copyright (c) 2022-2026 Yegor Bugayenko
+% SPDX-License-Identifier: MIT
+
+\input{regression-test.tex}
+\documentclass{article}
+\usepackage[template,scheme=dark,directory=../../]{ppt-slides}
+\begin{document}
+
+\START
+
+\setbox0\vbox{\pptChapter{Alpha}\pptChapter{Beta}\pptSection{One}}
+\TYPE{chapter=\the\value{section}, section=\the\value{subsection}}
+
+\END
