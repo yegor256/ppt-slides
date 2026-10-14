@@ -448,11 +448,14 @@
 \fi\makeatother
 %    \end{macrocode}
 
-% Then, we include the scheme:
+% Then, we include the scheme, either a built-in one by its name or
+% a custom one by the path to its file:
 %    \begin{macrocode}
 \makeatletter\ifdefined\ppt@scheme
   \RequirePackage{xcolor}
-  \input{\ppt@directory ppt-schemes/ppt-\ppt@scheme.tex}
+  \IfFileExists{\ppt@directory ppt-schemes/ppt-\ppt@scheme.tex}
+    {\input{\ppt@directory ppt-schemes/ppt-\ppt@scheme.tex}}
+    {\input{\ppt@scheme}}
 \else
   \message{^^Jppt: No color scheme is loaded, because
     the 'scheme' option is not specified}
