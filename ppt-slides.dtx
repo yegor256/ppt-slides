@@ -31,7 +31,7 @@
 %<package>\NeedsTeXFormat{LaTeX2e}
 %<package>\ProvidesPackage{ppt-slides}
 %<*package>
-[0000-00-00 0.0.0 Slide Decks a la Power Point]
+[0000-00-00 0.0.0 Slide Decks a la PowerPoint]
 %</package>
 %<*driver>
 \documentclass{ltxdoc}
@@ -90,7 +90,7 @@
 % Slide decks may be composed in \LaTeX:
 % \plick{\pptBanner{Making Slides Is Easy}}
 % \plick{Simply employ this package\ldots}
-% \plush{together with the 'clicks' package.}
+% \plush{together with the ``clicks'' package.}
 % The result resembles what PowerPoint
 % produces, yet with the precision of \LaTeX.
 % Use in concert with ``clicks'' is recommended.
@@ -125,6 +125,20 @@
 % |\pptToc| renders the table of contents in an interactive ``clickable'' format.
 % Through the use of \href{https://github.com/yegor256/crumbs}{crumbs}, a navigation
 % appears at the upper left corner.
+% An optional argument, as in |\pptToc[Agenda]|, prints a title above the table.
+
+% \DescribeMacro{\pptChapterLabel}
+% Each chapter slide is labelled with the word ``Chapter'' and its number.
+% The word may be replaced by redefining |\pptChapterLabel|:
+%\iffalse
+%<*verb>
+%\fi
+\begin{verbatim}
+\renewcommand\pptChapterLabel{Part}
+\end{verbatim}
+%\iffalse
+%</verb>
+%\fi
 
 % \DescribeMacro{\pptSection}
 % Sections are then placed within chapters:
@@ -188,7 +202,7 @@
 % \end{docshot}
 
 % \DescribeMacro{\pptHeader}
-% A code fragment may be added to a slide (the use of \href{https://github.com/yegor256/ffcode}{ffcode} is recommended):
+% A header may be printed above a code fragment on a slide (the use of \href{https://github.com/yegor256/ffcode}{ffcode} is recommended):
 % \begin{docshot}
 % \documentclass{article}
 % \usepackage[template,scheme=dark]{ppt-slides}
@@ -218,6 +232,8 @@
 % lies in knowing that one knows nothing}{Socrates}
 % \end{document}
 % \end{docshot}
+% The background colour of |\pptBanner| is |green| by default and may be
+% changed by an optional argument, as in |\pptBanner[orange]{Hello}|.
 
 % \DescribeMacro{\pptThought}
 % For a noteworthy thought to be placed at the centre of the slide, |\pptThought| is employed:
@@ -231,7 +247,7 @@
 % \end{document}
 % \end{docshot}
 
-% \DescribeMacro{pptMiddle}
+% \DescribeEnv{pptMiddle}
 % Content may be positioned vertically at the centre of the page by means of the |pptMiddle| environment:
 % \begin{docshot}
 % \documentclass{article}
@@ -256,10 +272,41 @@
 % \end{document}
 % \end{docshot}
 % The code is rendered thus by virtue of the \href{https://ctan.org/pkg/qrcode}{qrcode} package
-% employed internally.
+% employed internally. Its height is two inches by default and may be changed by an
+% optional argument, as in |\pptQR[1in]{...}|.
 
-% \DescribeMacro{pptWide}
-% \DescribeMacro{pptWideOne}
+% \DescribeMacro{\pptPin}
+% \DescribeMacro{\pptPinQR}
+% A small block may be pinned to the upper corner of a slide, outside of the
+% text flow, by means of |\pptPin|; the optional argument is either
+% |right| (the default) or |left|. The |\pptPinQR| command pins a QR code
+% together with its URL in the same way:
+%\iffalse
+%<*verb>
+%\fi
+\begin{verbatim}
+\pptPin{Remember this!}
+\pptPinQR[left]{https://www.yegor256.com}
+\end{verbatim}
+%\iffalse
+%</verb>
+%\fi
+
+% \DescribeMacro{\pptSnippet}
+% The content of a file may be printed verbatim by means of |\pptSnippet|;
+% the optional argument sets the font size, which is |\small| by default:
+%\iffalse
+%<*verb>
+%\fi
+\begin{verbatim}
+\pptSnippet[\footnotesize]{src/main.c}
+\end{verbatim}
+%\iffalse
+%</verb>
+%\fi
+
+% \DescribeEnv{pptWide}
+% \DescribeEnv{pptWideOne}
 % Slide content occasionally needs to occupy the entire visible horizontal width:
 % \begin{docshot}
 % \documentclass{article}
@@ -492,7 +539,7 @@
 \RequirePackage{seqsplit}
 %    \end{macrocode}
 
-% \begin{macro}{\pptMiddle}
+% \begin{environment}{pptMiddle}
 % \changes{0.2.1}{2022/12/04}{The \texttt{\char`\\pptMiddle} command turned into \texttt{pptMiddle} environment.}
 % Then, we define the |pptMiddle| environment:
 %    \begin{macrocode}
@@ -500,7 +547,7 @@
   {\vspace*{\fill}}
   {\vspace*{\fill}}
 %    \end{macrocode}
-% \end{macro}
+% \end{environment}
 
 % \begin{macro}{\pptBanner}
 % Then, we define the |\pptBanner| command:
@@ -623,7 +670,7 @@
 %    \begin{macrocode}
 \newcommand\pptQuote[4][]{%
   \begin{tabularx}{\columnwidth}{c>{\raggedright\arraybackslash}X}%
-    \raisebox{\dimexpr-\height+\ht\strutbox}{
+    \raisebox{\dimexpr-\height+\ht\strutbox}{%
       \parbox{0.25\textwidth+2pt}{%
         \raggedright%
         \pptPic{0.25}{#2}%
@@ -767,7 +814,8 @@
 %    \end{macrocode}
 % \end{macro}
 
-% \begin{macro}{pptWide}
+% \begin{environment}{pptWideOne}
+% \begin{environment}{pptWide}
 % Finally, we define the |pptWide| and |pptWideOne| environments:
 %    \begin{macrocode}
 \newenvironment{pptWideOne}
@@ -777,7 +825,8 @@
   {\begin{pptWideOne}\begin{multicols}{#1}}
   {\end{multicols}\end{pptWideOne}}
 %    \end{macrocode}
-% \end{macro}
+% \end{environment}
+% \end{environment}
 
 %    \begin{macrocode}
 \endinput
