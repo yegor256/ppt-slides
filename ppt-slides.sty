@@ -31,7 +31,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ppt-slides}
-[2026-10-14 11.54.23 Slide Decks a la PowerPoint]
+[2026-10-14 12.03.05 Slide Decks a la PowerPoint]
 
 
 
@@ -131,6 +131,9 @@
 \RequirePackage{tabularx}
 
 \RequirePackage{seqsplit}
+
+\RequirePackage{changepage}
+\RequirePackage{multicol}
 
 \newenvironment{pptMiddle}
   {\vspace*{\fill}}
@@ -280,11 +283,18 @@
   \end{pptMiddle}%
 }
 
+\makeatletter
 \newcommand\pptPunch[1]{%
-  \begin{textblock}{16}[0.5,0.5](8,8)\leavevmode\color{.}%
-    \centering #1%
-  \end{textblock}%
+  \ifdefined\ppt@template%
+    \begin{textblock}{16}[0.5,0.5](8,8)\leavevmode\color{.}%
+      \centering #1%
+    \end{textblock}%
+  \else%
+    \PackageError{ppt-slides}{The \string\pptPunch\space command
+      requires the 'template' package option}{}%
+  \fi%
 }
+\makeatother
 
 \newcommand\pptSnippet[2][\small]{%
   \begin{samepage}%
