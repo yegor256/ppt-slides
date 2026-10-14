@@ -31,7 +31,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ppt-slides}
-[2026-10-14 12.21.54 Slide Decks a la PowerPoint]
+[2026-10-14 12.29.36 Slide Decks a la PowerPoint]
 
 
 
@@ -84,6 +84,8 @@
 }
 \makeatother
 \ExplSyntaxOff
+
+\PassOptionsToPackage{increment}{crumbs}
 
 \makeatletter\ifdefined\ppt@template
   \input{\ppt@directory ppt-templates/ppt-\ppt@template.tex}
