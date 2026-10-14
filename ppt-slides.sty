@@ -31,7 +31,10 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ppt-slides}
-[2026-10-14 07.50.46 Slide Decks a la Power Point]
+[2026-10-14 07.57.48 Slide Decks a la PowerPoint]
+
+
+
 
 
 
@@ -193,7 +196,7 @@
 
 \newcommand\pptQuote[4][]{%
   \begin{tabularx}{\columnwidth}{c>{\raggedright\arraybackslash}X}%
-    \raisebox{\dimexpr-\height+\ht\strutbox}{
+    \raisebox{\dimexpr-\height+\ht\strutbox}{%
       \parbox{0.25\textwidth+2pt}{%
         \raggedright%
         \pptPic{0.25}{#2}%
