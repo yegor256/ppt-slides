@@ -358,7 +358,8 @@
 %</verb>
 %\fi
 % Several schemes are available out of the box: |light|, |dark|,
-% |light-mono|, and |dark-mono|. A bespoke scheme may also be devised, taking
+% |light-mono|, and |dark-mono|. Should the |scheme| option be omitted while
+% a template is in use, the |light| scheme is selected. A bespoke scheme may also be devised, taking
 % the |ppt-light.tex| file as a model:
 %\iffalse
 %<*verb>
@@ -463,8 +464,13 @@
 %    \end{macrocode}
 
 % Then, we include the scheme, either a built-in one by its name or
-% a custom one by the path to its file:
+% a custom one by the path to its file. The template relies on the colors
+% that schemes define, so the |light| scheme is used when a template
+% is loaded without a scheme:
 %    \begin{macrocode}
+\makeatletter\ifdefined\ppt@template\ifdefined\ppt@scheme\else
+  \def\ppt@scheme{light}
+\fi\fi\makeatother
 \makeatletter\ifdefined\ppt@scheme
   \RequirePackage{xcolor}
   \IfFileExists{\ppt@directory ppt-schemes/ppt-\ppt@scheme.tex}
