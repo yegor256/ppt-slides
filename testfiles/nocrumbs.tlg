@@ -1,0 +1,11 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Package fancyhdr Warning: \headheight is too small (6.0pt): 
+(fancyhdr)                Make it at least 28.79999pt, for example:
+(fancyhdr)                \setlength{\headheight}{28.79999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-22.79999pt}.
+> \box...=void
+! OK.
+\__hook_toplevel shipout/before ...ox \TP@holdbox 
+l. ...\newpage
