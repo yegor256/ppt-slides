@@ -716,7 +716,7 @@
 % Then, we define the |\pptPunch| command:
 %    \begin{macrocode}
 \newcommand\pptPunch[1]{%
-  \begin{textblock}{16}[0.5,0.5](8,8)%
+  \begin{textblock}{16}[0.5,0.5](8,8)\leavevmode\color{.}%
     \centering #1%
   \end{textblock}%
 }

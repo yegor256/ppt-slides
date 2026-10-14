@@ -1,0 +1,21 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+> \box...=
+\vbox(0.0+0.0)x0.0
+.\vbox(0.0+0.0)x0.0, glue set - 261.46497fil
+..\glue 244.61697
+..\hbox(16.656+0.19199)x0.0, glue set - 1084.04984fil
+...\glue -72.26999
+...\vbox(16.656+0.19199)x1156.31982
+....\hbox(16.656+0.19199)x1156.31982, glue set 553.46391fil
+.....\glue(\leftskip) 0.0 plus 1.0fil
+.....\hbox(0.0+0.0)x0.0
+.....\special{color push rgb 0.93333 0.93333 0.93333}
+.....\TU/lmr/m/n/24 Hello
+.....\penalty 10000
+.....\glue(\parfillskip) 0.0
+.....\glue(\rightskip) 0.0 plus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+! OK.
+l. ...\showbox\TP@holdbox
