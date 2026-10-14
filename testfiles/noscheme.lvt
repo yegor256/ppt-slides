@@ -1,0 +1,14 @@
+% SPDX-FileCopyrightText: Copyright (c) 2022-2026 Yegor Bugayenko
+% SPDX-License-Identifier: MIT
+
+\input{regression-test.tex}
+\documentclass{article}
+\usepackage[template,directory=../../]{ppt-slides}
+\begin{document}
+
+\START
+
+\setbox0\hbox{\color{grey}x}
+\showbox0
+
+\END
