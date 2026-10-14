@@ -453,6 +453,13 @@
 \ExplSyntaxOff
 %    \end{macrocode}
 
+% Then, we ask \href{https://ctan.org/pkg/crumbs}{crumbs}, which the template
+% may load first, to increment the |section| and |subsection| counters,
+% since chapter numbers and the crumbs bar rely on them:
+%    \begin{macrocode}
+\PassOptionsToPackage{increment}{crumbs}
+%    \end{macrocode}
+
 % Then, we include the template:
 %    \begin{macrocode}
 \makeatletter\ifdefined\ppt@template

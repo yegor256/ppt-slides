@@ -13,7 +13,6 @@
 \RequirePackage{tikz} % for drawing circles
 \RequirePackage{lastpage} % to count pages and show total
 
-\makeatletter\ifdefined\ppt@nocrumbs\else
 \RequirePackage{crumbs}
   \renewcommand\crumb[2]{%
     \ifnum\value{crumbi}=1\else\hspace{1em}\fi
@@ -31,15 +30,14 @@
       #1%
     \fi%
   }
-\fi
-\makeatother
 
 \RequirePackage{fancyhdr}
   \pagestyle{fancy}
   \renewcommand{\headrulewidth}{0pt}
   \fancyhf{}
+  \makeatletter
   \fancyhead[L]{%
-    \ifx\crumbs\empty\else
+    \ifdefined\ppt@nocrumbs\else\ifx\crumbs\empty\else
       \begin{textblock}{12}(1,1)\leavevmode\color{.}%
         \ifnum\value{section}=0\else
           {\small\ttfamily\crumbs}
@@ -49,9 +47,8 @@
           \fi
         \fi
       \end{textblock}%
-    \fi
+    \fi\fi
   }
-  \makeatletter
   \fancyhead[R]{%
     \ifnum\value{page}=1\else%
       \begin{textblock}{4}[1,0](15,1)\leavevmode\color{.}%
