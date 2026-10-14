@@ -662,13 +662,15 @@
 % first page. The first argument is the title, the second is the subtitle. If the second
 % argument is empty, it won't be printed:
 %    \begin{macrocode}
+\makeatletter
 \newcommand\pptTitle[2]{%
   {\pptBanner{\Huge #1}}%
-  \def\param{#2}%
-  \ifx\param\empty\else%
+  \def\ppt@param{#2}%
+  \ifx\ppt@param\empty\else%
     {\pptBanner{\large #2}}%
   \fi%
 }
+\makeatother
 %    \end{macrocode}
 % \end{macro}
 
@@ -683,8 +685,8 @@
 \newcommand\pptToc[1][]{%
   \renewcommand*\pptTOC{}%
   \def\ppt@toc{%
-    \def\param{#1}%
-    \ifx\param\empty\else%
+    \def\ppt@param{#1}%
+    \ifx\ppt@param\empty\else%
       \pptBanner{#1}%
     \fi%
     \tikz{%
@@ -719,32 +721,34 @@
 % Then, we define the |\pptQuote| command, with one optional and three mandatory arguments:
 % \changes{0.3.0}{2023/11/08}{The \texttt{\char`\\pptQuote} command has got an optional parameter, where the name of the person on the photo can be specified.}
 %    \begin{macrocode}
+\makeatletter
 \newcommand\pptQuote[4][]{%
   \begin{tabularx}{\columnwidth}{c>{\raggedright\arraybackslash}X}%
     \raisebox{\dimexpr-\height+\ht\strutbox}{%
       \parbox{0.25\textwidth+2pt}{%
         \raggedright%
         \pptPic{0.25}{#2}%
-        \def\person{#1}%
-        \ifx\person\empty\else%
+        \def\ppt@person{#1}%
+        \ifx\ppt@person\empty\else%
           \par%
           \small%
-          \person%
+          \ppt@person%
         \fi%
       }%
     }%
     &%
     \enquote{#3{}}%
-    \def\param{#4}%
-    \ifx\param\empty\else%
+    \def\ppt@param{#4}%
+    \ifx\ppt@param\empty\else%
       \par\vspace*{1em}%
       \small%
-      \textemdash{} \param%
+      \textemdash{} \ppt@param%
       \par%
     \fi%
     \\%
   \end{tabularx}%
 }
+\makeatother
 %    \end{macrocode}
 % \end{macro}
 
