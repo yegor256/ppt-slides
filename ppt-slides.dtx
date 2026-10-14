@@ -371,7 +371,8 @@
 %\fi
 
 % \DescribeMacro{directory}
-% The location of the templates and schemes may be altered by means of the |directory| package option:
+% The location of the templates and schemes may be altered by means of the |directory| package option,
+% with or without a trailing slash:
 %\iffalse
 %<*verb>
 %\fi
@@ -436,6 +437,19 @@
 }
 \ProcessPgfPackageOptions{/ppt-slides}
 \makeatother
+%    \end{macrocode}
+
+% Then, we append a slash to the |directory|, unless it is empty or already ends with one:
+%    \begin{macrocode}
+\ExplSyntaxOn
+\makeatletter
+\tl_if_empty:NF \ppt@directory {
+  \str_if_eq:eeF { \str_item:Nn \ppt@directory { -1 } } { / } {
+    \tl_put_right:Nn \ppt@directory { / }
+  }
+}
+\makeatother
+\ExplSyntaxOff
 %    \end{macrocode}
 
 % Then, we include the template:
