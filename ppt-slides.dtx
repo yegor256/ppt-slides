@@ -562,6 +562,14 @@
 \RequirePackage{seqsplit}
 %    \end{macrocode}
 
+% Then, we include \href{https://ctan.org/pkg/changepage}{changepage}
+% and \href{https://ctan.org/pkg/multicol}{multicol}
+% in order to render |pptWideOne| and |pptWide|:
+%    \begin{macrocode}
+\RequirePackage{changepage}
+\RequirePackage{multicol}
+%    \end{macrocode}
+
 % \begin{environment}{pptMiddle}
 % \changes{0.2.1}{2022/12/04}{The \texttt{\char`\\pptMiddle} command turned into \texttt{pptMiddle} environment.}
 % Then, we define the |pptMiddle| environment:
@@ -783,13 +791,21 @@
 % \begin{macro}{\pptPunch}
 % \changes{0.7.0}{2026/05/19}{The \texttt{\char`\\pptPunch} command places content right
 % in the middle of the slide, both vertically and horizontally.}
-% Then, we define the |\pptPunch| command:
+% Then, we define the |\pptPunch| command, which places its block on the grid
+% that only the template sets up, so it refuses to work without one:
 %    \begin{macrocode}
+\makeatletter
 \newcommand\pptPunch[1]{%
-  \begin{textblock}{16}[0.5,0.5](8,8)\leavevmode\color{.}%
-    \centering #1%
-  \end{textblock}%
+  \ifdefined\ppt@template%
+    \begin{textblock}{16}[0.5,0.5](8,8)\leavevmode\color{.}%
+      \centering #1%
+    \end{textblock}%
+  \else%
+    \PackageError{ppt-slides}{The \string\pptPunch\space command
+      requires the 'template' package option}{}%
+  \fi%
 }
+\makeatother
 %    \end{macrocode}
 % \end{macro}
 
