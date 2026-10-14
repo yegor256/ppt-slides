@@ -31,7 +31,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ppt-slides}
-[2026-10-14 12.10.18 Slide Decks a la PowerPoint]
+[2026-10-14 12.21.54 Slide Decks a la PowerPoint]
 
 
 
@@ -184,9 +184,10 @@
 }
 
 \newcommand*\pptTOC{}
+\makeatletter
 \newcommand\pptToc[1][]{%
   \renewcommand*\pptTOC{}%
-  \print{%
+  \def\ppt@toc{%
     \def\param{#1}%
     \ifx\param\empty\else%
       \pptBanner{#1}%
@@ -204,6 +205,7 @@
       \path [draw=blue,line width=4pt] (z.north west) -- (z.south west);%
     }%
   }%
+  \ifdefined\print\print{\ppt@toc}\fi%
   \begin{@empty}%
     \renewcommand\crumb[2]{%
       \ifx\pptTOC\empty\else\ifdefined\click\click[0]\fi\fi
@@ -211,8 +213,10 @@
     }
     \crumbs
   \end{@empty}%
+  \ifdefined\print\else\ppt@toc\par\fi%
   \ifdefined\flush\flush[1]\fi%
 }
+\makeatother
 
 \newcommand\pptQuote[4][]{%
   \begin{tabularx}{\columnwidth}{c>{\raggedright\arraybackslash}X}%
