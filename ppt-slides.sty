@@ -31,7 +31,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ppt-slides}
-[2026-10-14 11.46.28 Slide Decks a la PowerPoint]
+[2026-10-14 11.54.23 Slide Decks a la PowerPoint]
 
 
 
@@ -92,6 +92,9 @@
     the 'template' option is not specified}
 \fi\makeatother
 
+\makeatletter\ifdefined\ppt@template\ifdefined\ppt@scheme\else
+  \def\ppt@scheme{light}
+\fi\fi\makeatother
 \makeatletter\ifdefined\ppt@scheme
   \RequirePackage{xcolor}
   \IfFileExists{\ppt@directory ppt-schemes/ppt-\ppt@scheme.tex}
