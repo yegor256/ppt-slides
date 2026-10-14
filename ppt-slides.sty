@@ -31,7 +31,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ppt-slides}
-[2026-10-14 11.39.40 Slide Decks a la PowerPoint]
+[2026-10-14 11.46.28 Slide Decks a la PowerPoint]
 
 
 
@@ -74,6 +74,16 @@
 }
 \ProcessPgfPackageOptions{/ppt-slides}
 \makeatother
+
+\ExplSyntaxOn
+\makeatletter
+\tl_if_empty:NF \ppt@directory {
+  \str_if_eq:eeF { \str_item:Nn \ppt@directory { -1 } } { / } {
+    \tl_put_right:Nn \ppt@directory { / }
+  }
+}
+\makeatother
+\ExplSyntaxOff
 
 \makeatletter\ifdefined\ppt@template
   \input{\ppt@directory ppt-templates/ppt-\ppt@template.tex}
