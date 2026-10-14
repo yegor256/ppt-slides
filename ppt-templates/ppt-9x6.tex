@@ -42,7 +42,7 @@
   \fancyhf{}
   \fancyhead[L]{%
     \ifx\crumbs\empty\else
-      \begin{textblock}{12}(1,1)%
+      \begin{textblock}{12}(1,1)\leavevmode\color{.}%
         \ifnum\value{section}=0\else
           {\small\ttfamily\crumbs}
           \ifnum\value{subsection}=0\else
@@ -56,13 +56,13 @@
   \makeatletter
   \fancyhead[R]{%
     \ifnum\value{page}=1\else%
-      \begin{textblock}{4}[1,0](15,1)%
+      \begin{textblock}{4}[1,0](15,1)\leavevmode\color{.}%
         {\ttfamily\normalsize {\thepage{}}{\footnotesize{\color{grey}/\pageref{LastPage}}}}
       \end{textblock}%
       \ifdefined\ppt@nominutes\else
         \ifcsname c@minutes\endcsname
           \ifnum\value{minutes}=0\else%
-            \begin{textblock}{1}[1,0](15.8,0.2)%
+            \begin{textblock}{1}[1,0](15.8,0.2)\leavevmode\color{.}%
               \tikz{
                 \node[inner sep=2pt,circle,draw=grey]
                 {\color{grey}\scriptsize\ttfamily\theminutes{}};
@@ -78,7 +78,7 @@
 \newcommand\pptLeft[1]{%
   \fancyfoot[L]{%
     \ifnum\value{page}=1\else%
-      \begin{textblock}{8}[0,1](1,15)%
+      \begin{textblock}{8}[0,1](1,15)\leavevmode\color{.}%
         {\color{grey}\scriptsize\ttfamily #1}
       \end{textblock}%
     \fi
@@ -88,7 +88,7 @@
 \newcommand\pptRight[1]{%
   \fancyfoot[R]{%
     \ifnum\value{page}=1\else%
-      \begin{textblock}{8}[1,1](15,15)%
+      \begin{textblock}{8}[1,1](15,15)\leavevmode\color{.}%
         {\color{grey}\scriptsize\ttfamily #1}
       \end{textblock}%
     \fi
